@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Assets/Hero.png" type="Texture" id=1]
+
+[node name="KinematicBody2D" type="Sprite"]
+texture = ExtResource( 1 )
+hframes = 4
+
+[node name="Right" type="RayCast2D" parent="."]
+position = Vector2( 0, 30.246 )
+cast_to = Vector2( 40, 20 )
+
+[node name="Abajo" type="RayCast2D" parent="."]
+position = Vector2( 0, 30.246 )
+cast_to = Vector2( -40, 20 )
+
+[node name="Arriba" type="RayCast2D" parent="."]
+position = Vector2( 0, 30.246 )
+cast_to = Vector2( 40, -20 )
+
+[node name="Left" type="RayCast2D" parent="."]
+position = Vector2( 0, 30.246 )
+cast_to = Vector2( -40, -20 )

@@ -34,7 +34,6 @@ tracks/1/keys = {
 
 [node name="KinematicBody2D" type="Sprite"]
 position = Vector2( 0, -4 )
-scale = Vector2( 0.75, 0.75 )
 texture = ExtResource( 1 )
 offset = Vector2( 0, -25 )
 hframes = 4
@@ -64,3 +63,7 @@ cast_to = Vector2( -40, -20 )
 
 [node name="anim" type="AnimationPlayer" parent="."]
 anims/Walk = SubResource( 1 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 3.18199, 3.02237 )
+current = true

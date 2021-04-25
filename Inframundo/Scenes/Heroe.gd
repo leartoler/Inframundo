@@ -14,11 +14,11 @@ func _physics_process(delta):
 	if can_move:
 		if Input.is_action_pressed("ui_up") and !$Up.is_colliding():
 			move_to(dir.Up)
-		if Input.is_action_pressed("ui_down") and !$Down.is_colliding():
+		elif Input.is_action_pressed("ui_down") and !$Down.is_colliding():
 			move_to(dir.Down)
-		if Input.is_action_pressed("ui_right") and !$Right.is_colliding():
+		elif Input.is_action_pressed("ui_right") and !$Right.is_colliding():
 			move_to(dir.Right)
-		if Input.is_action_pressed("ui_left") and !$Left.is_colliding():
+		elif Input.is_action_pressed("ui_left") and !$Left.is_colliding():
 			move_to(dir.Left)
 		
 #Movimiento según donde se mueva el prota

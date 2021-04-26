@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Roca_1_3.png-e798b797b367515d83fb08c75d489333.stex"
+path="res://.import/Cerca_1_2.png-02b0cf45f9c6508af2da521cfa24b525.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Roca_1_3.png"
-dest_files=[ "res://.import/Roca_1_3.png-e798b797b367515d83fb08c75d489333.stex" ]
+source_file="res://Assets/Lvl_01/Cerca_1_2.png"
+dest_files=[ "res://.import/Cerca_1_2.png-02b0cf45f9c6508af2da521cfa24b525.stex" ]
 
 [params]
 

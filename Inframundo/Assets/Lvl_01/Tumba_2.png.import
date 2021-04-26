@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/arbol_1.png-3a520087fa45cfb0f757632aeebf5e80.stex"
+path="res://.import/Tumba_2.png-4327942a329aa2d9b3faa88b588f65a4.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/arbol_1.png"
-dest_files=[ "res://.import/arbol_1.png-3a520087fa45cfb0f757632aeebf5e80.stex" ]
+source_file="res://Assets/Lvl_01/Tumba_2.png"
+dest_files=[ "res://.import/Tumba_2.png-4327942a329aa2d9b3faa88b588f65a4.stex" ]
 
 [params]
 

@@ -1,21 +1,33 @@
-[gd_resource type="TileSet" load_steps=25 format=2]
+[gd_resource type="TileSet" load_steps=39 format=2]
 
-[ext_resource path="res://Assets/Piso_1.png" type="Texture" id=1]
-[ext_resource path="res://Assets/Tumba_1.png" type="Texture" id=2]
-[ext_resource path="res://Assets/Tumba_2.png" type="Texture" id=3]
-[ext_resource path="res://Assets/Piso_2.png" type="Texture" id=4]
-[ext_resource path="res://Assets/Cerca_1_2.png" type="Texture" id=5]
-[ext_resource path="res://Assets/Roca_1_1.png" type="Texture" id=6]
-[ext_resource path="res://Assets/Cerca_1_4.png" type="Texture" id=7]
-[ext_resource path="res://Assets/Roca_1_2.png" type="Texture" id=8]
-[ext_resource path="res://Assets/arbol_1.png" type="Texture" id=9]
-[ext_resource path="res://Assets/arbol_2.png" type="Texture" id=10]
-[ext_resource path="res://Assets/Cerca_1_1.png" type="Texture" id=11]
-[ext_resource path="res://Assets/Cerca_1_3.png" type="Texture" id=12]
-[ext_resource path="res://Assets/Tumba_Esposa_01.png" type="Texture" id=13]
+[ext_resource path="res://Assets/Lvl_01/Cerca_1_2.png" type="Texture" id=1]
+[ext_resource path="res://Assets/Lvl_01/arbol_1.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Lvl_01/arbol_2.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Lvl_01/Cerca_1_3.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Lvl_01/Roca_1_2.png" type="Texture" id=5]
+[ext_resource path="res://Assets/Lvl_01/Cerca_1_1.png" type="Texture" id=6]
+[ext_resource path="res://Assets/Lvl_01/Roca_1_1.png" type="Texture" id=7]
+[ext_resource path="res://Assets/Lvl_01/Cerca_1_4.png" type="Texture" id=8]
+[ext_resource path="res://Assets/Lvl_02/Arbolote_01.png" type="Texture" id=9]
+[ext_resource path="res://Assets/Lvl_02/arbol_03_02.png" type="Texture" id=10]
+[ext_resource path="res://Assets/Lvl_02/arbol_03_04.png" type="Texture" id=11]
+[ext_resource path="res://Assets/Lvl_02/suelo_3_3.png" type="Texture" id=12]
+[ext_resource path="res://Assets/Lvl_02/suelo_3_2.png" type="Texture" id=13]
+[ext_resource path="res://Assets/Lvl_02/arbol_03_01.png" type="Texture" id=14]
+[ext_resource path="res://Assets/Lvl_02/suelo_3_1.png" type="Texture" id=15]
+[ext_resource path="res://Assets/Lvl_02/arbol_03_03.png" type="Texture" id=16]
+[ext_resource path="res://Assets/Lvl_02/suelo_3_4.png" type="Texture" id=17]
+
+[sub_resource type="StreamTexture" id=12]
+flags = 4
+load_path = "res://.import/Piso_1.png-052ace0e42cbaec7476b77923c341b91.stex"
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0.523705, 39.5951, 40.9905, 20.5245, 80.2945, 40.5254, 40.2928, 60.2937 )
+
+[sub_resource type="StreamTexture" id=13]
+flags = 4
+load_path = "res://.import/Tumba_1.png-b645ce03bddeba889c747343e9965e92.stex"
 
 [sub_resource type="ConvexPolygonShape2D" id=2]
 points = PoolVector2Array( 39.5951, 60.2937, 0.523705, 41.2231, 41.6882, 19.5943, 80.5271, 40.2928 )
@@ -26,8 +38,35 @@ points = PoolVector2Array( 0.756271, 47.9676, 40.5254, 27.5016, 80, 48.8978, 40.
 [sub_resource type="ConvexPolygonShape2D" id=4]
 points = PoolVector2Array( 40.8258, 28.0346, 80.1685, 48.5781, 40.2444, 68.5401, 0.126404, 48.1904 )
 
+[sub_resource type="StreamTexture" id=14]
+flags = 4
+load_path = "res://.import/Tumba_Esposa_01.png-18dc8ce4b467e1d036aa113f8b5fc5ea.stex"
+
+[sub_resource type="ConvexPolygonShape2D" id=15]
+points = PoolVector2Array( 61.6347, 74.2891, 135.58, 112.869, 72.4854, 144.216, 0.549286, 105.636 )
+
+[sub_resource type="ConvexPolygonShape2D" id=16]
+points = PoolVector2Array( 63.2422, 83.3361, 115.486, 110.262, 54.8027, 142.01, 0.147415, 112.673 )
+
+[sub_resource type="ConvexPolygonShape2D" id=17]
+points = PoolVector2Array( 71.8779, 129.346, 7.97932, 97.1961, 75.0929, 63.4384, 136.178, 96.3924 )
+
+[sub_resource type="StreamTexture" id=18]
+flags = 4
+load_path = "res://.import/Piso_2.png-5523e57a55829cd642f31d9107bcfd4a.stex"
+
+[sub_resource type="ConvexPolygonShape2D" id=19]
+points = PoolVector2Array( 158.874, 299.256, 19.0202, 228.847, 138.137, 169.53, 277.99, 238.01 )
+
+[sub_resource type="ConvexPolygonShape2D" id=20]
+points = PoolVector2Array( 80.5229, 137.59, 4.56807, 99.813, 66.4572, 67.6628, 142, 105.037 )
+
 [sub_resource type="ConvexPolygonShape2D" id=5]
 points = PoolVector2Array( 0, 38.1416, 39.537, 17.443, 80.0038, 38.6067, 40.6998, 59.0727 )
+
+[sub_resource type="StreamTexture" id=21]
+flags = 4
+load_path = "res://.import/Tumba_2.png-781c8345af125cd519f17b114dc0fcf8.stex"
 
 [sub_resource type="ConvexPolygonShape2D" id=6]
 points = PoolVector2Array( 0.215225, 28.6397, 40.4301, 7.48248, 79.999, 27.5092, 40.2686, 48.8279 )
@@ -49,7 +88,7 @@ points = PoolVector2Array( 40.0603, 18.8966, 80.2945, 40.5254, 40.0603, 60.2937,
 
 [resource]
 0/name = "Piso_1"
-0/texture = ExtResource( 1 )
+0/texture = SubResource( 12 )
 0/tex_offset = Vector2( 0, 0 )
 0/modulate = Color( 1, 1, 1, 1 )
 0/region = Rect2( 0, 0, 81, 45 )
@@ -63,7 +102,7 @@ points = PoolVector2Array( 40.0603, 18.8966, 80.2945, 40.5254, 40.0603, 60.2937,
 0/shapes = [  ]
 0/z_index = 0
 1/name = "Tumba_1"
-1/texture = ExtResource( 2 )
+1/texture = SubResource( 13 )
 1/tex_offset = Vector2( 0, -20 )
 1/modulate = Color( 1, 1, 1, 1 )
 1/region = Rect2( 0, 0, 81, 65 )
@@ -84,7 +123,7 @@ points = PoolVector2Array( 40.0603, 18.8966, 80.2945, 40.5254, 40.0603, 60.2937,
 } ]
 1/z_index = 0
 2/name = "Piso_2.png 2"
-2/texture = ExtResource( 4 )
+2/texture = SubResource( 18 )
 2/tex_offset = Vector2( 0.275, -1.116 )
 2/modulate = Color( 1, 1, 1, 1 )
 2/region = Rect2( 0, 0, 81, 47 )
@@ -98,7 +137,7 @@ points = PoolVector2Array( 40.0603, 18.8966, 80.2945, 40.5254, 40.0603, 60.2937,
 2/shapes = [  ]
 2/z_index = 0
 3/name = "Tumba_2.png 3"
-3/texture = ExtResource( 3 )
+3/texture = SubResource( 21 )
 3/tex_offset = Vector2( 0, -18 )
 3/modulate = Color( 1, 1, 1, 1 )
 3/region = Rect2( 0, 0, 81, 63 )
@@ -119,7 +158,7 @@ points = PoolVector2Array( 40.0603, 18.8966, 80.2945, 40.5254, 40.0603, 60.2937,
 } ]
 3/z_index = 0
 4/name = "Cerca_1_3.png 4"
-4/texture = ExtResource( 12 )
+4/texture = ExtResource( 4 )
 4/tex_offset = Vector2( 0, -8 )
 4/modulate = Color( 1, 1, 1, 1 )
 4/region = Rect2( 0, 0, 80, 52 )
@@ -140,7 +179,7 @@ points = PoolVector2Array( 40.0603, 18.8966, 80.2945, 40.5254, 40.0603, 60.2937,
 } ]
 4/z_index = 0
 5/name = "Cerca_1_1.png 5"
-5/texture = ExtResource( 11 )
+5/texture = ExtResource( 6 )
 5/tex_offset = Vector2( 0, -30 )
 5/modulate = Color( 1, 1, 1, 1 )
 5/region = Rect2( 0, 0, 80, 74 )
@@ -161,7 +200,7 @@ points = PoolVector2Array( 40.0603, 18.8966, 80.2945, 40.5254, 40.0603, 60.2937,
 } ]
 5/z_index = 0
 6/name = "Cerca_1_4.png 6"
-6/texture = ExtResource( 7 )
+6/texture = ExtResource( 8 )
 6/tex_offset = Vector2( 0, -13 )
 6/modulate = Color( 1, 1, 1, 1 )
 6/region = Rect2( 0, -1, 81, 58 )
@@ -182,7 +221,7 @@ points = PoolVector2Array( 40.0603, 18.8966, 80.2945, 40.5254, 40.0603, 60.2937,
 } ]
 6/z_index = 0
 7/name = "Cerca_1_2.png 7"
-7/texture = ExtResource( 5 )
+7/texture = ExtResource( 1 )
 7/tex_offset = Vector2( 0, -26 )
 7/modulate = Color( 1, 1, 1, 1 )
 7/region = Rect2( -2, -1, 83, 72 )
@@ -203,7 +242,7 @@ points = PoolVector2Array( 40.0603, 18.8966, 80.2945, 40.5254, 40.0603, 60.2937,
 } ]
 7/z_index = 0
 8/name = "Roca_1_1.png 8"
-8/texture = ExtResource( 6 )
+8/texture = ExtResource( 7 )
 8/tex_offset = Vector2( 0, -14.446 )
 8/modulate = Color( 1, 1, 1, 1 )
 8/region = Rect2( 0, 0, 81, 59 )
@@ -224,7 +263,7 @@ points = PoolVector2Array( 40.0603, 18.8966, 80.2945, 40.5254, 40.0603, 60.2937,
 } ]
 8/z_index = 0
 9/name = "Roca_1_2.png 9"
-9/texture = ExtResource( 8 )
+9/texture = ExtResource( 5 )
 9/tex_offset = Vector2( 0, -20 )
 9/modulate = Color( 1, 1, 1, 1 )
 9/region = Rect2( 0, 0, 81, 64 )
@@ -245,7 +284,7 @@ points = PoolVector2Array( 40.0603, 18.8966, 80.2945, 40.5254, 40.0603, 60.2937,
 } ]
 9/z_index = 0
 10/name = "arbol_1.png 10"
-10/texture = ExtResource( 9 )
+10/texture = ExtResource( 2 )
 10/tex_offset = Vector2( 0, -20 )
 10/modulate = Color( 1, 1, 1, 1 )
 10/region = Rect2( 0, 0, 81, 65 )
@@ -266,7 +305,7 @@ points = PoolVector2Array( 40.0603, 18.8966, 80.2945, 40.5254, 40.0603, 60.2937,
 } ]
 10/z_index = 0
 11/name = "arbol_2.png 11"
-11/texture = ExtResource( 10 )
+11/texture = ExtResource( 3 )
 11/tex_offset = Vector2( 0, -28 )
 11/modulate = Color( 1, 1, 1, 1 )
 11/region = Rect2( 0, 0, 80, 73 )
@@ -287,7 +326,7 @@ points = PoolVector2Array( 40.0603, 18.8966, 80.2945, 40.5254, 40.0603, 60.2937,
 } ]
 11/z_index = 0
 12/name = "Tumba_Esposa_01.png 12"
-12/texture = ExtResource( 13 )
+12/texture = SubResource( 14 )
 12/tex_offset = Vector2( 0, -28 )
 12/modulate = Color( 1, 1, 1, 1 )
 12/region = Rect2( 0, 0, 81, 73 )
@@ -307,3 +346,164 @@ points = PoolVector2Array( 40.0603, 18.8966, 80.2945, 40.5254, 40.0603, 60.2937,
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, -28 )
 } ]
 12/z_index = 0
+14/name = "arbol_03_02.png 14"
+14/texture = ExtResource( 10 )
+14/tex_offset = Vector2( 0, -85 )
+14/modulate = Color( 1, 1, 1, 1 )
+14/region = Rect2( 0, -1, 141, 159 )
+14/tile_mode = 0
+14/occluder_offset = Vector2( 0, 0 )
+14/navigation_offset = Vector2( 0, 0 )
+14/shape_offset = Vector2( 0, -85 )
+14/shape_transform = Transform2D( 1, 0, 0, 1, 0, -85 )
+14/shape = SubResource( 15 )
+14/shape_one_way = false
+14/shape_one_way_margin = 1.0
+14/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 15 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, -85 )
+} ]
+14/z_index = 0
+15/name = "arbol_03_03.png 15"
+15/texture = ExtResource( 16 )
+15/tex_offset = Vector2( -0.5, -92 )
+15/modulate = Color( 1, 1, 1, 1 )
+15/region = Rect2( 0, 0, 140, 151 )
+15/tile_mode = 0
+15/occluder_offset = Vector2( 0, 0 )
+15/navigation_offset = Vector2( 0, 0 )
+15/shape_offset = Vector2( 0, -92 )
+15/shape_transform = Transform2D( 1, 0, 0, 1, 0, -92 )
+15/shape = SubResource( 16 )
+15/shape_one_way = false
+15/shape_one_way_margin = 1.0
+15/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 16 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, -92 )
+} ]
+15/z_index = 0
+16/name = "arbol_03_04.png 16"
+16/texture = ExtResource( 11 )
+16/tex_offset = Vector2( 0, -76 )
+16/modulate = Color( 1, 1, 1, 1 )
+16/region = Rect2( -1, -1, 143, 134 )
+16/tile_mode = 0
+16/occluder_offset = Vector2( 0, 0 )
+16/navigation_offset = Vector2( 0, 0 )
+16/shape_offset = Vector2( 0, -76 )
+16/shape_transform = Transform2D( 1, 0, 0, 1, 0, -76 )
+16/shape = SubResource( 17 )
+16/shape_one_way = false
+16/shape_one_way_margin = 1.0
+16/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 17 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, -76 )
+} ]
+16/z_index = 0
+17/name = "suelo_3_1.png 17"
+17/texture = ExtResource( 15 )
+17/tex_offset = Vector2( 0, 0 )
+17/modulate = Color( 1, 1, 1, 1 )
+17/region = Rect2( 0, 0, 80, 44 )
+17/tile_mode = 0
+17/occluder_offset = Vector2( 0, 0 )
+17/navigation_offset = Vector2( 0, 0 )
+17/shape_offset = Vector2( 0, 0 )
+17/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+17/shape_one_way = false
+17/shape_one_way_margin = 0.0
+17/shapes = [  ]
+17/z_index = 0
+18/name = "suelo_3_2.png 18"
+18/texture = ExtResource( 13 )
+18/tex_offset = Vector2( 0, 0 )
+18/modulate = Color( 1, 1, 1, 1 )
+18/region = Rect2( 0, 0, 81, 44 )
+18/tile_mode = 0
+18/occluder_offset = Vector2( 0, 0 )
+18/navigation_offset = Vector2( 0, 0 )
+18/shape_offset = Vector2( 0, 0 )
+18/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+18/shape_one_way = false
+18/shape_one_way_margin = 0.0
+18/shapes = [  ]
+18/z_index = 0
+19/name = "suelo_3_3.png 19"
+19/texture = ExtResource( 12 )
+19/tex_offset = Vector2( 0, 0 )
+19/modulate = Color( 1, 1, 1, 1 )
+19/region = Rect2( 0, 0, 81, 45 )
+19/tile_mode = 0
+19/occluder_offset = Vector2( 0, 0 )
+19/navigation_offset = Vector2( 0, 0 )
+19/shape_offset = Vector2( 0, 0 )
+19/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+19/shape_one_way = false
+19/shape_one_way_margin = 0.0
+19/shapes = [  ]
+19/z_index = 0
+20/name = "suelo_3_4.png 20"
+20/texture = ExtResource( 17 )
+20/tex_offset = Vector2( 0, 0 )
+20/modulate = Color( 1, 1, 1, 1 )
+20/region = Rect2( 0, 0, 81, 45 )
+20/tile_mode = 0
+20/occluder_offset = Vector2( 0, 0 )
+20/navigation_offset = Vector2( 0, 0 )
+20/shape_offset = Vector2( 0, 0 )
+20/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+20/shape_one_way = false
+20/shape_one_way_margin = 0.0
+20/shapes = [  ]
+20/z_index = 0
+21/name = "Arbolote_01.png 21"
+21/texture = ExtResource( 9 )
+21/tex_offset = Vector2( -3, -217 )
+21/modulate = Color( 1, 1, 1, 1 )
+21/region = Rect2( 1, -3, 315, 319 )
+21/tile_mode = 0
+21/occluder_offset = Vector2( 0, 0 )
+21/navigation_offset = Vector2( 0, 0 )
+21/shape_offset = Vector2( 0, -217 )
+21/shape_transform = Transform2D( 1, 0, 0, 1, 0, -217 )
+21/shape = SubResource( 19 )
+21/shape_one_way = false
+21/shape_one_way_margin = 1.0
+21/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 19 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, -217 )
+} ]
+21/z_index = 0
+22/name = "arbol_03_01.png 22"
+22/texture = ExtResource( 14 )
+22/tex_offset = Vector2( -1, -76 )
+22/modulate = Color( 1, 1, 1, 1 )
+22/region = Rect2( 0, 0, 142, 143 )
+22/tile_mode = 0
+22/occluder_offset = Vector2( 0, 0 )
+22/navigation_offset = Vector2( 0, 0 )
+22/shape_offset = Vector2( 0, -76 )
+22/shape_transform = Transform2D( 1, 0, 0, 1, 0, -76 )
+22/shape = SubResource( 20 )
+22/shape_one_way = false
+22/shape_one_way_margin = 1.0
+22/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 20 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, -76 )
+} ]
+22/z_index = 0

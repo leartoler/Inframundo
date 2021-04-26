@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Tumba_Esposa_01.png-18dc8ce4b467e1d036aa113f8b5fc5ea.stex"
+path="res://.import/suelo_3_4.png-1a2824fa1465f5fb4f0a0e6871e7d5bf.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Tumba_Esposa_01.png"
-dest_files=[ "res://.import/Tumba_Esposa_01.png-18dc8ce4b467e1d036aa113f8b5fc5ea.stex" ]
+source_file="res://Assets/Lvl_02/suelo_3_4.png"
+dest_files=[ "res://.import/suelo_3_4.png-1a2824fa1465f5fb4f0a0e6871e7d5bf.stex" ]
 
 [params]
 

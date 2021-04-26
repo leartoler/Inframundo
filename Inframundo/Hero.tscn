@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://Assets/Hero.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Lvl_01/Hero.png" type="Texture" id=3]
 
-[sub_resource type="GDScript" id=3]
+[sub_resource type="GDScript" id=1]
 script/source = "extends KinematicBody2D
 
 
@@ -21,7 +21,7 @@ func _ready():
 #	pass
 "
 
-[sub_resource type="GDScript" id=4]
+[sub_resource type="GDScript" id=2]
 script/source = "extends Sprite
 
 var can_move = true
@@ -88,8 +88,7 @@ func _ready():
 #	pass
 "
 
-[sub_resource type="Animation" id=1]
-resource_name = "Walk"
+[sub_resource type="Animation" id=3]
 length = 0.5
 step = 0.5
 tracks/0/type = "value"
@@ -117,16 +116,16 @@ tracks/1/keys = {
 "values": [ Vector2( 0, -25 ), Vector2( 0, -35 ), Vector2( 0, -25 ) ]
 }
 
-[sub_resource type="RectangleShape2D" id=2]
+[sub_resource type="RectangleShape2D" id=4]
 
 [node name="Hero" type="KinematicBody2D"]
-script = SubResource( 3 )
+script = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 3 )
 hframes = 4
 frame = 2
-script = SubResource( 4 )
+script = SubResource( 2 )
 
 [node name="Down" type="RayCast2D" parent="."]
 position = Vector2( 3.18199, 3.02237 )
@@ -151,7 +150,7 @@ cast_to = Vector2( -40, -20 )
 [node name="Tween" type="Tween" parent="."]
 
 [node name="anim" type="AnimationPlayer" parent="."]
-anims/Walk = SubResource( 1 )
+anims/Walk = SubResource( 3 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( 3.18199, 3.02237 )
@@ -160,4 +159,4 @@ current = true
 zoom = Vector2( 0.4, 0.4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource( 2 )
+shape = SubResource( 4 )

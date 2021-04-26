@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/arbol_2.png-b8c306cab14799f9c3c526c58097683f.stex"
+path="res://.import/Tecolote_1_3.png-fab1bfd434314b20694519cf409a5714.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/arbol_2.png"
-dest_files=[ "res://.import/arbol_2.png-b8c306cab14799f9c3c526c58097683f.stex" ]
+source_file="res://Assets/Lvl_01/Tecolote_1_3.png"
+dest_files=[ "res://.import/Tecolote_1_3.png-fab1bfd434314b20694519cf409a5714.stex" ]
 
 [params]
 

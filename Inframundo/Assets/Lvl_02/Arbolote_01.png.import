@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Roca_1_1.png-71104191cb4bde33d484f2a4c79ddce9.stex"
+path="res://.import/Arbolote_01.png-aaf775d9ef541441700586928f94b0f5.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Roca_1_1.png"
-dest_files=[ "res://.import/Roca_1_1.png-71104191cb4bde33d484f2a4c79ddce9.stex" ]
+source_file="res://Assets/Lvl_02/Arbolote_01.png"
+dest_files=[ "res://.import/Arbolote_01.png-aaf775d9ef541441700586928f94b0f5.stex" ]
 
 [params]
 

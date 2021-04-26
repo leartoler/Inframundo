@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Piso_2.png-5523e57a55829cd642f31d9107bcfd4a.stex"
+path="res://.import/arbol_2.png-f9010d74c781685d0645753419b20353.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Piso_2.png"
-dest_files=[ "res://.import/Piso_2.png-5523e57a55829cd642f31d9107bcfd4a.stex" ]
+source_file="res://Assets/Lvl_01/arbol_2.png"
+dest_files=[ "res://.import/arbol_2.png-f9010d74c781685d0645753419b20353.stex" ]
 
 [params]
 

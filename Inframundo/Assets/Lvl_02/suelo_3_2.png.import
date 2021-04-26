@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Hero.png-2cfa8e9bbc63de39050a8ed9472f340a.stex"
+path="res://.import/suelo_3_2.png-6448ed654687d5039f0b3d8754bb5cb2.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Hero.png"
-dest_files=[ "res://.import/Hero.png-2cfa8e9bbc63de39050a8ed9472f340a.stex" ]
+source_file="res://Assets/Lvl_02/suelo_3_2.png"
+dest_files=[ "res://.import/suelo_3_2.png-6448ed654687d5039f0b3d8754bb5cb2.stex" ]
 
 [params]
 

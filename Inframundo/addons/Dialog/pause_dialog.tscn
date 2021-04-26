@@ -1,0 +1,143 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://addons/Dialog/pause_dialog.gd" type="Script" id=1]
+
+[sub_resource type="StyleBoxFlat" id=1]
+content_margin_left = 6.0
+content_margin_right = 6.0
+content_margin_top = 6.0
+content_margin_bottom = 6.0
+bg_color = Color( 0.196078, 0.133333, 0.133333, 1 )
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color( 0, 0, 0, 1 )
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="InputEventKey" id=2]
+scancode = 16777221
+
+[sub_resource type="ShortCut" id=3]
+shortcut = SubResource( 2 )
+
+[node name="pause_dialog" type="Panel"]
+margin_right = 456.0
+margin_bottom = 263.0
+rect_min_size = Vector2( 456, 263 )
+custom_styles/panel = SubResource( 1 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 8.0
+margin_top = 8.0
+margin_right = -8.0
+margin_bottom = -8.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer"]
+margin_right = 440.0
+margin_bottom = 138.0
+rect_min_size = Vector2( 0, 138 )
+mouse_filter = 2
+bbcode_enabled = true
+bbcode_text = "[center][color=red]PAUSE[/color][/center]
+
+Stops text flow in letter-by-letter mode.
+[indent][color=#2df41d]· time[/color]: Controls how time is the flow text stopped
+		(in seconds).
+[color=#2df41d]· auto_continue[/color]: Restores text flow automatically.
+		When this paramater is disabled, a button
+		need be pressed to restore the text flow.[/indent]"
+text = "PAUSE
+
+Stops text flow in letter-by-letter mode.
+	· time: Controls how time is the flow text stopped
+		(in seconds).
+· auto_continue: Restores text flow automatically.
+		When this paramater is disabled, a button
+		need be pressed to restore the text flow."
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 142.0
+margin_right = 440.0
+margin_bottom = 166.0
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer"]
+margin_top = 5.0
+margin_right = 100.0
+margin_bottom = 19.0
+rect_min_size = Vector2( 100, 0 )
+custom_colors/font_color = Color( 0.176471, 0.956863, 0.113725, 1 )
+text = "time:"
+
+[node name="time_SpinBox" type="SpinBox" parent="VBoxContainer/HBoxContainer"]
+margin_left = 104.0
+margin_right = 178.0
+margin_bottom = 24.0
+step = 0.1
+value = 5.0
+allow_greater = true
+
+[node name="Label2" type="Label" parent="VBoxContainer/HBoxContainer"]
+margin_left = 182.0
+margin_top = 5.0
+margin_right = 239.0
+margin_bottom = 19.0
+text = "seconds."
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 170.0
+margin_right = 440.0
+margin_bottom = 194.0
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer2"]
+margin_top = 5.0
+margin_right = 100.0
+margin_bottom = 19.0
+rect_min_size = Vector2( 100, 0 )
+custom_colors/font_color = Color( 0.176471, 0.956863, 0.113725, 1 )
+text = "auto continue:"
+
+[node name="auto_continue_CheckBox" type="CheckBox" parent="VBoxContainer/HBoxContainer2"]
+margin_left = 104.0
+margin_right = 128.0
+margin_bottom = 24.0
+mouse_default_cursor_shape = 2
+pressed = true
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 227.0
+margin_right = 440.0
+margin_bottom = 247.0
+size_flags_vertical = 10
+alignment = 2
+
+[node name="OK_Button" type="Button" parent="VBoxContainer/HBoxContainer3"]
+margin_left = 351.0
+margin_right = 382.0
+margin_bottom = 20.0
+mouse_default_cursor_shape = 2
+shortcut = SubResource( 3 )
+text = "OK"
+
+[node name="Cancel_Button" type="Button" parent="VBoxContainer/HBoxContainer3"]
+margin_left = 386.0
+margin_right = 440.0
+margin_bottom = 20.0
+mouse_default_cursor_shape = 2
+text = "Cancel"
+[connection signal="visibility_changed" from="." to="." method="_on_pause_dialog_visibility_changed"]
+[connection signal="button_down" from="VBoxContainer/HBoxContainer3/OK_Button" to="." method="_on_OK_Button_button_down"]
+[connection signal="button_down" from="VBoxContainer/HBoxContainer3/Cancel_Button" to="." method="_on_Cancel_Button_button_down"]
+[connection signal="focus_exited" from="VBoxContainer/HBoxContainer3/Cancel_Button" to="." method="_on_Cancel_Button_focus_exited"]

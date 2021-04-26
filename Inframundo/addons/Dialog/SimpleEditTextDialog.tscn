@@ -1,0 +1,98 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://addons/Dialog/SimpleEditTextDialog.gd" type="Script" id=1]
+[ext_resource path="res://addons/Dialog/Graphics/cancel_button_normal.png" type="Texture" id=2]
+[ext_resource path="res://addons/Dialog/Graphics/cancel_button_over.png" type="Texture" id=3]
+[ext_resource path="res://addons/Dialog/Graphics/ok_button_over.png" type="Texture" id=4]
+[ext_resource path="res://addons/Dialog/Graphics/ok_button_normal.png" type="Texture" id=5]
+[ext_resource path="res://addons/Dialog/Fonts/NotoSansCJKtc-Regular.ttf" type="DynamicFontData" id=6]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.235294, 0.235294, 0.235294, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0, 0, 0, 1 )
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="DynamicFont" id=2]
+font_data = ExtResource( 6 )
+
+[node name="SimpleEditTextDialog" type="Panel"]
+margin_right = 316.0
+margin_bottom = 92.0
+custom_styles/panel = SubResource( 1 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 10.0
+margin_top = 10.0
+margin_right = -10.0
+margin_bottom = -13.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+margin_right = 296.0
+margin_bottom = 32.0
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer"]
+margin_top = 9.0
+margin_right = 260.0
+margin_bottom = 23.0
+rect_min_size = Vector2( 260, 0 )
+text = "Language Filename:"
+
+[node name="TextureButton" type="TextureButton" parent="VBoxContainer/HBoxContainer"]
+margin_left = 264.0
+margin_right = 296.0
+margin_bottom = 32.0
+hint_tooltip = "(ESC) Cancel."
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture_normal = ExtResource( 2 )
+texture_hover = ExtResource( 3 )
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 36.0
+margin_right = 296.0
+margin_bottom = 71.0
+
+[node name="LineEdit" type="LineEdit" parent="VBoxContainer/HBoxContainer2"]
+margin_right = 260.0
+margin_bottom = 35.0
+hint_tooltip = "Write desired name and press enter
+to create the new language"
+size_flags_horizontal = 3
+custom_fonts/font = SubResource( 2 )
+placeholder_text = "set name......."
+caret_blink = true
+
+[node name="TextureButton" type="TextureButton" parent="VBoxContainer/HBoxContainer2"]
+margin_left = 264.0
+margin_right = 296.0
+margin_bottom = 35.0
+hint_tooltip = "(Enter) Apply."
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource( 5 )
+texture_hover = ExtResource( 4 )
+__meta__ = {
+"_editor_description_": ""
+}
+[connection signal="visibility_changed" from="." to="." method="_on_SelectLanguageNameDialog_visibility_changed"]
+[connection signal="button_down" from="VBoxContainer/HBoxContainer/TextureButton" to="." method="hide"]
+[connection signal="text_changed" from="VBoxContainer/HBoxContainer2/LineEdit" to="." method="_on_LineEdit_text_changed"]
+[connection signal="text_entered" from="VBoxContainer/HBoxContainer2/LineEdit" to="." method="_on_LineEdit_text_entered"]
+[connection signal="button_down" from="VBoxContainer/HBoxContainer2/TextureButton" to="." method="_on_ok_button_down"]

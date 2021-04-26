@@ -8,6 +8,76 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "PanelContainer",
+"class": "ChoiceBox",
+"language": "GDScript",
+"path": "res://addons/Dialog/ChoiceBox.gd"
+}, {
+"base": "PanelContainer",
+"class": "CustomGraphNode",
+"language": "GDScript",
+"path": "res://addons/Dialog/CustomGraphNode.gd"
+}, {
+"base": "CustomGraphNode",
+"class": "CustomGraphNode_01",
+"language": "GDScript",
+"path": "res://addons/Dialog/CustomGraphNode_01.gd"
+}, {
+"base": "CustomGraphNode",
+"class": "CustomGraphNode_02",
+"language": "GDScript",
+"path": "res://addons/Dialog/CustomGraphNode_02.gd"
+}, {
+"base": "CustomGraphNode",
+"class": "CustomGraphNode_03",
+"language": "GDScript",
+"path": "res://addons/Dialog/CustomGraphNode_03.gd"
+}, {
+"base": "CustomGraphNode",
+"class": "CustomGraphNode_04",
+"language": "GDScript",
+"path": "res://addons/Dialog/CustomGraphNode_04.gd"
+}, {
+"base": "TextureButton",
+"class": "CustomNodeDot",
+"language": "GDScript",
+"path": "res://addons/Dialog/CustomNodeDot.gd"
+}, {
+"base": "Control",
+"class": "CustomRichTextLabel",
+"language": "GDScript",
+"path": "res://addons/Dialog/DialogBox/CustomRichTextLabel.gd"
+}, {
+"base": "Panel",
+"class": "DefaultDialog",
+"language": "GDScript",
+"path": "res://addons/Dialog/default_dialog.gd"
+}, {
+"base": "CanvasLayer",
+"class": "DialogBox",
+"language": "GDScript",
+"path": "res://addons/Dialog/DialogBox/custom_dialog_node.gd"
+}, {
+"base": "Control",
+"class": "GraphNodeMinimal",
+"language": "GDScript",
+"path": "res://addons/Dialog/CustomGraphNode_minimal.gd"
+} ]
+_global_script_class_icons={
+"ChoiceBox": "",
+"CustomGraphNode": "",
+"CustomGraphNode_01": "",
+"CustomGraphNode_02": "",
+"CustomGraphNode_03": "",
+"CustomGraphNode_04": "",
+"CustomNodeDot": "",
+"CustomRichTextLabel": "",
+"DefaultDialog": "",
+"DialogBox": "",
+"GraphNodeMinimal": ""
+}
+
 [application]
 
 config/name="Inframundo"
@@ -17,6 +87,10 @@ config/icon="res://icon.png"
 
 window/stretch/mode="2d"
 window/stretch/aspect="keep"
+
+[editor_plugins]
+
+enabled=PoolStringArray( "res://addons/Dialog/plugin.cfg" )
 
 [physics]
 

@@ -1,0 +1,28 @@
+[gd_resource type="RichTextEffect" load_steps=2 format=2]
+
+[sub_resource type="GDScript" id=1]
+script/source = "tool
+extends RichTextEffect
+
+# Syntax: [play_sound path=path_of_sound] [/play_sound]
+
+signal play_sound(data)
+
+# Define the tag name.
+var bbcode = \"play_sound\"
+
+func _process_custom_fx(char_fx):
+	# Get parameters, or use the provided default value if missing.
+	var p = char_fx.env.get(\"process\", false)
+	if p: return false
+	char_fx.env.process = true
+	var data = {
+		\"char_index\"	: char_fx.absolute_index,
+		\"path\"	: char_fx.env.get(\"path\", true),
+	}
+	emit_signal(\"play_sound\", data)
+	return true
+"
+
+[resource]
+script = SubResource( 1 )

@@ -1,0 +1,108 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://addons/Dialog/CustomGraphNode.gd" type="Script" id=1]
+[ext_resource path="res://addons/Dialog/Graphics/cancel_button_normal.png" type="Texture" id=3]
+[ext_resource path="res://addons/Dialog/Graphics/cancel_button_over.png" type="Texture" id=4]
+[ext_resource path="res://addons/Dialog/Fonts/KOMIKAX_.ttf" type="DynamicFontData" id=5]
+
+[sub_resource type="StyleBoxFlat" id=1]
+resource_local_to_scene = true
+content_margin_left = 16.0
+content_margin_right = 16.0
+content_margin_top = 2.0
+content_margin_bottom = 15.0
+bg_color = Color( 0, 0, 0, 0.862745 )
+border_width_left = 2
+border_width_top = 35
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0.227451, 0.741176, 0.0156863, 1 )
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+shadow_color = Color( 0, 0, 0, 0.231373 )
+shadow_size = 9
+shadow_offset = Vector2( 10, 10 )
+
+[sub_resource type="DynamicFont" id=2]
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 5 )
+
+[node name="CustomGraphNode" type="PanelContainer"]
+margin_right = 212.0
+margin_bottom = 150.0
+rect_min_size = Vector2( 180, 150 )
+focus_mode = 1
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_styles/panel = SubResource( 1 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+margin_left = 16.0
+margin_top = 2.0
+margin_right = 196.0
+margin_bottom = 135.0
+mouse_filter = 2
+
+[node name="TopContainer" type="HBoxContainer" parent="VBoxContainer"]
+margin_right = 180.0
+margin_bottom = 35.0
+rect_min_size = Vector2( 180, 35 )
+size_flags_horizontal = 3
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Title" type="Label" parent="VBoxContainer/TopContainer"]
+margin_right = 144.0
+margin_bottom = 28.0
+size_flags_horizontal = 3
+size_flags_vertical = 0
+custom_fonts/font = SubResource( 2 )
+text = "Titulo"
+
+[node name="CloseButton" type="TextureButton" parent="VBoxContainer/TopContainer"]
+margin_left = 148.0
+margin_right = 180.0
+margin_bottom = 35.0
+texture_normal = ExtResource( 3 )
+texture_hover = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DotContainerLeft" type="Control" parent="VBoxContainer"]
+margin_top = 39.0
+margin_right = 180.0
+margin_bottom = 39.0
+mouse_filter = 2
+
+[node name="DotContainerRight" type="Control" parent="VBoxContainer"]
+margin_top = 43.0
+margin_right = 180.0
+margin_bottom = 43.0
+mouse_filter = 2
+
+[node name="ContentContainer" type="VBoxContainer" parent="VBoxContainer"]
+margin_top = 47.0
+margin_right = 180.0
+margin_bottom = 47.0
+
+[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
+visible = false
+scale = Vector2( 1.17333, 0.906667 )
+rect = Rect2( 0, 0, 300, 300 )
+[connection signal="draw" from="." to="." method="_on_CustomGraphNode_draw"]
+[connection signal="focus_entered" from="." to="." method="_on_CustomGraphNode_focus_entered"]
+[connection signal="gui_input" from="." to="." method="_on_CustomGraphNode_gui_input"]
+[connection signal="item_rect_changed" from="." to="." method="_on_CustomGraphNode_item_rect_changed"]
+[connection signal="tree_entered" from="." to="." method="_on_CustomGraphNode_tree_entered"]
+[connection signal="tree_exiting" from="." to="." method="_on_CustomGraphNode_tree_exiting"]
+[connection signal="button_down" from="VBoxContainer/TopContainer/CloseButton" to="." method="_on_CloseButton_button_down"]
+[connection signal="screen_entered" from="VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_entered"]
+[connection signal="screen_exited" from="VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_exited"]

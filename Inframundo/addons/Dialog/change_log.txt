@@ -1,0 +1,61 @@
+26-03-2021
+
+Version 1.1h
+- Full message preview supported. Now you can preview the messages with animations, images, faces and box names in the Dialog Editor.
+- Fixed several visual problems.
+- Now in the editor, when you click on a point and drag it to an empty zone, you can automatically create a node that will be automatically connected to that point.
+
+25-03-2021
+
+Version 1.1g
+- Add support to can write text in foreign language (non-latin English).
+- Added a preview button in config node to preview the message using that config.
+- Enabled preview button in the Advance Text Editor (face, show box name, character, remove image, remove box name,
+image effect, emit signals and set config commands do not work in this version)
+- Now the plugin is opened in a 1024 x 768 resolution when you open it from tools menu. You can change this value in the file "plugin.gd" lines 18 and 19.
+
+23-02-2021
+
+Version 1.1f
+- Minor fix: Fixed an issue where the background graphic of the answer panel could not be changed (notified by Citrinu).
+
+17-01-2021
+
+Version 1.1e
+- Minor fix: Fixed a bug that caused the default settings not to have some images configured.
+
+19-11-2020
+
+Version 1.1d
+- Fixed a bug that caused the dialog to crached when selecting an answer/choice in a dialog that had more answers/choices than the following dialog (notified by Tekiraify).
+- Fixed a bug that made it impossible to disconnect a response in the dialogue editor.
+
+07-11-2020:
+
+Version 1.1c
+- Fixed a bug that caused a command to be duplicated in the "Advanced Text Editor" when editing it with a double click.
+- You can now use sub-folders within the root folders where the dialogues save the sounds, images or text fonts.
+- Fixed a small bug in the dialogue for adding fonts.
+
+06-11-2020:
+
+Version 1.1b
+- Fixed a small visual bug in the color selection dialog.
+- Changed the regular expression used to process text for better accuracy.
+- Fixed the custom effect created when displaying an image with the "character" and "face" command.
+
+05-11-2020:
+
+Version 1.1
+- Fix embedded image command (notified by Citrinu).
+- Add a new parameter to the embedded image command: Offset.
+	Now you can change the vertical position.
+	By default, embedded images in dialogs are aligned with the bottom of the text.
+- Fixed a mislabel in the "show a character name" button in the advanced text editor (notified by Citrinu).
+- Added a new command button to the "Advanced Text Editor" that allows you to create a command to change the current message settings.
+- Update some icons in the "Advance text Editor".
+
+
+21-10-2020:
+
+Release Version 1.0.

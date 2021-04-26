@@ -1,0 +1,59 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://addons/Dialog/ImageButton.gd" type="Script" id=2]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.6, 0.6, 0.6, 0.47451 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 0.996078, 0.996078, 0.996078, 1 )
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[node name="ImageButton" type="Control"]
+margin_right = 40.0
+margin_bottom = 40.0
+hint_tooltip = "Click here to select an image"
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+edge_normal_color = Color( 0.996078, 0.996078, 0.996078, 1 )
+edge_over_color = Color( 0.788235, 0.611765, 0.00784314, 1 )
+background_over_color = Color( 0.941176, 0.764706, 0.764706, 0.47451 )
+
+[node name="Panel" type="PanelContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+custom_styles/panel = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="NinePatchRect" parent="Panel"]
+margin_left = 1.0
+margin_top = 1.0
+margin_right = 39.0
+margin_bottom = 39.0
+rect_min_size = Vector2( 38, 38 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="canvas" type="Control" parent="Panel"]
+visible = false
+margin_left = 1.0
+margin_top = 1.0
+margin_right = 39.0
+margin_bottom = 39.0
+mouse_filter = 2
+[connection signal="draw" from="Panel/canvas" to="." method="_on_canvas_draw"]

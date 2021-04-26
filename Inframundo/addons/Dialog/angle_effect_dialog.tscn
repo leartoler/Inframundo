@@ -1,0 +1,187 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://addons/Dialog/angle_effect_dialog.gd" type="Script" id=1]
+
+[sub_resource type="StyleBoxFlat" id=1]
+content_margin_left = 6.0
+content_margin_right = 6.0
+content_margin_top = 6.0
+content_margin_bottom = 6.0
+bg_color = Color( 0.196078, 0.133333, 0.133333, 1 )
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color( 0, 0, 0, 1 )
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="InputEventKey" id=2]
+scancode = 16777221
+
+[sub_resource type="ShortCut" id=3]
+shortcut = SubResource( 2 )
+
+[node name="angle_effect_dialog" type="Panel"]
+margin_right = 454.0
+margin_bottom = 275.0
+rect_min_size = Vector2( 454, 275 )
+custom_styles/panel = SubResource( 1 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 8.0
+margin_top = 8.0
+margin_right = -8.0
+margin_bottom = -8.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer"]
+margin_right = 438.0
+margin_bottom = 140.0
+rect_min_size = Vector2( 0, 140 )
+mouse_filter = 2
+bbcode_enabled = true
+bbcode_text = "[center][color=red]ANGLE[/color][/center]
+
+Change text angle from one value to another.
+[indent][color=#2df41d]· start value[/color]: Start value for the angle.
+[color=#2df41d]· end value[/color]: End value for the angle.
+[color=#2df41d]· time[/color]: Duration of the effect.
+[color=#2df41d]· loop[/color]: If the loop is 0, when the text reaches the final angle,
+the start and end values are swapped and played infinitely.
+If the loop is greater than 0, it will only play \"loop\" times[/indent]"
+text = "ANGLE
+
+Change text angle from one value to another.
+	· start value: Start value for the angle.
+· end value: End value for the angle.
+· time: Duration of the effect.
+· loop: If the loop is 0, when the text reaches the final angle,
+the start and end values are swapped and played infinitely.
+If the loop is greater than 0, it will only play \"loop\" times"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 144.0
+margin_right = 438.0
+margin_bottom = 168.0
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer"]
+margin_top = 5.0
+margin_right = 72.0
+margin_bottom = 19.0
+rect_min_size = Vector2( 72, 0 )
+custom_colors/font_color = Color( 0.176471, 0.956863, 0.113725, 1 )
+text = "start value:"
+
+[node name="start_value_SpinBox" type="SpinBox" parent="VBoxContainer/HBoxContainer"]
+margin_left = 76.0
+margin_right = 150.0
+margin_bottom = 24.0
+min_value = -1000.0
+step = 0.01
+value = -720.0
+allow_greater = true
+allow_lesser = true
+
+[node name="Label2" type="Label" parent="VBoxContainer/HBoxContainer"]
+margin_left = 154.0
+margin_top = 5.0
+margin_right = 304.0
+margin_bottom = 19.0
+rect_min_size = Vector2( 150, 0 )
+custom_colors/font_color = Color( 0.176471, 0.956863, 0.113725, 1 )
+text = "end value:"
+align = 2
+
+[node name="end_value_SpinBox" type="SpinBox" parent="VBoxContainer/HBoxContainer"]
+margin_left = 308.0
+margin_right = 382.0
+margin_bottom = 24.0
+step = 0.01
+allow_greater = true
+allow_lesser = true
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 172.0
+margin_right = 438.0
+margin_bottom = 196.0
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer2"]
+margin_top = 5.0
+margin_right = 72.0
+margin_bottom = 19.0
+rect_min_size = Vector2( 72, 0 )
+custom_colors/font_color = Color( 0.176471, 0.956863, 0.113725, 1 )
+text = "time:"
+
+[node name="time_SpinBox" type="SpinBox" parent="VBoxContainer/HBoxContainer2"]
+margin_left = 76.0
+margin_right = 150.0
+margin_bottom = 24.0
+min_value = 0.1
+max_value = 1000.0
+step = 0.1
+value = 2.0
+allow_greater = true
+
+[node name="Label2" type="Label" parent="VBoxContainer/HBoxContainer2"]
+margin_left = 154.0
+margin_top = 5.0
+margin_right = 207.0
+margin_bottom = 19.0
+text = "seconds"
+
+[node name="Label3" type="Label" parent="VBoxContainer/HBoxContainer2"]
+margin_left = 211.0
+margin_top = 5.0
+margin_right = 304.0
+margin_bottom = 19.0
+rect_min_size = Vector2( 93, 0 )
+custom_colors/font_color = Color( 0.176471, 0.956863, 0.113725, 1 )
+text = "loop:"
+align = 2
+
+[node name="loop_SpinBox" type="SpinBox" parent="VBoxContainer/HBoxContainer2"]
+margin_left = 308.0
+margin_right = 382.0
+margin_bottom = 24.0
+value = 1.0
+allow_greater = true
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 239.0
+margin_right = 438.0
+margin_bottom = 259.0
+size_flags_vertical = 10
+alignment = 2
+
+[node name="OK_Button" type="Button" parent="VBoxContainer/HBoxContainer3"]
+margin_left = 349.0
+margin_right = 380.0
+margin_bottom = 20.0
+mouse_default_cursor_shape = 2
+size_flags_vertical = 4
+shortcut = SubResource( 3 )
+text = "OK"
+
+[node name="Cancel_Button" type="Button" parent="VBoxContainer/HBoxContainer3"]
+margin_left = 384.0
+margin_right = 438.0
+margin_bottom = 20.0
+mouse_default_cursor_shape = 2
+size_flags_vertical = 4
+text = "Cancel"
+[connection signal="visibility_changed" from="." to="." method="_on_fade_animation_effect_dialog_visibility_changed"]
+[connection signal="button_down" from="VBoxContainer/HBoxContainer3/OK_Button" to="." method="_on_OK_Button_button_down"]
+[connection signal="button_down" from="VBoxContainer/HBoxContainer3/Cancel_Button" to="." method="_on_Cancel_Button_button_down"]
+[connection signal="focus_exited" from="VBoxContainer/HBoxContainer3/Cancel_Button" to="." method="_on_Cancel_Button_focus_exited"]

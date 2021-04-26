@@ -1,0 +1,246 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://addons/Dialog/CustomGraphNode_04.gd" type="Script" id=1]
+[ext_resource path="res://addons/Dialog/Graphics/cancel_button_normal.png" type="Texture" id=3]
+[ext_resource path="res://addons/Dialog/Graphics/cancel_button_over.png" type="Texture" id=4]
+[ext_resource path="res://addons/Dialog/Fonts/KOMIKAX_.ttf" type="DynamicFontData" id=5]
+
+[sub_resource type="StyleBoxFlat" id=1]
+resource_local_to_scene = true
+content_margin_left = 16.0
+content_margin_right = 16.0
+content_margin_top = 2.0
+content_margin_bottom = 15.0
+bg_color = Color( 0, 0, 0, 0.862745 )
+border_width_left = 2
+border_width_top = 35
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0.741176, 0.0156863, 0.678431, 1 )
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+shadow_color = Color( 0, 0, 0, 0.231373 )
+shadow_size = 9
+shadow_offset = Vector2( 10, 10 )
+
+[sub_resource type="DynamicFont" id=2]
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 5 )
+
+[sub_resource type="StyleBoxFlat" id=3]
+content_margin_left = 1.0
+content_margin_right = 1.0
+content_margin_top = 1.0
+content_margin_bottom = 2.0
+bg_color = Color( 0.137255, 0.137255, 0.137255, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 0.952941, 0.588235, 0.0196078, 1 )
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+expand_margin_left = 1.0
+expand_margin_right = 1.0
+expand_margin_top = 1.0
+
+[sub_resource type="StyleBoxFlat" id=4]
+content_margin_left = 1.0
+content_margin_right = 1.0
+content_margin_top = 1.0
+content_margin_bottom = 2.0
+bg_color = Color( 0.137255, 0.137255, 0.137255, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 0.921569, 0.921569, 0.921569, 1 )
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+expand_margin_left = 1.0
+expand_margin_right = 1.0
+expand_margin_top = 1.0
+
+[node name="CustomGraphNode_04" type="PanelContainer"]
+margin_right = 342.0
+margin_bottom = 192.0
+rect_min_size = Vector2( 342, 192 )
+focus_mode = 1
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_styles/panel = SubResource( 1 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+resizable = false
+frame_color = Color( 0.741176, 0.0156863, 0.678431, 1 )
+slots = [ {
+"dot_left_name": "CustomNodeDot2",
+"dot_right_name": "CustomNodeDot2",
+"left_color": Color( 0.741176, 0.0156863, 0.678431, 1 ),
+"left_max_connections": 0,
+"left_offset": Vector2( 0, 20 ),
+"left_show": true,
+"left_type": 1,
+"right_color": Color( 0.741176, 0.0156863, 0.678431, 1 ),
+"right_max_connections": 0,
+"right_offset": Vector2( 0, 20 ),
+"right_show": true,
+"right_type": 1
+} ]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+margin_left = 16.0
+margin_top = 2.0
+margin_right = 326.0
+margin_bottom = 177.0
+mouse_filter = 2
+
+[node name="TopContainer" type="HBoxContainer" parent="VBoxContainer"]
+margin_right = 310.0
+margin_bottom = 35.0
+rect_min_size = Vector2( 180, 35 )
+size_flags_horizontal = 3
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Title" type="Label" parent="VBoxContainer/TopContainer"]
+margin_right = 274.0
+margin_bottom = 28.0
+size_flags_horizontal = 3
+size_flags_vertical = 0
+custom_fonts/font = SubResource( 2 )
+text = "ConDITIONALITY"
+
+[node name="CloseButton" type="TextureButton" parent="VBoxContainer/TopContainer"]
+margin_left = 278.0
+margin_right = 310.0
+margin_bottom = 35.0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource( 3 )
+texture_hover = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="simple_text_label" type="RichTextLabel" parent="VBoxContainer"]
+visible = false
+margin_top = 39.0
+margin_right = 226.0
+margin_bottom = 39.0
+custom_colors/default_color = Color( 0.705882, 0.917647, 0.952941, 0.843137 )
+scroll_active = false
+
+[node name="DotContainerLeft" type="Control" parent="VBoxContainer"]
+margin_top = 39.0
+margin_right = 310.0
+margin_bottom = 39.0
+mouse_filter = 2
+
+[node name="DotContainerRight" type="Control" parent="VBoxContainer"]
+margin_top = 43.0
+margin_right = 310.0
+margin_bottom = 43.0
+mouse_filter = 2
+
+[node name="ContentContainer" type="VBoxContainer" parent="VBoxContainer"]
+margin_top = 47.0
+margin_right = 310.0
+margin_bottom = 125.0
+
+[node name="separator" type="HBoxContainer" parent="VBoxContainer/ContentContainer"]
+margin_right = 310.0
+margin_bottom = 22.0
+rect_min_size = Vector2( 0, 22 )
+alignment = 2
+
+[node name="ColorPickerButton" type="ColorPickerButton" parent="VBoxContainer/ContentContainer/separator"]
+margin_left = 288.0
+margin_right = 310.0
+margin_bottom = 22.0
+rect_min_size = Vector2( 22, 22 )
+hint_tooltip = "Set Color for this node"
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_styles/hover = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
+color = Color( 0.741176, 0.0156863, 0.678431, 1 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/ContentContainer"]
+margin_top = 26.0
+margin_right = 310.0
+margin_bottom = 78.0
+rect_min_size = Vector2( 0, 26 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/ContentContainer/VBoxContainer"]
+margin_right = 310.0
+margin_bottom = 24.0
+
+[node name="SpinBox" type="SpinBox" parent="VBoxContainer/ContentContainer/VBoxContainer/HBoxContainer"]
+margin_right = 74.0
+margin_bottom = 24.0
+hint_tooltip = "When any  message is linked to more than
+one message, this percentage box indicates how
+likely it is that this message will be shown below
+
+If the previous message box is also linked to one or more condition boxes,
+these are evaluated first and if none are satisfied this message box is evaluated"
+value = 100.0
+suffix = "%"
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="NoConditionLabel" type="Label" parent="VBoxContainer/ContentContainer/VBoxContainer/HBoxContainer"]
+margin_left = 78.0
+margin_top = 5.0
+margin_right = 213.0
+margin_bottom = 19.0
+custom_colors/font_color = Color( 1, 0.996078, 0.996078, 0.313726 )
+text = "no condition added..."
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/ContentContainer/VBoxContainer"]
+margin_top = 28.0
+margin_right = 310.0
+margin_bottom = 28.0
+size_flags_vertical = 3
+
+[node name="AddConditionButton" type="Button" parent="VBoxContainer/ContentContainer/VBoxContainer"]
+margin_top = 32.0
+margin_right = 310.0
+margin_bottom = 52.0
+mouse_default_cursor_shape = 2
+text = "Add Condition"
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.02
+one_shot = true
+[connection signal="collapsed" from="." to="." method="_on_CustomGraphNode_collapsed"]
+[connection signal="draw" from="." to="." method="_on_CustomGraphNode_draw"]
+[connection signal="focus_entered" from="." to="." method="_on_CustomGraphNode_focus_entered"]
+[connection signal="gui_input" from="." to="." method="_on_CustomGraphNode_gui_input"]
+[connection signal="item_rect_changed" from="." to="." method="_on_CustomGraphNode_item_rect_changed"]
+[connection signal="tree_entered" from="." to="." method="_on_CustomGraphNode_tree_entered"]
+[connection signal="tree_exiting" from="." to="." method="_on_CustomGraphNode_tree_exiting"]
+[connection signal="button_down" from="VBoxContainer/TopContainer/CloseButton" to="." method="_on_CloseButton_button_down"]
+[connection signal="gui_input" from="VBoxContainer/DotContainerLeft/CustomNodeDot2" to="VBoxContainer/DotContainerLeft/CustomNodeDot2" method="_on_CustomNodeDot_gui_input"]
+[connection signal="mouse_entered" from="VBoxContainer/DotContainerLeft/CustomNodeDot2" to="VBoxContainer/DotContainerLeft/CustomNodeDot2" method="_on_CustomNodeDot_mouse_entered"]
+[connection signal="mouse_exited" from="VBoxContainer/DotContainerLeft/CustomNodeDot2" to="VBoxContainer/DotContainerLeft/CustomNodeDot2" method="_on_CustomNodeDot_mouse_exited"]
+[connection signal="gui_input" from="VBoxContainer/DotContainerRight/CustomNodeDot2" to="VBoxContainer/DotContainerRight/CustomNodeDot2" method="_on_CustomNodeDot_gui_input"]
+[connection signal="mouse_entered" from="VBoxContainer/DotContainerRight/CustomNodeDot2" to="VBoxContainer/DotContainerRight/CustomNodeDot2" method="_on_CustomNodeDot_mouse_entered"]
+[connection signal="mouse_exited" from="VBoxContainer/DotContainerRight/CustomNodeDot2" to="VBoxContainer/DotContainerRight/CustomNodeDot2" method="_on_CustomNodeDot_mouse_exited"]
+[connection signal="color_changed" from="VBoxContainer/ContentContainer/separator/ColorPickerButton" to="." method="set_frame_color"]
+[connection signal="toggled" from="VBoxContainer/ContentContainer/separator/ColorPickerButton" to="." method="_on_ColorPickerButton_toggled"]
+[connection signal="button_down" from="VBoxContainer/ContentContainer/VBoxContainer/AddConditionButton" to="." method="_on_AddConditionButton_button_down"]

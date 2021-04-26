@@ -1,0 +1,139 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://addons/Dialog/ConfirmDialog.gd" type="Script" id=1]
+[ext_resource path="res://addons/Dialog/Graphics/cancel_button_normal.png" type="Texture" id=2]
+[ext_resource path="res://addons/Dialog/Graphics/cancel_button_over.png" type="Texture" id=3]
+[ext_resource path="res://addons/Dialog/Graphics/ok_button_over.png" type="Texture" id=4]
+[ext_resource path="res://addons/Dialog/Graphics/ok_button_normal.png" type="Texture" id=5]
+[ext_resource path="res://addons/Dialog/Graphics/alert_icon.png" type="Texture" id=6]
+
+[sub_resource type="StyleBoxEmpty" id=1]
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.235294, 0.235294, 0.235294, 1 )
+border_width_left = 2
+border_width_top = 7
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0, 0, 0, 1 )
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[node name="ConfirmDialog" type="Panel"]
+margin_top = -1.0
+margin_right = 351.0
+margin_bottom = 144.0
+rect_min_size = Vector2( 0, 122 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/panel = SubResource( 1 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 0, 122 )
+mouse_filter = 2
+custom_styles/panel = SubResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MarginContainer2" type="MarginContainer" parent="PanelContainer"]
+margin_left = 2.0
+margin_top = 7.0
+margin_right = 349.0
+margin_bottom = 161.0
+mouse_filter = 2
+custom_constants/margin_right = 6
+custom_constants/margin_top = 2
+custom_constants/margin_left = 64
+custom_constants/margin_bottom = 39
+
+[node name="BACKGROUND" type="ColorRect" parent="PanelContainer/MarginContainer2"]
+margin_left = 64.0
+margin_top = 2.0
+margin_right = 341.0
+margin_bottom = 115.0
+color = Color( 1, 1, 1, 0.0901961 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer"]
+margin_left = 2.0
+margin_top = 7.0
+margin_right = 349.0
+margin_bottom = 161.0
+mouse_filter = 2
+custom_constants/margin_right = 5
+custom_constants/margin_top = 6
+custom_constants/margin_left = 0
+custom_constants/margin_bottom = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer"]
+margin_top = 6.0
+margin_right = 342.0
+margin_bottom = 150.0
+rect_min_size = Vector2( 0, 86 )
+custom_constants/separation = 7
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer"]
+margin_right = 342.0
+margin_bottom = 105.0
+rect_min_size = Vector2( 0, 105 )
+
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+margin_right = 64.0
+margin_bottom = 105.0
+texture = ExtResource( 6 )
+
+[node name="Label" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+margin_left = 68.0
+margin_right = 298.0
+margin_bottom = 105.0
+rect_min_size = Vector2( 230, 0 )
+mouse_filter = 2
+bbcode_enabled = true
+fit_content_height = true
+
+[node name="VBoxContainer" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer"]
+margin_top = 112.0
+margin_right = 342.0
+margin_bottom = 144.0
+alignment = 2
+
+[node name="TextureButton2" type="TextureButton" parent="PanelContainer/MarginContainer/VBoxContainer/VBoxContainer"]
+margin_left = 274.0
+margin_right = 306.0
+margin_bottom = 32.0
+hint_tooltip = "(Enter) Apply."
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource( 5 )
+texture_hover = ExtResource( 4 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="TextureButton" type="TextureButton" parent="PanelContainer/MarginContainer/VBoxContainer/VBoxContainer"]
+margin_left = 310.0
+margin_right = 342.0
+margin_bottom = 32.0
+hint_tooltip = "(ESC) Cancel."
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture_normal = ExtResource( 2 )
+texture_hover = ExtResource( 3 )
+[connection signal="visibility_changed" from="." to="." method="_on_ConfirmDialog_visibility_changed"]
+[connection signal="item_rect_changed" from="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/Label" to="." method="_on_Label_item_rect_changed"]
+[connection signal="button_down" from="PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/TextureButton2" to="." method="_on_ok_button_down"]
+[connection signal="button_down" from="PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/TextureButton" to="." method="hide"]

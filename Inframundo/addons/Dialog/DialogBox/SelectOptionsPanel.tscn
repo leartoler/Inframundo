@@ -1,0 +1,65 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://addons/Dialog/DialogBox/SimpleTexture.tscn" type="PackedScene" id=2]
+[ext_resource path="res://addons/Dialog/DialogBox/Graphics/default_dialog_background.png" type="Texture" id=3]
+[ext_resource path="res://addons/Dialog/DialogBox/SelectOptionsPanel.gd" type="Script" id=4]
+
+[node name="SelectOptionsPanel" type="NinePatchRect"]
+modulate = Color( 1, 1, 1, 3.36312e-44 )
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -1024.0
+margin_right = -628.0
+margin_bottom = 118.0
+rect_clip_content = true
+texture = ExtResource( 3 )
+patch_margin_left = 18
+patch_margin_top = 6
+patch_margin_right = 16
+patch_margin_bottom = 10
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 6.0
+margin_top = 6.0
+margin_right = -6.0
+margin_bottom = -6.0
+rect_clip_content = true
+custom_constants/margin_right = 0
+custom_constants/margin_top = 0
+custom_constants/margin_left = 0
+custom_constants/margin_bottom = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="OptionsMarginContainer" type="MarginContainer" parent="MarginContainer"]
+margin_right = 384.0
+margin_bottom = 106.0
+rect_clip_content = true
+custom_constants/margin_right = 20
+custom_constants/margin_top = 12
+custom_constants/margin_left = 12
+custom_constants/margin_bottom = -200
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="OptionsContainer" type="VBoxContainer" parent="MarginContainer/OptionsMarginContainer"]
+margin_left = 12.0
+margin_top = 12.0
+margin_right = 364.0
+margin_bottom = 306.0
+rect_clip_content = true
+
+[node name="Cursor" parent="." instance=ExtResource( 2 )]
+visible = true
+
+[node name="PageIndicatorUp" parent="." instance=ExtResource( 2 )]
+
+[node name="PageIndicatorDown" parent="." instance=ExtResource( 2 )]

@@ -1,0 +1,186 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://addons/Dialog/matrix_effect_dialog.gd" type="Script" id=1]
+
+[sub_resource type="StyleBoxFlat" id=1]
+content_margin_left = 6.0
+content_margin_right = 6.0
+content_margin_top = 6.0
+content_margin_bottom = 6.0
+bg_color = Color( 0.196078, 0.133333, 0.133333, 1 )
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color( 0, 0, 0, 1 )
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="InputEventKey" id=2]
+scancode = 16777221
+
+[sub_resource type="ShortCut" id=3]
+shortcut = SubResource( 2 )
+
+[node name="matrix_effect_dialog" type="Panel"]
+margin_left = 36.0
+margin_top = 94.0
+margin_right = 442.0
+margin_bottom = 373.0
+rect_min_size = Vector2( 406, 279 )
+custom_styles/panel = SubResource( 1 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 8.0
+margin_top = 8.0
+margin_right = -8.0
+margin_bottom = -8.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer"]
+margin_right = 390.0
+margin_bottom = 120.0
+rect_min_size = Vector2( 0, 120 )
+mouse_filter = 2
+bbcode_enabled = true
+bbcode_text = "[center][color=red]MATRIX[/color][/center]
+
+Apply the effect of the letters from the matrix movie.
+[indent][color=#2df41d]· clean[/color]: Pause between reps.
+[color=#2df41d]· dirty and span[/color]: Play with these values to get
+		interesting effects on the text.
+[color=#2df41d]· delay[/color]: pause beetween characteres (in seconds)[/indent]"
+text = "MATRIX
+
+Apply the effect of the letters from the matrix movie.
+	· clean: Pause between reps.
+· dirty and span: Play with these values to get
+		interesting effects on the text.
+· delay: pause beetween characteres (in seconds)"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 124.0
+margin_right = 390.0
+margin_bottom = 148.0
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer"]
+margin_top = 5.0
+margin_right = 50.0
+margin_bottom = 19.0
+rect_min_size = Vector2( 50, 0 )
+custom_colors/font_color = Color( 0.176471, 0.956863, 0.113725, 1 )
+text = "clean:"
+
+[node name="clean_SpinBox" type="SpinBox" parent="VBoxContainer/HBoxContainer"]
+margin_left = 54.0
+margin_right = 128.0
+margin_bottom = 24.0
+min_value = -1000.0
+max_value = 1000.0
+step = 0.1
+value = -10.0
+allow_greater = true
+allow_lesser = true
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 152.0
+margin_right = 390.0
+margin_bottom = 176.0
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer2"]
+margin_top = 5.0
+margin_right = 50.0
+margin_bottom = 19.0
+rect_min_size = Vector2( 50, 0 )
+custom_colors/font_color = Color( 0.176471, 0.956863, 0.113725, 1 )
+text = "dirty:"
+
+[node name="dirty_SpinBox" type="SpinBox" parent="VBoxContainer/HBoxContainer2"]
+margin_left = 54.0
+margin_right = 128.0
+margin_bottom = 24.0
+min_value = -1000.0
+max_value = 1000.0
+step = 0.1
+value = 10.0
+allow_greater = true
+allow_lesser = true
+
+[node name="Label2" type="Label" parent="VBoxContainer/HBoxContainer2"]
+margin_left = 132.0
+margin_top = 5.0
+margin_right = 283.0
+margin_bottom = 19.0
+rect_min_size = Vector2( 50, 0 )
+custom_colors/font_color = Color( 0.176471, 0.956863, 0.113725, 1 )
+text = "delay beetween letters:"
+
+[node name="delay_SpinBox" type="SpinBox" parent="VBoxContainer/HBoxContainer2"]
+margin_left = 287.0
+margin_right = 361.0
+margin_bottom = 24.0
+min_value = 0.1
+max_value = 1000.0
+step = 0.01
+value = 0.3
+allow_greater = true
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 180.0
+margin_right = 390.0
+margin_bottom = 204.0
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer3"]
+margin_top = 5.0
+margin_right = 50.0
+margin_bottom = 19.0
+rect_min_size = Vector2( 50, 0 )
+custom_colors/font_color = Color( 0.176471, 0.956863, 0.113725, 1 )
+text = "span:"
+
+[node name="span_SpinBox" type="SpinBox" parent="VBoxContainer/HBoxContainer3"]
+margin_left = 54.0
+margin_right = 128.0
+margin_bottom = 24.0
+min_value = -1000.0
+max_value = 1000.0
+step = 0.1
+value = 100.0
+allow_greater = true
+allow_lesser = true
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 243.0
+margin_right = 390.0
+margin_bottom = 263.0
+size_flags_vertical = 10
+alignment = 2
+
+[node name="OK_Button" type="Button" parent="VBoxContainer/HBoxContainer4"]
+margin_left = 301.0
+margin_right = 332.0
+margin_bottom = 20.0
+mouse_default_cursor_shape = 2
+shortcut = SubResource( 3 )
+text = "OK"
+
+[node name="Cancel_Button" type="Button" parent="VBoxContainer/HBoxContainer4"]
+margin_left = 336.0
+margin_right = 390.0
+margin_bottom = 20.0
+mouse_default_cursor_shape = 2
+text = "Cancel"
+[connection signal="visibility_changed" from="." to="." method="_on_matrix_effect_dialog_visibility_changed"]
+[connection signal="button_down" from="VBoxContainer/HBoxContainer4/OK_Button" to="." method="_on_OK_Button_button_down"]
+[connection signal="button_down" from="VBoxContainer/HBoxContainer4/Cancel_Button" to="." method="_on_Cancel_Button_button_down"]
+[connection signal="focus_exited" from="VBoxContainer/HBoxContainer4/Cancel_Button" to="." method="_on_Cancel_Button_focus_exited"]

@@ -1,0 +1,141 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://addons/Dialog/play_sound_dialog.gd" type="Script" id=1]
+[ext_resource path="res://addons/Dialog/Graphics/play_forward_button_normal.png" type="Texture" id=2]
+[ext_resource path="res://addons/Dialog/Graphics/play_forward_button_over.png" type="Texture" id=3]
+
+[sub_resource type="StyleBoxFlat" id=1]
+content_margin_left = 6.0
+content_margin_right = 6.0
+content_margin_top = 6.0
+content_margin_bottom = 6.0
+bg_color = Color( 0.196078, 0.133333, 0.133333, 1 )
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color( 0, 0, 0, 1 )
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="InputEventKey" id=2]
+scancode = 16777221
+
+[sub_resource type="ShortCut" id=3]
+shortcut = SubResource( 2 )
+
+[node name="play_sound_dialog" type="Panel"]
+margin_left = 36.0
+margin_top = 94.0
+margin_right = 364.0
+margin_bottom = 242.0
+rect_min_size = Vector2( 328, 148 )
+custom_styles/panel = SubResource( 1 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 8.0
+margin_top = 8.0
+margin_right = -8.0
+margin_bottom = -8.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer"]
+margin_right = 312.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 0, 20 )
+mouse_filter = 2
+bbcode_enabled = true
+bbcode_text = "[center][color=red]PLAY A SOUND[/color][/center]"
+text = "PLAY A SOUND"
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+margin_top = 24.0
+margin_right = 312.0
+margin_bottom = 38.0
+rect_min_size = Vector2( 50, 0 )
+custom_colors/font_color = Color( 0.176471, 0.956863, 0.113725, 1 )
+text = "Sound:"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 42.0
+margin_right = 312.0
+margin_bottom = 74.0
+
+[node name="Button" type="Button" parent="VBoxContainer/HBoxContainer"]
+margin_top = 6.0
+margin_right = 120.0
+margin_bottom = 26.0
+mouse_default_cursor_shape = 2
+size_flags_vertical = 4
+text = "Search a sound..."
+
+[node name="OptionButton" type="OptionButton" parent="VBoxContainer/HBoxContainer"]
+margin_left = 124.0
+margin_top = 6.0
+margin_right = 276.0
+margin_bottom = 26.0
+rect_clip_content = true
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+text = "last used..."
+
+[node name="TextureButton" type="TextureButton" parent="VBoxContainer/HBoxContainer"]
+margin_left = 280.0
+margin_right = 312.0
+margin_bottom = 32.0
+hint_tooltip = "Play the sound loaded"
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource( 2 )
+texture_hover = ExtResource( 3 )
+
+[node name="LineEdit" type="LineEdit" parent="VBoxContainer"]
+margin_top = 78.0
+margin_right = 312.0
+margin_bottom = 102.0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+editable = false
+placeholder_text = "no sound loaded..."
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 112.0
+margin_right = 312.0
+margin_bottom = 132.0
+size_flags_vertical = 10
+alignment = 2
+
+[node name="OK_Button" type="Button" parent="VBoxContainer/HBoxContainer3"]
+margin_left = 223.0
+margin_right = 254.0
+margin_bottom = 20.0
+mouse_default_cursor_shape = 2
+shortcut = SubResource( 3 )
+text = "OK"
+
+[node name="Cancel_Button" type="Button" parent="VBoxContainer/HBoxContainer3"]
+margin_left = 258.0
+margin_right = 312.0
+margin_bottom = 20.0
+mouse_default_cursor_shape = 2
+text = "Cancel"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[connection signal="visibility_changed" from="." to="." method="_on_play_sound_dialog_visibility_changed"]
+[connection signal="button_down" from="VBoxContainer/HBoxContainer/Button" to="." method="_on_Button_button_down"]
+[connection signal="item_selected" from="VBoxContainer/HBoxContainer/OptionButton" to="." method="_on_OptionButton_item_selected"]
+[connection signal="button_down" from="VBoxContainer/HBoxContainer/TextureButton" to="." method="_on_TextureButton_button_down"]
+[connection signal="gui_input" from="VBoxContainer/LineEdit" to="." method="_on_LineEdit_gui_input"]
+[connection signal="button_down" from="VBoxContainer/HBoxContainer3/OK_Button" to="." method="_on_OK_Button_button_down"]
+[connection signal="button_down" from="VBoxContainer/HBoxContainer3/Cancel_Button" to="." method="_on_Cancel_Button_button_down"]
+[connection signal="finished" from="AudioStreamPlayer" to="." method="_on_AudioStreamPlayer_finished"]

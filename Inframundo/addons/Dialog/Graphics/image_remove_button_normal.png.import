@@ -1,0 +1,34 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/image_remove_button_normal.png-7749d824b120f80fd1ae6a576762eebc.stex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://addons/Dialog/Graphics/image_remove_button_normal.png"
+dest_files=[ "res://.import/image_remove_button_normal.png-7749d824b120f80fd1ae6a576762eebc.stex" ]
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/bptc_ldr=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+process/invert_color=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

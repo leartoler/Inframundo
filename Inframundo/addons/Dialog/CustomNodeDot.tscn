@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://addons/Dialog/CustomNodeDot.gd" type="Script" id=1]
+[ext_resource path="res://addons/Dialog/Graphics/graphedit_dot_over.png" type="Texture" id=2]
+[ext_resource path="res://addons/Dialog/Graphics/graphedit_dot.png" type="Texture" id=3]
+[ext_resource path="res://addons/Dialog/Graphics/graphedit_dot_bitmap.png" type="BitMap" id=4]
+
+[node name="CustomNodeDot" type="TextureButton"]
+margin_left = -13.0
+margin_top = -13.0
+margin_right = 20.0
+margin_bottom = 20.0
+rect_pivot_offset = Vector2( 13, 13 )
+focus_mode = 0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource( 3 )
+texture_hover = ExtResource( 2 )
+texture_click_mask = ExtResource( 4 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="gui_input" from="." to="." method="_on_CustomNodeDot_gui_input"]
+[connection signal="mouse_entered" from="." to="." method="_on_CustomNodeDot_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_CustomNodeDot_mouse_exited"]

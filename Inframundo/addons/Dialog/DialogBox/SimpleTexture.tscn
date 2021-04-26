@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://addons/Dialog/DialogBox/SimpleTexture.gd" type="Script" id=1]
+
+[node name="SimpleTexture" type="Sprite"]
+visible = false
+region_enabled = true
+script = ExtResource( 1 )

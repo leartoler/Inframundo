@@ -1,0 +1,754 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://addons/Dialog/image_effects_dialog.gd" type="Script" id=1]
+
+[sub_resource type="StyleBoxFlat" id=1]
+content_margin_left = 6.0
+content_margin_right = 6.0
+content_margin_top = 6.0
+content_margin_bottom = 6.0
+bg_color = Color( 0.196078, 0.133333, 0.133333, 1 )
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color( 0, 0, 0, 1 )
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.141176, 0.588235, 0.796078, 0.0745098 )
+border_width_left = 1
+border_width_top = 18
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 0, 0, 0, 1 )
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="InputEventKey" id=3]
+scancode = 16777221
+
+[sub_resource type="ShortCut" id=4]
+shortcut = SubResource( 3 )
+
+[node name="image_effects_dialog" type="Panel"]
+margin_right = 532.0
+margin_bottom = 263.0
+rect_min_size = Vector2( 532, 263 )
+custom_styles/panel = SubResource( 1 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 8.0
+margin_top = 8.0
+margin_right = -8.0
+margin_bottom = -8.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer"]
+margin_right = 516.0
+margin_bottom = 26.0
+rect_min_size = Vector2( 0, 26 )
+mouse_filter = 2
+bbcode_enabled = true
+bbcode_text = "[center][color=red]IMAGE EFFECTS[/color][/center]"
+text = "IMAGE EFFECTS"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 30.0
+margin_right = 516.0
+margin_bottom = 54.0
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer"]
+margin_top = 5.0
+margin_right = 50.0
+margin_bottom = 19.0
+rect_min_size = Vector2( 50, 0 )
+custom_colors/font_color = Color( 0.176471, 0.956863, 0.113725, 1 )
+text = "Type:"
+
+[node name="OptionButton" type="OptionButton" parent="VBoxContainer/HBoxContainer"]
+margin_left = 54.0
+margin_top = 2.0
+margin_right = 169.0
+margin_bottom = 22.0
+rect_min_size = Vector2( 115, 0 )
+mouse_default_cursor_shape = 2
+size_flags_vertical = 4
+text = "Face"
+items = [ "Face", null, false, 0, null, "Full character", null, false, 1, null, "Message Box", null, false, 2, null ]
+selected = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/HBoxContainer"]
+visible = false
+margin_left = 173.0
+margin_right = 294.0
+margin_bottom = 24.0
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/HBoxContainer"]
+margin_top = 5.0
+margin_right = 43.0
+margin_bottom = 19.0
+custom_colors/font_color = Color( 0.176471, 0.956863, 0.113725, 1 )
+text = "      ID:"
+
+[node name="SpinBox" type="SpinBox" parent="VBoxContainer/HBoxContainer/HBoxContainer"]
+margin_left = 47.0
+margin_right = 121.0
+margin_bottom = 24.0
+hint_tooltip = "The ID of the \"full character\" image to
+which the effect is to be applied."
+size_flags_vertical = 4
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer/HBoxContainer"]
+margin_left = 173.0
+margin_right = 328.0
+margin_bottom = 24.0
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/HBoxContainer2"]
+margin_top = 5.0
+margin_right = 127.0
+margin_bottom = 19.0
+custom_colors/font_color = Color( 0.176471, 0.956863, 0.113725, 1 )
+text = "    Pause while run?:"
+
+[node name="CheckBox" type="CheckBox" parent="VBoxContainer/HBoxContainer/HBoxContainer2"]
+margin_left = 131.0
+margin_right = 155.0
+margin_bottom = 24.0
+hint_tooltip = "Pause the message text flow while this effect is running"
+mouse_default_cursor_shape = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 58.0
+margin_right = 516.0
+margin_bottom = 88.0
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer2"]
+margin_right = 50.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 50, 30 )
+custom_colors/font_color = Color( 0.176471, 0.956863, 0.113725, 1 )
+text = "Effect:"
+valign = 1
+
+[node name="OptionButton" type="OptionButton" parent="VBoxContainer/HBoxContainer2"]
+margin_left = 54.0
+margin_top = 5.0
+margin_right = 254.0
+margin_bottom = 25.0
+rect_min_size = Vector2( 200, 0 )
+hint_tooltip = "Select an effect.
+
+Start values of the effects will be the current values of the selected object"
+mouse_default_cursor_shape = 2
+size_flags_vertical = 4
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/HBoxContainer2"]
+visible = false
+margin_left = 258.0
+margin_right = 456.0
+margin_bottom = 30.0
+
+[node name="label" type="Label" parent="VBoxContainer/HBoxContainer2/HBoxContainer"]
+margin_right = 59.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 50, 30 )
+custom_colors/font_color = Color( 0.176471, 0.956863, 0.113725, 1 )
+text = "Duration:"
+valign = 1
+
+[node name="SpinBox" type="SpinBox" parent="VBoxContainer/HBoxContainer2/HBoxContainer"]
+margin_left = 63.0
+margin_right = 137.0
+margin_bottom = 30.0
+min_value = 0.01
+step = 0.01
+value = 0.15
+allow_greater = true
+
+[node name="label2" type="Label" parent="VBoxContainer/HBoxContainer2/HBoxContainer"]
+margin_left = 141.0
+margin_right = 198.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 50, 30 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "seconds:"
+valign = 1
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer/HBoxContainer2"]
+visible = false
+margin_left = 258.0
+margin_right = 447.0
+margin_bottom = 30.0
+
+[node name="label" type="Label" parent="VBoxContainer/HBoxContainer2/HBoxContainer2"]
+margin_right = 50.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 50, 30 )
+custom_colors/font_color = Color( 0.176471, 0.956863, 0.113725, 1 )
+text = "Delay:"
+align = 2
+valign = 1
+
+[node name="SpinBox" type="SpinBox" parent="VBoxContainer/HBoxContainer2/HBoxContainer2"]
+margin_left = 54.0
+margin_right = 128.0
+margin_bottom = 30.0
+hint_tooltip = "Wait N Seconds before play this effect"
+step = 0.01
+allow_greater = true
+
+[node name="label2" type="Label" parent="VBoxContainer/HBoxContainer2/HBoxContainer2"]
+margin_left = 132.0
+margin_right = 189.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 50, 30 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "seconds:"
+valign = 1
+
+[node name="Panel" type="Panel" parent="VBoxContainer"]
+margin_top = 92.0
+margin_right = 516.0
+margin_bottom = 202.0
+rect_min_size = Vector2( 0, 110 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="Label" type="Label" parent="VBoxContainer/Panel"]
+margin_left = 5.0
+margin_top = 4.0
+margin_right = 408.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 50, 20 )
+custom_colors/font_color = Color( 0.113725, 0.929412, 0.956863, 1 )
+text = "Effect Configuration:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer4" type="VBoxContainer" parent="VBoxContainer/Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 10.0
+margin_top = 23.0
+margin_right = -10.0
+margin_bottom = -5.0
+rect_min_size = Vector2( 0, 52 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="shake_config" type="VBoxContainer" parent="VBoxContainer/Panel/HBoxContainer4"]
+visible = false
+margin_right = 452.0
+margin_bottom = 52.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/Panel/HBoxContainer4/shake_config"]
+margin_right = 452.0
+margin_bottom = 24.0
+
+[node name="label" type="Label" parent="VBoxContainer/Panel/HBoxContainer4/shake_config/HBoxContainer"]
+margin_top = 5.0
+margin_right = 60.0
+margin_bottom = 19.0
+rect_min_size = Vector2( 60, 0 )
+custom_colors/font_color = Color( 0.176471, 0.956863, 0.113725, 1 )
+text = "Rate:"
+valign = 1
+
+[node name="SpinBox" type="SpinBox" parent="VBoxContainer/Panel/HBoxContainer4/shake_config/HBoxContainer"]
+margin_left = 64.0
+margin_right = 138.0
+margin_bottom = 24.0
+hint_tooltip = "Controls how fast the image shakes."
+step = 0.1
+value = 0.1
+allow_greater = true
+allow_lesser = true
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer/Panel/HBoxContainer4/shake_config"]
+margin_top = 28.0
+margin_right = 452.0
+margin_bottom = 52.0
+
+[node name="label" type="Label" parent="VBoxContainer/Panel/HBoxContainer4/shake_config/HBoxContainer2"]
+margin_top = 5.0
+margin_right = 60.0
+margin_bottom = 19.0
+rect_min_size = Vector2( 60, 0 )
+custom_colors/font_color = Color( 0.176471, 0.956863, 0.113725, 1 )
+text = "Level:"
+valign = 1
+
+[node name="SpinBox" type="SpinBox" parent="VBoxContainer/Panel/HBoxContainer4/shake_config/HBoxContainer2"]
+margin_left = 64.0
+margin_right = 138.0
+margin_bottom = 24.0
+hint_tooltip = "Controls how far the image is offset from the origin."
+step = 0.1
+value = 0.2
+allow_greater = true
+allow_lesser = true
+
+[node name="opacity_config" type="VBoxContainer" parent="VBoxContainer/Panel/HBoxContainer4"]
+visible = false
+margin_right = 452.0
+margin_bottom = 44.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/Panel/HBoxContainer4/opacity_config"]
+margin_right = 452.0
+margin_bottom = 16.0
+
+[node name="label" type="Label" parent="VBoxContainer/Panel/HBoxContainer4/opacity_config/HBoxContainer"]
+margin_top = 1.0
+margin_right = 60.0
+margin_bottom = 15.0
+rect_min_size = Vector2( 60, 0 )
+custom_colors/font_color = Color( 0.176471, 0.956863, 0.113725, 1 )
+text = "Opacity:"
+valign = 1
+
+[node name="HSlider" type="HSlider" parent="VBoxContainer/Panel/HBoxContainer4/opacity_config/HBoxContainer"]
+margin_left = 64.0
+margin_right = 304.0
+margin_bottom = 16.0
+rect_min_size = Vector2( 240, 0 )
+mouse_default_cursor_shape = 2
+value = 100.0
+
+[node name="Label" type="Label" parent="VBoxContainer/Panel/HBoxContainer4/opacity_config/HBoxContainer"]
+margin_left = 308.0
+margin_top = 1.0
+margin_right = 348.0
+margin_bottom = 15.0
+text = "100 %"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer/Panel/HBoxContainer4/opacity_config"]
+margin_top = 20.0
+margin_right = 452.0
+margin_bottom = 44.0
+
+[node name="label" type="Label" parent="VBoxContainer/Panel/HBoxContainer4/opacity_config/HBoxContainer2"]
+margin_top = 5.0
+margin_right = 60.0
+margin_bottom = 19.0
+rect_min_size = Vector2( 60, 0 )
+custom_colors/font_color = Color( 0.176471, 0.956863, 0.113725, 1 )
+text = "mode:"
+valign = 1
+
+[node name="OptionButton" type="OptionButton" parent="VBoxContainer/Panel/HBoxContainer4/opacity_config/HBoxContainer2"]
+margin_left = 64.0
+margin_right = 214.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 150, 0 )
+hint_tooltip = "Select the behavior of the effect between
+instantaneous and animated in time"
+mouse_default_cursor_shape = 2
+text = "Instant"
+items = [ "Instant", null, false, 0, null, "Animate over time", null, false, 1, null ]
+selected = 0
+
+[node name="SpinBox" type="SpinBox" parent="VBoxContainer/Panel/HBoxContainer4/opacity_config/HBoxContainer2"]
+margin_left = 218.0
+margin_right = 292.0
+margin_bottom = 24.0
+hint_tooltip = "Length of animation in seconds"
+min_value = 0.1
+step = 0.1
+value = 0.2
+allow_greater = true
+editable = false
+
+[node name="Label" type="Label" parent="VBoxContainer/Panel/HBoxContainer4/opacity_config/HBoxContainer2"]
+margin_left = 296.0
+margin_top = 5.0
+margin_right = 349.0
+margin_bottom = 19.0
+text = "seconds"
+
+[node name="color_config" type="VBoxContainer" parent="VBoxContainer/Panel/HBoxContainer4"]
+visible = false
+margin_right = 453.0
+margin_bottom = 50.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/Panel/HBoxContainer4/color_config"]
+margin_right = 453.0
+margin_bottom = 50.0
+
+[node name="label" type="Label" parent="VBoxContainer/Panel/HBoxContainer4/color_config/HBoxContainer"]
+margin_right = 37.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 0, 50 )
+custom_colors/font_color = Color( 0.176471, 0.956863, 0.113725, 1 )
+text = "Color:"
+valign = 1
+
+[node name="ColorPickerButton" type="ColorPickerButton" parent="VBoxContainer/Panel/HBoxContainer4/color_config/HBoxContainer"]
+margin_left = 41.0
+margin_right = 101.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 60, 0 )
+hint_tooltip = "Select a modulate color"
+mouse_default_cursor_shape = 2
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="VBoxContainer/Panel/HBoxContainer4/color_config/HBoxContainer"]
+margin_left = 105.0
+margin_right = 435.0
+margin_bottom = 50.0
+
+[node name="label" type="Label" parent="VBoxContainer/Panel/HBoxContainer4/color_config/HBoxContainer/HBoxContainer3"]
+margin_top = 18.0
+margin_right = 41.0
+margin_bottom = 32.0
+custom_colors/font_color = Color( 0.176471, 0.956863, 0.113725, 1 )
+text = "mode:"
+valign = 1
+
+[node name="OptionButton" type="OptionButton" parent="VBoxContainer/Panel/HBoxContainer4/color_config/HBoxContainer/HBoxContainer3"]
+margin_left = 45.0
+margin_top = 15.0
+margin_right = 195.0
+margin_bottom = 35.0
+rect_min_size = Vector2( 150, 0 )
+hint_tooltip = "Select the behavior of the effect between
+instantaneous and animated in time"
+mouse_default_cursor_shape = 2
+size_flags_vertical = 4
+text = "Instant"
+items = [ "Instant", null, false, 0, null, "Animate over time", null, false, 1, null ]
+selected = 0
+
+[node name="SpinBox" type="SpinBox" parent="VBoxContainer/Panel/HBoxContainer4/color_config/HBoxContainer/HBoxContainer3"]
+margin_left = 199.0
+margin_top = 13.0
+margin_right = 273.0
+margin_bottom = 37.0
+hint_tooltip = "Length of animation in seconds"
+size_flags_vertical = 4
+min_value = 0.1
+step = 0.1
+value = 0.2
+allow_greater = true
+editable = false
+
+[node name="Label" type="Label" parent="VBoxContainer/Panel/HBoxContainer4/color_config/HBoxContainer/HBoxContainer3"]
+margin_left = 277.0
+margin_top = 18.0
+margin_right = 330.0
+margin_bottom = 32.0
+text = "seconds"
+
+[node name="movement_config" type="VBoxContainer" parent="VBoxContainer/Panel/HBoxContainer4"]
+visible = false
+margin_right = 453.0
+margin_bottom = 52.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/Panel/HBoxContainer4/movement_config"]
+margin_right = 453.0
+margin_bottom = 24.0
+
+[node name="label" type="Label" parent="VBoxContainer/Panel/HBoxContainer4/movement_config/HBoxContainer"]
+margin_top = 5.0
+margin_right = 105.0
+margin_bottom = 19.0
+rect_min_size = Vector2( 60, 0 )
+custom_colors/font_color = Color( 0.176471, 0.956863, 0.113725, 1 )
+text = "Movement in  X:"
+valign = 1
+
+[node name="SpinBox" type="SpinBox" parent="VBoxContainer/Panel/HBoxContainer4/movement_config/HBoxContainer"]
+margin_left = 109.0
+margin_right = 183.0
+margin_bottom = 24.0
+hint_tooltip = "Displacement in X"
+allow_greater = true
+allow_lesser = true
+
+[node name="Label" type="Label" parent="VBoxContainer/Panel/HBoxContainer4/movement_config/HBoxContainer"]
+margin_left = 187.0
+margin_top = 5.0
+margin_right = 225.0
+margin_bottom = 19.0
+text = "pixels"
+
+[node name="label2" type="Label" parent="VBoxContainer/Panel/HBoxContainer4/movement_config/HBoxContainer"]
+margin_left = 229.0
+margin_top = 5.0
+margin_right = 333.0
+margin_bottom = 19.0
+rect_min_size = Vector2( 60, 0 )
+custom_colors/font_color = Color( 0.176471, 0.956863, 0.113725, 1 )
+text = "Movement in  Y:"
+valign = 1
+
+[node name="SpinBox2" type="SpinBox" parent="VBoxContainer/Panel/HBoxContainer4/movement_config/HBoxContainer"]
+margin_left = 337.0
+margin_right = 411.0
+margin_bottom = 24.0
+hint_tooltip = "Displacement in Y"
+allow_greater = true
+allow_lesser = true
+
+[node name="Label2" type="Label" parent="VBoxContainer/Panel/HBoxContainer4/movement_config/HBoxContainer"]
+margin_left = 415.0
+margin_top = 5.0
+margin_right = 453.0
+margin_bottom = 19.0
+text = "pixels"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer/Panel/HBoxContainer4/movement_config"]
+margin_top = 28.0
+margin_right = 453.0
+margin_bottom = 52.0
+
+[node name="label" type="Label" parent="VBoxContainer/Panel/HBoxContainer4/movement_config/HBoxContainer2"]
+margin_top = 5.0
+margin_right = 60.0
+margin_bottom = 19.0
+rect_min_size = Vector2( 60, 0 )
+custom_colors/font_color = Color( 0.176471, 0.956863, 0.113725, 1 )
+text = "mode:"
+valign = 1
+
+[node name="OptionButton" type="OptionButton" parent="VBoxContainer/Panel/HBoxContainer4/movement_config/HBoxContainer2"]
+margin_left = 64.0
+margin_right = 214.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 150, 0 )
+hint_tooltip = "Select the behavior of the effect between
+instantaneous and animated in time"
+mouse_default_cursor_shape = 2
+text = "Instant"
+items = [ "Instant", null, false, 0, null, "Animate over time", null, false, 1, null ]
+selected = 0
+
+[node name="SpinBox" type="SpinBox" parent="VBoxContainer/Panel/HBoxContainer4/movement_config/HBoxContainer2"]
+margin_left = 218.0
+margin_right = 292.0
+margin_bottom = 24.0
+hint_tooltip = "Length of animation in seconds"
+min_value = 0.1
+step = 0.1
+value = 0.2
+allow_greater = true
+editable = false
+
+[node name="Label" type="Label" parent="VBoxContainer/Panel/HBoxContainer4/movement_config/HBoxContainer2"]
+margin_left = 296.0
+margin_top = 5.0
+margin_right = 349.0
+margin_bottom = 19.0
+text = "seconds"
+
+[node name="zoom_config" type="VBoxContainer" parent="VBoxContainer/Panel/HBoxContainer4"]
+visible = false
+margin_right = 453.0
+margin_bottom = 52.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/Panel/HBoxContainer4/zoom_config"]
+margin_right = 453.0
+margin_bottom = 24.0
+
+[node name="label" type="Label" parent="VBoxContainer/Panel/HBoxContainer4/zoom_config/HBoxContainer"]
+margin_top = 5.0
+margin_right = 68.0
+margin_bottom = 19.0
+rect_min_size = Vector2( 60, 0 )
+custom_colors/font_color = Color( 0.176471, 0.956863, 0.113725, 1 )
+text = "zoom in X:"
+valign = 1
+
+[node name="SpinBox" type="SpinBox" parent="VBoxContainer/Panel/HBoxContainer4/zoom_config/HBoxContainer"]
+margin_left = 72.0
+margin_right = 146.0
+margin_bottom = 24.0
+hint_tooltip = "Transform the current zoom X in a new Zoom X"
+step = 0.01
+value = 1.0
+allow_greater = true
+allow_lesser = true
+
+[node name="label2" type="Label" parent="VBoxContainer/Panel/HBoxContainer4/zoom_config/HBoxContainer"]
+margin_left = 150.0
+margin_top = 5.0
+margin_right = 218.0
+margin_bottom = 19.0
+rect_min_size = Vector2( 60, 0 )
+custom_colors/font_color = Color( 0.176471, 0.956863, 0.113725, 1 )
+text = "Zoom in Y:"
+valign = 1
+
+[node name="SpinBox2" type="SpinBox" parent="VBoxContainer/Panel/HBoxContainer4/zoom_config/HBoxContainer"]
+margin_left = 222.0
+margin_right = 296.0
+margin_bottom = 24.0
+hint_tooltip = "Transform the current zoom Y in a new Zoom Y"
+step = 0.01
+value = 1.0
+allow_greater = true
+allow_lesser = true
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer/Panel/HBoxContainer4/zoom_config"]
+margin_top = 28.0
+margin_right = 453.0
+margin_bottom = 52.0
+
+[node name="label" type="Label" parent="VBoxContainer/Panel/HBoxContainer4/zoom_config/HBoxContainer2"]
+margin_top = 5.0
+margin_right = 60.0
+margin_bottom = 19.0
+rect_min_size = Vector2( 60, 0 )
+custom_colors/font_color = Color( 0.176471, 0.956863, 0.113725, 1 )
+text = "mode:"
+valign = 1
+
+[node name="OptionButton" type="OptionButton" parent="VBoxContainer/Panel/HBoxContainer4/zoom_config/HBoxContainer2"]
+margin_left = 64.0
+margin_right = 214.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 150, 0 )
+hint_tooltip = "Select the behavior of the effect between
+instantaneous and animated in time"
+mouse_default_cursor_shape = 2
+text = "Instant"
+items = [ "Instant", null, false, 0, null, "Animate over time", null, false, 1, null ]
+selected = 0
+
+[node name="SpinBox" type="SpinBox" parent="VBoxContainer/Panel/HBoxContainer4/zoom_config/HBoxContainer2"]
+margin_left = 218.0
+margin_right = 292.0
+margin_bottom = 24.0
+hint_tooltip = "Length of animation in seconds"
+min_value = 0.1
+step = 0.1
+value = 0.2
+allow_greater = true
+editable = false
+
+[node name="Label" type="Label" parent="VBoxContainer/Panel/HBoxContainer4/zoom_config/HBoxContainer2"]
+margin_left = 296.0
+margin_top = 5.0
+margin_right = 349.0
+margin_bottom = 19.0
+text = "seconds"
+
+[node name="rotate_config" type="VBoxContainer" parent="VBoxContainer/Panel/HBoxContainer4"]
+margin_right = 496.0
+margin_bottom = 52.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/Panel/HBoxContainer4/rotate_config"]
+margin_right = 496.0
+margin_bottom = 24.0
+
+[node name="label" type="Label" parent="VBoxContainer/Panel/HBoxContainer4/rotate_config/HBoxContainer"]
+margin_top = 5.0
+margin_right = 60.0
+margin_bottom = 19.0
+rect_min_size = Vector2( 60, 0 )
+custom_colors/font_color = Color( 0.176471, 0.956863, 0.113725, 1 )
+text = "rotate by"
+valign = 1
+
+[node name="SpinBox" type="SpinBox" parent="VBoxContainer/Panel/HBoxContainer4/rotate_config/HBoxContainer"]
+margin_left = 64.0
+margin_right = 138.0
+margin_bottom = 24.0
+hint_tooltip = "Rotate image form current angle to a new angle (in degrees)"
+step = 0.5
+allow_greater = true
+allow_lesser = true
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer/Panel/HBoxContainer4/rotate_config"]
+margin_top = 28.0
+margin_right = 496.0
+margin_bottom = 52.0
+
+[node name="label" type="Label" parent="VBoxContainer/Panel/HBoxContainer4/rotate_config/HBoxContainer2"]
+margin_top = 5.0
+margin_right = 60.0
+margin_bottom = 19.0
+rect_min_size = Vector2( 60, 0 )
+custom_colors/font_color = Color( 0.176471, 0.956863, 0.113725, 1 )
+text = "mode:"
+valign = 1
+
+[node name="OptionButton" type="OptionButton" parent="VBoxContainer/Panel/HBoxContainer4/rotate_config/HBoxContainer2"]
+margin_left = 64.0
+margin_right = 214.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 150, 0 )
+hint_tooltip = "Select the behavior of the effect between
+instantaneous and animated in time"
+mouse_default_cursor_shape = 2
+text = "Instant"
+items = [ "Instant", null, false, 0, null, "Animate over time", null, false, 1, null ]
+selected = 0
+
+[node name="SpinBox" type="SpinBox" parent="VBoxContainer/Panel/HBoxContainer4/rotate_config/HBoxContainer2"]
+margin_left = 218.0
+margin_right = 292.0
+margin_bottom = 24.0
+hint_tooltip = "Length of animation in seconds"
+min_value = 0.1
+step = 0.1
+value = 0.2
+allow_greater = true
+editable = false
+
+[node name="Label" type="Label" parent="VBoxContainer/Panel/HBoxContainer4/rotate_config/HBoxContainer2"]
+margin_left = 296.0
+margin_top = 5.0
+margin_right = 349.0
+margin_bottom = 19.0
+text = "seconds"
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 221.0
+margin_right = 516.0
+margin_bottom = 247.0
+rect_min_size = Vector2( 0, 26 )
+size_flags_vertical = 10
+alignment = 2
+
+[node name="OK_Button" type="Button" parent="VBoxContainer/HBoxContainer3"]
+margin_left = 427.0
+margin_top = 3.0
+margin_right = 458.0
+margin_bottom = 23.0
+mouse_default_cursor_shape = 2
+size_flags_vertical = 4
+shortcut = SubResource( 4 )
+text = "OK"
+
+[node name="Cancel_Button" type="Button" parent="VBoxContainer/HBoxContainer3"]
+margin_left = 462.0
+margin_top = 3.0
+margin_right = 516.0
+margin_bottom = 23.0
+mouse_default_cursor_shape = 2
+size_flags_vertical = 4
+text = "Cancel"
+[connection signal="item_selected" from="VBoxContainer/HBoxContainer/OptionButton" to="." method="_on_type_OptionButton_item_selected"]
+[connection signal="item_selected" from="VBoxContainer/HBoxContainer2/OptionButton" to="." method="_on_OptionButton_item_selected"]
+[connection signal="value_changed" from="VBoxContainer/Panel/HBoxContainer4/opacity_config/HBoxContainer/HSlider" to="." method="_on_HSlider_value_changed"]
+[connection signal="item_selected" from="VBoxContainer/Panel/HBoxContainer4/opacity_config/HBoxContainer2/OptionButton" to="." method="_on_opacity_OptionButton_item_selected"]
+[connection signal="item_selected" from="VBoxContainer/Panel/HBoxContainer4/color_config/HBoxContainer/HBoxContainer3/OptionButton" to="." method="_on_color_OptionButton_item_selected"]
+[connection signal="item_selected" from="VBoxContainer/Panel/HBoxContainer4/movement_config/HBoxContainer2/OptionButton" to="." method="_on_movement_OptionButton_item_selected"]
+[connection signal="item_selected" from="VBoxContainer/Panel/HBoxContainer4/zoom_config/HBoxContainer2/OptionButton" to="." method="_on_zoom_OptionButton_item_selected"]
+[connection signal="item_selected" from="VBoxContainer/Panel/HBoxContainer4/rotate_config/HBoxContainer2/OptionButton" to="." method="_on_rotate_OptionButton_item_selected"]
+[connection signal="button_down" from="VBoxContainer/HBoxContainer3/OK_Button" to="." method="_on_OK_Button_button_down"]
+[connection signal="button_down" from="VBoxContainer/HBoxContainer3/Cancel_Button" to="." method="_on_Cancel_Button_button_down"]

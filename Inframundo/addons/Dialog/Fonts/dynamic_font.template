@@ -1,0 +1,15 @@
+[gd_resource type="DynamicFont" load_steps=2 format=2]
+
+[ext_resource path="$001" type="DynamicFontData" id=1]
+
+[resource]
+size = $002
+outline_size = $003
+outline_color = Color( $004 )
+use_mipmaps = $005
+use_filter = $006
+extra_spacing_top = $007
+extra_spacing_bottom = $008
+extra_spacing_char = $009
+extra_spacing_space = $010
+font_data = SubResource( 1 )

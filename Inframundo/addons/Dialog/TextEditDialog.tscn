@@ -1,0 +1,1192 @@
+[gd_scene load_steps=100 format=2]
+
+[ext_resource path="res://addons/Dialog/TextEditDialog.gd" type="Script" id=1]
+[ext_resource path="res://addons/Dialog/Graphics/cancel_button_normal.png" type="Texture" id=2]
+[ext_resource path="res://addons/Dialog/Graphics/cancel_button_over.png" type="Texture" id=3]
+[ext_resource path="res://addons/Dialog/Graphics/strikethrough_button_over.png" type="Texture" id=4]
+[ext_resource path="res://addons/Dialog/Graphics/bold_button_normal.png" type="Texture" id=5]
+[ext_resource path="res://addons/Dialog/Graphics/bold_button_over.png" type="Texture" id=6]
+[ext_resource path="res://addons/Dialog/Graphics/italic_button_over.png" type="Texture" id=7]
+[ext_resource path="res://addons/Dialog/Graphics/underline_button_over.png" type="Texture" id=8]
+[ext_resource path="res://addons/Dialog/Graphics/strikethrough_button_normal.png" type="Texture" id=9]
+[ext_resource path="res://addons/Dialog/Graphics/italic_button_normal.png" type="Texture" id=10]
+[ext_resource path="res://addons/Dialog/Graphics/underline_button_normal.png" type="Texture" id=11]
+[ext_resource path="res://addons/Dialog/Graphics/center_button2_over.png" type="Texture" id=12]
+[ext_resource path="res://addons/Dialog/Graphics/left_button_normal.png" type="Texture" id=13]
+[ext_resource path="res://addons/Dialog/Graphics/left_button_over.png" type="Texture" id=14]
+[ext_resource path="res://addons/Dialog/Graphics/right_button_over.png" type="Texture" id=15]
+[ext_resource path="res://addons/Dialog/Graphics/center_button2_normal.png" type="Texture" id=16]
+[ext_resource path="res://addons/Dialog/Graphics/right_button_normal.png" type="Texture" id=17]
+[ext_resource path="res://addons/Dialog/Graphics/font_button_over.png" type="Texture" id=18]
+[ext_resource path="res://addons/Dialog/Graphics/color_button_normal.png" type="Texture" id=19]
+[ext_resource path="res://addons/Dialog/Graphics/font_button_normal.png" type="Texture" id=20]
+[ext_resource path="res://addons/Dialog/Graphics/color_button_over.png" type="Texture" id=21]
+[ext_resource path="res://addons/Dialog/Graphics/image_button_normal.png" type="Texture" id=22]
+[ext_resource path="res://addons/Dialog/Graphics/image_button_over.png" type="Texture" id=23]
+[ext_resource path="res://addons/Dialog/Graphics/indent_button_normal.png" type="Texture" id=24]
+[ext_resource path="res://addons/Dialog/Graphics/indent_button_over.png" type="Texture" id=25]
+[ext_resource path="res://addons/Dialog/zoom_effect_dialog.tscn" type="PackedScene" id=26]
+[ext_resource path="res://addons/Dialog/angle_effect_dialog.tscn" type="PackedScene" id=27]
+[ext_resource path="res://addons/Dialog/table_dialog.tscn" type="PackedScene" id=28]
+[ext_resource path="res://addons/Dialog/wave_effect_dialog.tscn" type="PackedScene" id=29]
+[ext_resource path="res://addons/Dialog/tornado_effect_dialog.tscn" type="PackedScene" id=30]
+[ext_resource path="res://addons/Dialog/shake_effect_dialog.tscn" type="PackedScene" id=31]
+[ext_resource path="res://addons/Dialog/fade_effect_dialog.tscn" type="PackedScene" id=32]
+[ext_resource path="res://addons/Dialog/rainbow_effect_dialog.tscn" type="PackedScene" id=33]
+[ext_resource path="res://addons/Dialog/CustomFileDialog.tscn" type="PackedScene" id=34]
+[ext_resource path="res://addons/Dialog/font_dialog.tscn" type="PackedScene" id=35]
+[ext_resource path="res://addons/Dialog/color_dialog.tscn" type="PackedScene" id=36]
+[ext_resource path="res://addons/Dialog/ghost_effect_dialog.tscn" type="PackedScene" id=37]
+[ext_resource path="res://addons/Dialog/pulse_effect_dialog.tscn" type="PackedScene" id=38]
+[ext_resource path="res://addons/Dialog/matrix_effect_dialog.tscn" type="PackedScene" id=39]
+[ext_resource path="res://addons/Dialog/Graphics/pause_button_normal.png" type="Texture" id=40]
+[ext_resource path="res://addons/Dialog/fade_animation_effect_dialog.tscn" type="PackedScene" id=41]
+[ext_resource path="res://addons/Dialog/Graphics/pause_button_over.png" type="Texture" id=42]
+[ext_resource path="res://addons/Dialog/pause_dialog.tscn" type="PackedScene" id=43]
+[ext_resource path="res://addons/Dialog/Graphics/page_break_button_normal.png" type="Texture" id=44]
+[ext_resource path="res://addons/Dialog/Graphics/page_break_button_over.png" type="Texture" id=45]
+[ext_resource path="res://addons/Dialog/Fonts/NotoSansCJKtc-Regular.ttf" type="DynamicFontData" id=46]
+[ext_resource path="res://addons/Dialog/AdvanceTextContainer.gd" type="Script" id=47]
+[ext_resource path="res://addons/Dialog/select_image_dialog.tscn" type="PackedScene" id=48]
+[ext_resource path="res://addons/Dialog/Graphics/imagen_effect_button_normal.png" type="Texture" id=49]
+[ext_resource path="res://addons/Dialog/Graphics/imagen_effect_button_over.png" type="Texture" id=50]
+[ext_resource path="res://addons/Dialog/Graphics/image_remove_button_normal.png" type="Texture" id=51]
+[ext_resource path="res://addons/Dialog/Graphics/image_remove_button_over.png" type="Texture" id=52]
+[ext_resource path="res://addons/Dialog/Graphics/show_box_name_button_over.png" type="Texture" id=53]
+[ext_resource path="res://addons/Dialog/Graphics/remove_box_name_button_normal.png" type="Texture" id=54]
+[ext_resource path="res://addons/Dialog/Graphics/remove_box_name_button_over.png" type="Texture" id=55]
+[ext_resource path="res://addons/Dialog/Graphics/show_box_name_button_normal.png" type="Texture" id=56]
+[ext_resource path="res://addons/Dialog/Graphics/play_sound_button_over.png" type="Texture" id=57]
+[ext_resource path="res://addons/Dialog/Graphics/play_sound_button_normal.png" type="Texture" id=58]
+[ext_resource path="res://addons/Dialog/Graphics/set_letter_by_letter1_button_over.png" type="Texture" id=59]
+[ext_resource path="res://addons/Dialog/Graphics/set_letter_by_letter3_button_over.png" type="Texture" id=60]
+[ext_resource path="res://addons/Dialog/Graphics/set_letter_by_letter_button4_normal.png" type="Texture" id=61]
+[ext_resource path="res://addons/Dialog/Graphics/set_letter_by_letter_button_over.png" type="Texture" id=62]
+[ext_resource path="res://addons/Dialog/Graphics/set_letter_by_letter2_button_over.png" type="Texture" id=63]
+[ext_resource path="res://addons/Dialog/Graphics/emit_signal_button_over.png" type="Texture" id=64]
+[ext_resource path="res://addons/Dialog/Graphics/emit_signal_button_normal.png" type="Texture" id=65]
+[ext_resource path="res://addons/Dialog/image_effects_dialog.tscn" type="PackedScene" id=66]
+[ext_resource path="res://addons/Dialog/remove_image_dialog.tscn" type="PackedScene" id=67]
+[ext_resource path="res://addons/Dialog/show_char_name_dialog.tscn" type="PackedScene" id=68]
+[ext_resource path="res://addons/Dialog/remove_char_name_dialog.tscn" type="PackedScene" id=69]
+[ext_resource path="res://addons/Dialog/change_letter_by_letter_dialog.tscn" type="PackedScene" id=70]
+[ext_resource path="res://addons/Dialog/emit_signal_dialog.tscn" type="PackedScene" id=71]
+[ext_resource path="res://addons/Dialog/play_sound_dialog.tscn" type="PackedScene" id=72]
+[ext_resource path="res://addons/Dialog/show_variable_dialog.tscn" type="PackedScene" id=73]
+[ext_resource path="res://addons/Dialog/Graphics/variable_button_over.png" type="Texture" id=74]
+[ext_resource path="res://addons/Dialog/Graphics/variable_button_normal.png" type="Texture" id=75]
+[ext_resource path="res://addons/Dialog/Graphics/term_button_over.png" type="Texture" id=76]
+[ext_resource path="res://addons/Dialog/Graphics/term_button_normal.png" type="Texture" id=77]
+[ext_resource path="res://addons/Dialog/show_term_dialog.tscn" type="PackedScene" id=78]
+[ext_resource path="res://addons/Dialog/show_character_name_dialog.tscn" type="PackedScene" id=79]
+[ext_resource path="res://addons/Dialog/Graphics/character_name_button_normal.png" type="Texture" id=80]
+[ext_resource path="res://addons/Dialog/Graphics/character_name_button_over.png" type="Texture" id=81]
+[ext_resource path="res://addons/Dialog/Graphics/separator_button_normal.png" type="Texture" id=82]
+[ext_resource path="res://addons/Dialog/Graphics/separator_button_over.png" type="Texture" id=83]
+[ext_resource path="res://addons/Dialog/Graphics/button_config_normal.png" type="Texture" id=84]
+[ext_resource path="res://addons/Dialog/Graphics/button_config1_over.png" type="Texture" id=85]
+[ext_resource path="res://addons/Dialog/Graphics/button_config2_over.png" type="Texture" id=86]
+[ext_resource path="res://addons/Dialog/Graphics/button_config4_over.png" type="Texture" id=87]
+[ext_resource path="res://addons/Dialog/Graphics/button_config3_over.png" type="Texture" id=88]
+[ext_resource path="res://addons/Dialog/select_config_dialog.tscn" type="PackedScene" id=89]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0, 0, 0, 1 )
+border_width_left = 2
+border_width_top = 1
+border_width_right = 2
+border_width_bottom = 1
+border_color = Color( 0, 0, 0, 1 )
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0, 0.0352941, 0.301961, 0.803922 )
+border_width_left = 2
+border_width_top = 1
+border_width_right = 2
+border_width_bottom = 1
+border_color = Color( 0.0196078, 0.603922, 0.682353, 1 )
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+
+[sub_resource type="StyleBoxFlat" id=3]
+content_margin_left = 8.0
+content_margin_right = 8.0
+content_margin_top = 6.0
+content_margin_bottom = 10.0
+border_width_left = 2
+border_width_top = 1
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0, 0, 0, 1 )
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color( 0, 0, 0, 0.294118 )
+shadow_size = 8
+shadow_offset = Vector2( 8.331, 11.789 )
+
+[sub_resource type="StyleBoxFlat" id=4]
+content_margin_left = 8.0
+content_margin_right = 8.0
+content_margin_top = 6.0
+content_margin_bottom = 10.0
+bg_color = Color( 0, 0, 0, 1 )
+border_width_left = 2
+border_width_top = 1
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0, 0, 0, 1 )
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+expand_margin_left = 8.0
+expand_margin_right = 8.0
+expand_margin_top = 6.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxFlat" id=5]
+content_margin_left = 8.0
+content_margin_right = 8.0
+content_margin_top = 6.0
+content_margin_bottom = 10.0
+bg_color = Color( 0.666667, 0.666667, 0.666667, 1 )
+border_width_left = 2
+border_width_top = 1
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0, 0, 0, 1 )
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+expand_margin_left = 8.0
+expand_margin_right = 8.0
+expand_margin_top = 6.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxFlat" id=6]
+content_margin_left = 5.0
+content_margin_right = 5.0
+content_margin_top = 5.0
+content_margin_bottom = 5.0
+bg_color = Color( 0.976471, 0.960784, 0.862745, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0, 0, 0, 1 )
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id=7]
+content_margin_left = 5.0
+content_margin_right = 5.0
+content_margin_top = 9.0
+content_margin_bottom = 5.0
+bg_color = Color( 0.976471, 0.960784, 0.862745, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0, 0, 0, 1 )
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="AnimatedTexture" id=8]
+flags = 4
+frames = 4
+fps = 10.0
+frame_0/texture = ExtResource( 59 )
+frame_1/texture = ExtResource( 63 )
+frame_1/delay_sec = 0.0
+frame_2/texture = ExtResource( 60 )
+frame_2/delay_sec = 0.0
+frame_3/texture = ExtResource( 62 )
+frame_3/delay_sec = 0.0
+
+[sub_resource type="AnimatedTexture" id=9]
+flags = 4
+frames = 4
+fps = 10.0
+frame_0/texture = ExtResource( 85 )
+frame_1/texture = ExtResource( 86 )
+frame_1/delay_sec = 0.0
+frame_2/texture = ExtResource( 88 )
+frame_2/delay_sec = 0.0
+frame_3/texture = ExtResource( 87 )
+frame_3/delay_sec = 0.0
+
+[sub_resource type="DynamicFont" id=10]
+size = 24
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 46 )
+
+[node name="TextEditDialog" type="Popup"]
+margin_right = 550.0
+margin_bottom = 400.0
+rect_min_size = Vector2( 550, 400 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 3.05176e-05
+margin_bottom = 2.0
+custom_constants/separation = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TopPanel" type="Control" parent="VBoxContainer"]
+margin_right = 550.0
+margin_bottom = 33.0
+rect_min_size = Vector2( 0, 33 )
+mouse_filter = 1
+
+[node name="Background" type="Panel" parent="VBoxContainer/TopPanel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 5.0
+margin_right = -5.0
+custom_styles/panel = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PanelContainer" type="PanelContainer" parent="VBoxContainer/TopPanel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 5.0
+margin_right = -5.0
+rect_min_size = Vector2( 0, 32 )
+mouse_filter = 2
+custom_styles/panel = SubResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Container" type="Control" parent="VBoxContainer/TopPanel/PanelContainer"]
+margin_left = 2.0
+margin_top = 1.0
+margin_right = 538.0
+margin_bottom = 33.0
+rect_min_size = Vector2( 0, 32 )
+mouse_filter = 1
+
+[node name="CloseButton" type="TextureButton" parent="VBoxContainer/TopPanel/PanelContainer/Container"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -32.0
+margin_top = -12.0
+margin_bottom = 16.0
+rect_scale = Vector2( 0.8, 0.8 )
+hint_tooltip = "Click here to close the advanced text editor (or press [color=red]ESC[/color])
+
+When the advanced text editor is closed, the text is saved in the dialog box"
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture_normal = ExtResource( 2 )
+texture_hover = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="VBoxContainer/TopPanel/PanelContainer/Container"]
+margin_left = 11.0
+margin_top = 10.0
+margin_right = 137.0
+margin_bottom = 24.0
+text = "Advanced Text Editor"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="VBoxContainer/TopPanel/PanelContainer/Container"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -218.0
+margin_top = -6.0
+margin_right = -47.0
+margin_bottom = 8.0
+grow_horizontal = 2
+size_flags_horizontal = 3
+custom_colors/font_color = Color( 0.486275, 0.901961, 1, 0.45098 )
+text = "(Double click to maximize)"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BottomPanel" type="PanelContainer" parent="VBoxContainer"]
+show_behind_parent = true
+margin_top = 33.0
+margin_right = 550.0
+margin_bottom = 402.0
+mouse_filter = 2
+size_flags_vertical = 3
+custom_styles/panel = SubResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Background" type="Panel" parent="VBoxContainer/BottomPanel"]
+margin_left = 8.0
+margin_top = 6.0
+margin_right = 542.0
+margin_bottom = 359.0
+custom_styles/panel = SubResource( 4 )
+
+[node name="Background2" type="Panel" parent="VBoxContainer/BottomPanel"]
+margin_left = 8.0
+margin_top = 6.0
+margin_right = 542.0
+margin_bottom = 359.0
+custom_styles/panel = SubResource( 5 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/BottomPanel"]
+margin_left = 8.0
+margin_top = 6.0
+margin_right = 542.0
+margin_bottom = 359.0
+
+[node name="Container" type="Container" parent="VBoxContainer/BottomPanel/VBoxContainer"]
+margin_right = 534.0
+margin_bottom = 83.0
+rect_min_size = Vector2( 0, 40 )
+size_flags_horizontal = 3
+script = ExtResource( 47 )
+margin = Vector2( 0, 0 )
+v_separation = 5
+h_separation = 5
+
+[node name="PanelContainer" type="PanelContainer" parent="VBoxContainer/BottomPanel/VBoxContainer/Container"]
+margin_right = 10.0
+margin_bottom = 38.0
+rect_min_size = Vector2( 0, 38 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_styles/panel = SubResource( 6 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/BottomPanel/VBoxContainer/Container/PanelContainer"]
+margin_left = 5.0
+margin_top = 5.0
+margin_right = 123.0
+margin_bottom = 33.0
+size_flags_vertical = 0
+custom_constants/separation = 2
+
+[node name="BoldButton" type="TextureButton" parent="VBoxContainer/BottomPanel/VBoxContainer/Container/PanelContainer/HBoxContainer"]
+margin_right = 28.0
+margin_bottom = 28.0
+hint_tooltip = "Makes {text} bold"
+focus_mode = 0
+mouse_default_cursor_shape = 2
+size_flags_vertical = 0
+enabled_focus_mode = 0
+texture_normal = ExtResource( 5 )
+texture_hover = ExtResource( 6 )
+
+[node name="ItalicButton" type="TextureButton" parent="VBoxContainer/BottomPanel/VBoxContainer/Container/PanelContainer/HBoxContainer"]
+margin_left = 30.0
+margin_right = 58.0
+margin_bottom = 28.0
+hint_tooltip = "Makes {text} italics"
+focus_mode = 0
+mouse_default_cursor_shape = 2
+size_flags_vertical = 0
+enabled_focus_mode = 0
+texture_normal = ExtResource( 10 )
+texture_hover = ExtResource( 7 )
+
+[node name="UnderlineButton" type="TextureButton" parent="VBoxContainer/BottomPanel/VBoxContainer/Container/PanelContainer/HBoxContainer"]
+margin_left = 60.0
+margin_right = 88.0
+margin_bottom = 28.0
+hint_tooltip = "Makes {text} underline"
+focus_mode = 0
+mouse_default_cursor_shape = 2
+size_flags_vertical = 0
+enabled_focus_mode = 0
+texture_normal = ExtResource( 11 )
+texture_hover = ExtResource( 8 )
+
+[node name="strikethroughButton" type="TextureButton" parent="VBoxContainer/BottomPanel/VBoxContainer/Container/PanelContainer/HBoxContainer"]
+margin_left = 90.0
+margin_right = 118.0
+margin_bottom = 28.0
+hint_tooltip = "Makes {text} strikethrough"
+focus_mode = 0
+mouse_default_cursor_shape = 2
+size_flags_vertical = 0
+enabled_focus_mode = 0
+texture_normal = ExtResource( 9 )
+texture_hover = ExtResource( 4 )
+
+[node name="PanelContainer2" type="PanelContainer" parent="VBoxContainer/BottomPanel/VBoxContainer/Container"]
+margin_left = 15.0
+margin_right = 25.0
+margin_bottom = 38.0
+rect_min_size = Vector2( 0, 38 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_styles/panel = SubResource( 6 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/BottomPanel/VBoxContainer/Container/PanelContainer2"]
+margin_left = 5.0
+margin_top = 5.0
+margin_right = 93.0
+margin_bottom = 33.0
+size_flags_vertical = 0
+custom_constants/separation = 2
+
+[node name="LeftTextButton" type="TextureButton" parent="VBoxContainer/BottomPanel/VBoxContainer/Container/PanelContainer2/HBoxContainer"]
+margin_right = 28.0
+margin_bottom = 28.0
+hint_tooltip = "Makes {text} left-aligned"
+focus_mode = 0
+mouse_default_cursor_shape = 2
+size_flags_vertical = 0
+enabled_focus_mode = 0
+texture_normal = ExtResource( 13 )
+texture_hover = ExtResource( 14 )
+
+[node name="CenterTextButton" type="TextureButton" parent="VBoxContainer/BottomPanel/VBoxContainer/Container/PanelContainer2/HBoxContainer"]
+margin_left = 30.0
+margin_right = 58.0
+margin_bottom = 28.0
+hint_tooltip = "Makes {text} centered"
+focus_mode = 0
+mouse_default_cursor_shape = 2
+size_flags_vertical = 0
+enabled_focus_mode = 0
+texture_normal = ExtResource( 16 )
+texture_hover = ExtResource( 12 )
+
+[node name="RightTextButton" type="TextureButton" parent="VBoxContainer/BottomPanel/VBoxContainer/Container/PanelContainer2/HBoxContainer"]
+margin_left = 60.0
+margin_right = 88.0
+margin_bottom = 28.0
+hint_tooltip = "Makes {text} right-aligned"
+focus_mode = 0
+mouse_default_cursor_shape = 2
+size_flags_vertical = 0
+enabled_focus_mode = 0
+texture_normal = ExtResource( 17 )
+texture_hover = ExtResource( 15 )
+
+[node name="PanelContainer3" type="PanelContainer" parent="VBoxContainer/BottomPanel/VBoxContainer/Container"]
+anchor_left = 0.501486
+anchor_right = 0.501486
+margin_left = -237.794
+margin_right = -227.794
+margin_bottom = 38.0
+rect_min_size = Vector2( 0, 38 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_styles/panel = SubResource( 6 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/BottomPanel/VBoxContainer/Container/PanelContainer3"]
+margin_left = 5.0
+margin_top = 5.0
+margin_right = 63.0
+margin_bottom = 33.0
+size_flags_vertical = 0
+custom_constants/separation = 2
+
+[node name="FontButton" type="TextureButton" parent="VBoxContainer/BottomPanel/VBoxContainer/Container/PanelContainer3/HBoxContainer"]
+margin_right = 28.0
+margin_bottom = 28.0
+hint_tooltip = "Use custom font for {text}"
+focus_mode = 0
+mouse_default_cursor_shape = 2
+size_flags_vertical = 0
+enabled_focus_mode = 0
+texture_normal = ExtResource( 20 )
+texture_hover = ExtResource( 18 )
+
+[node name="FontColorButton" type="TextureButton" parent="VBoxContainer/BottomPanel/VBoxContainer/Container/PanelContainer3/HBoxContainer"]
+margin_left = 30.0
+margin_right = 58.0
+margin_bottom = 28.0
+hint_tooltip = "Change {text} color"
+focus_mode = 0
+mouse_default_cursor_shape = 2
+size_flags_vertical = 0
+enabled_focus_mode = 0
+texture_normal = ExtResource( 19 )
+texture_hover = ExtResource( 21 )
+
+[node name="PanelContainer4" type="PanelContainer" parent="VBoxContainer/BottomPanel/VBoxContainer/Container"]
+anchor_left = 0.518595
+anchor_right = 0.518595
+margin_left = -231.93
+margin_right = -221.93
+margin_bottom = 38.0
+rect_min_size = Vector2( 0, 38 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_styles/panel = SubResource( 6 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/BottomPanel/VBoxContainer/Container/PanelContainer4"]
+margin_left = 5.0
+margin_top = 5.0
+margin_right = 93.0
+margin_bottom = 33.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_constants/separation = 2
+
+[node name="ImageButton" type="TextureButton" parent="VBoxContainer/BottomPanel/VBoxContainer/Container/PanelContainer4/HBoxContainer"]
+margin_right = 28.0
+margin_bottom = 28.0
+hint_tooltip = "Insert image"
+focus_mode = 0
+mouse_default_cursor_shape = 2
+size_flags_vertical = 0
+enabled_focus_mode = 0
+texture_normal = ExtResource( 22 )
+texture_hover = ExtResource( 23 )
+
+[node name="ImageButton2" type="TextureButton" parent="VBoxContainer/BottomPanel/VBoxContainer/Container/PanelContainer4/HBoxContainer"]
+margin_left = 30.0
+margin_right = 58.0
+margin_bottom = 28.0
+hint_tooltip = "Insert image effect"
+focus_mode = 0
+mouse_default_cursor_shape = 2
+size_flags_vertical = 0
+enabled_focus_mode = 0
+texture_normal = ExtResource( 49 )
+texture_hover = ExtResource( 50 )
+
+[node name="ImageButton3" type="TextureButton" parent="VBoxContainer/BottomPanel/VBoxContainer/Container/PanelContainer4/HBoxContainer"]
+margin_left = 60.0
+margin_right = 88.0
+margin_bottom = 28.0
+hint_tooltip = "Remove face or character images"
+focus_mode = 0
+mouse_default_cursor_shape = 2
+size_flags_vertical = 0
+enabled_focus_mode = 0
+texture_normal = ExtResource( 51 )
+texture_hover = ExtResource( 52 )
+
+[node name="PanelContainer8" type="PanelContainer" parent="VBoxContainer/BottomPanel/VBoxContainer/Container"]
+anchor_left = 0.001486
+anchor_top = 0.488372
+anchor_right = 0.00148603
+anchor_bottom = 0.488372
+margin_left = 59.2065
+margin_top = -40.5349
+margin_right = 69.2065
+margin_bottom = -2.53487
+rect_min_size = Vector2( 0, 38 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_styles/panel = SubResource( 6 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/BottomPanel/VBoxContainer/Container/PanelContainer8"]
+margin_left = 5.0
+margin_top = 5.0
+margin_right = 63.0
+margin_bottom = 33.0
+size_flags_vertical = 0
+custom_constants/separation = 2
+
+[node name="ShowNameButton" type="TextureButton" parent="VBoxContainer/BottomPanel/VBoxContainer/Container/PanelContainer8/HBoxContainer"]
+margin_right = 28.0
+margin_bottom = 28.0
+hint_tooltip = "Show a character name Box"
+focus_mode = 0
+mouse_default_cursor_shape = 2
+size_flags_vertical = 0
+enabled_focus_mode = 0
+texture_normal = ExtResource( 56 )
+texture_hover = ExtResource( 53 )
+
+[node name="RemoveNameButton" type="TextureButton" parent="VBoxContainer/BottomPanel/VBoxContainer/Container/PanelContainer8/HBoxContainer"]
+margin_left = 30.0
+margin_right = 58.0
+margin_bottom = 28.0
+hint_tooltip = "Remove a character name Box"
+focus_mode = 0
+mouse_default_cursor_shape = 2
+size_flags_vertical = 0
+enabled_focus_mode = 0
+texture_normal = ExtResource( 54 )
+texture_hover = ExtResource( 55 )
+
+[node name="PanelContainer5" type="PanelContainer" parent="VBoxContainer/BottomPanel/VBoxContainer/Container"]
+anchor_left = 0.150826
+anchor_right = 0.150826
+margin_left = -5.54108
+margin_right = 4.45892
+margin_bottom = 38.0
+rect_min_size = Vector2( 0, 38 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_styles/panel = SubResource( 6 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/BottomPanel/VBoxContainer/Container/PanelContainer5"]
+margin_left = 5.0
+margin_top = 5.0
+margin_right = 33.0
+margin_bottom = 33.0
+size_flags_vertical = 0
+custom_constants/separation = 2
+
+[node name="IndentButton" type="TextureButton" parent="VBoxContainer/BottomPanel/VBoxContainer/Container/PanelContainer5/HBoxContainer"]
+margin_right = 28.0
+margin_bottom = 28.0
+hint_tooltip = "indent text to right"
+focus_mode = 0
+mouse_default_cursor_shape = 2
+size_flags_vertical = 0
+enabled_focus_mode = 0
+texture_normal = ExtResource( 24 )
+texture_hover = ExtResource( 25 )
+
+[node name="PanelContainer6" type="PanelContainer" parent="VBoxContainer/BottomPanel/VBoxContainer/Container"]
+anchor_left = 0.150826
+anchor_right = 0.150826
+margin_left = 9.45892
+margin_right = 19.4589
+margin_bottom = 38.0
+rect_min_size = Vector2( 0, 38 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_styles/panel = SubResource( 7 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/BottomPanel/VBoxContainer/Container/PanelContainer6"]
+margin_left = 5.0
+margin_top = 9.0
+margin_right = 68.0
+margin_bottom = 29.0
+size_flags_vertical = 0
+custom_constants/separation = 2
+
+[node name="effects_OptionButton" type="OptionButton" parent="VBoxContainer/BottomPanel/VBoxContainer/Container/PanelContainer6/HBoxContainer"]
+margin_right = 63.0
+margin_bottom = 20.0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+enabled_focus_mode = 0
+text = "None"
+items = [ "None", null, false, 0, null, "Wave", null, false, 1, null, "Tornado", null, false, 2, null, "Shake", null, false, 3, null, "Fade", null, false, 4, null, "Rainbow", null, false, 5, null, "Ghost", null, false, 6, null, "Pulse", null, false, 7, null, "Matrix", null, false, 8, null, "Fade Animation", null, false, 9, null, "Zoom", null, false, 10, null, "Angle", null, false, 11, null ]
+selected = 0
+
+[node name="PanelContainer7" type="PanelContainer" parent="VBoxContainer/BottomPanel/VBoxContainer/Container"]
+anchor_left = 0.150826
+anchor_right = 0.150826
+margin_left = 24.4589
+margin_right = 34.4589
+margin_bottom = 38.0
+rect_min_size = Vector2( 0, 38 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_styles/panel = SubResource( 6 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/BottomPanel/VBoxContainer/Container/PanelContainer7"]
+margin_left = 5.0
+margin_top = 5.0
+margin_right = 303.0
+margin_bottom = 33.0
+size_flags_vertical = 0
+custom_constants/separation = 2
+
+[node name="PauseButton" type="TextureButton" parent="VBoxContainer/BottomPanel/VBoxContainer/Container/PanelContainer7/HBoxContainer"]
+margin_right = 28.0
+margin_bottom = 28.0
+hint_tooltip = "Insert pause"
+focus_mode = 0
+mouse_default_cursor_shape = 2
+size_flags_vertical = 0
+enabled_focus_mode = 0
+texture_normal = ExtResource( 40 )
+texture_hover = ExtResource( 42 )
+
+[node name="PageBreakButton" type="TextureButton" parent="VBoxContainer/BottomPanel/VBoxContainer/Container/PanelContainer7/HBoxContainer"]
+margin_left = 30.0
+margin_right = 58.0
+margin_bottom = 28.0
+hint_tooltip = "Insert page break"
+focus_mode = 0
+mouse_default_cursor_shape = 2
+size_flags_vertical = 0
+enabled_focus_mode = 0
+texture_normal = ExtResource( 44 )
+texture_hover = ExtResource( 45 )
+
+[node name="PlaySoundButton" type="TextureButton" parent="VBoxContainer/BottomPanel/VBoxContainer/Container/PanelContainer7/HBoxContainer"]
+margin_left = 60.0
+margin_right = 88.0
+margin_bottom = 28.0
+hint_tooltip = "Play a sound"
+focus_mode = 0
+mouse_default_cursor_shape = 2
+size_flags_vertical = 0
+enabled_focus_mode = 0
+texture_normal = ExtResource( 58 )
+texture_hover = ExtResource( 57 )
+
+[node name="LetterByLetterButton" type="TextureButton" parent="VBoxContainer/BottomPanel/VBoxContainer/Container/PanelContainer7/HBoxContainer"]
+margin_left = 90.0
+margin_right = 118.0
+margin_bottom = 28.0
+rect_min_size = Vector2( 28, 0 )
+hint_tooltip = "Enable or disable letter by letter effect"
+focus_mode = 0
+mouse_default_cursor_shape = 2
+size_flags_vertical = 0
+enabled_focus_mode = 0
+texture_normal = ExtResource( 61 )
+texture_hover = SubResource( 8 )
+
+[node name="EmitSignalButton" type="TextureButton" parent="VBoxContainer/BottomPanel/VBoxContainer/Container/PanelContainer7/HBoxContainer"]
+margin_left = 120.0
+margin_right = 148.0
+margin_bottom = 28.0
+hint_tooltip = "Causes the dialog box scene emit the signal
+selected here (if it exists in that scene).
+
+You will need to connect this signal manually in your other scenes"
+focus_mode = 0
+mouse_default_cursor_shape = 2
+size_flags_vertical = 0
+enabled_focus_mode = 0
+texture_normal = ExtResource( 65 )
+texture_hover = ExtResource( 64 )
+
+[node name="ShowVariableButton" type="TextureButton" parent="VBoxContainer/BottomPanel/VBoxContainer/Container/PanelContainer7/HBoxContainer"]
+margin_left = 150.0
+margin_right = 178.0
+margin_bottom = 28.0
+hint_tooltip = "show the contents of a variable in this message"
+focus_mode = 0
+mouse_default_cursor_shape = 2
+size_flags_vertical = 0
+enabled_focus_mode = 0
+texture_normal = ExtResource( 75 )
+texture_hover = ExtResource( 74 )
+
+[node name="TermButton" type="TextureButton" parent="VBoxContainer/BottomPanel/VBoxContainer/Container/PanelContainer7/HBoxContainer"]
+margin_left = 180.0
+margin_right = 208.0
+margin_bottom = 28.0
+hint_tooltip = "show the value of a term in this message"
+focus_mode = 0
+mouse_default_cursor_shape = 2
+size_flags_vertical = 0
+enabled_focus_mode = 0
+texture_normal = ExtResource( 77 )
+texture_hover = ExtResource( 76 )
+
+[node name="CharacterNameButton" type="TextureButton" parent="VBoxContainer/BottomPanel/VBoxContainer/Container/PanelContainer7/HBoxContainer"]
+margin_left = 210.0
+margin_right = 238.0
+margin_bottom = 28.0
+hint_tooltip = "Show a Character's Name"
+focus_mode = 0
+mouse_default_cursor_shape = 2
+size_flags_vertical = 0
+enabled_focus_mode = 0
+texture_normal = ExtResource( 80 )
+texture_hover = ExtResource( 81 )
+
+[node name="ChangeConfigButton" type="TextureButton" parent="VBoxContainer/BottomPanel/VBoxContainer/Container/PanelContainer7/HBoxContainer"]
+margin_left = 240.0
+margin_right = 268.0
+margin_bottom = 28.0
+hint_tooltip = "choose a new setting for this message
+
+(a new page is automatically created
+when the message processes this command)"
+focus_mode = 0
+mouse_default_cursor_shape = 2
+size_flags_vertical = 0
+enabled_focus_mode = 0
+texture_normal = ExtResource( 84 )
+texture_hover = SubResource( 9 )
+
+[node name="SeparatorButton" type="TextureButton" parent="VBoxContainer/BottomPanel/VBoxContainer/Container/PanelContainer7/HBoxContainer"]
+margin_left = 270.0
+margin_right = 298.0
+margin_bottom = 28.0
+hint_tooltip = "this button has no effect on the text but you
+can use it to separate the commands from the texts"
+focus_mode = 0
+mouse_default_cursor_shape = 2
+size_flags_vertical = 0
+enabled_focus_mode = 0
+texture_normal = ExtResource( 82 )
+texture_hover = ExtResource( 83 )
+
+[node name="PanelContainer9" type="PanelContainer" parent="VBoxContainer/BottomPanel/VBoxContainer/Container"]
+anchor_left = 0.735537
+anchor_right = 0.797521
+margin_left = -272.777
+margin_right = -295.876
+margin_bottom = 38.0
+rect_min_size = Vector2( 0, 38 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_styles/panel = SubResource( 6 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/BottomPanel/VBoxContainer/Container/PanelContainer9"]
+margin_left = 5.0
+margin_top = 9.0
+margin_right = 109.0
+margin_bottom = 29.0
+size_flags_horizontal = 0
+size_flags_vertical = 4
+custom_constants/separation = 2
+
+[node name="Button" type="Button" parent="VBoxContainer/BottomPanel/VBoxContainer/Container/PanelContainer9/HBoxContainer"]
+margin_right = 104.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 104, 0 )
+hint_tooltip = "Previsualize message
+
+(face, show box name, character, remove image, remove box name,
+image effect, emit signals and set config commands do not work in this version)"
+focus_mode = 0
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+enabled_focus_mode = 0
+text = "PREVIEW"
+
+[node name="TextEdit" type="TextEdit" parent="VBoxContainer/BottomPanel/VBoxContainer"]
+margin_top = 87.0
+margin_right = 534.0
+margin_bottom = 353.0
+rect_min_size = Vector2( 0, 180 )
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 10 )
+custom_colors/selection_color = Color( 1, 0.529412, 0.529412, 1 )
+custom_colors/font_color_selected = Color( 0.027451, 0, 0, 1 )
+custom_colors/number_color = Color( 1, 1, 1, 1 )
+syntax_highlighting = true
+fold_gutter = true
+smooth_scrolling = true
+wrap_enabled = true
+caret_blink = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="hide_all_dialogs" type="ColorRect" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color( 0, 0, 0, 0 )
+
+[node name="table_dialog" parent="." instance=ExtResource( 28 )]
+visible = false
+margin_left = 560.0
+margin_top = -28.0
+margin_right = 746.0
+margin_bottom = 83.0
+
+[node name="wave_effect_dialog" parent="." instance=ExtResource( 29 )]
+visible = false
+margin_left = 560.0
+margin_top = 1.0
+margin_right = 909.0
+margin_bottom = 198.0
+
+[node name="tornado_effect_dialog" parent="." instance=ExtResource( 30 )]
+visible = false
+margin_left = 560.0
+margin_top = 30.6
+margin_right = 936.0
+margin_bottom = 227.6
+
+[node name="shake_effect_dialog" parent="." instance=ExtResource( 31 )]
+visible = false
+margin_left = 560.0
+margin_top = 54.0
+margin_right = 926.0
+margin_bottom = 251.0
+
+[node name="fade_effect_dialog" parent="." instance=ExtResource( 32 )]
+visible = false
+margin_left = 560.0
+margin_top = 81.8107
+margin_right = 967.0
+margin_bottom = 294.811
+
+[node name="rainbow_effect_dialog" parent="." instance=ExtResource( 33 )]
+visible = false
+margin_left = 560.0
+margin_top = 111.0
+margin_right = 979.0
+margin_bottom = 337.0
+
+[node name="ghost_effect_dialog" parent="." instance=ExtResource( 37 )]
+visible = false
+margin_left = 560.0
+margin_top = 141.0
+margin_right = 940.0
+margin_bottom = 338.0
+
+[node name="pulse_effect_dialog" parent="." instance=ExtResource( 38 )]
+visible = false
+margin_left = 560.0
+margin_top = 171.0
+margin_right = 979.0
+margin_bottom = 373.0
+
+[node name="matrix_effect_dialog" parent="." instance=ExtResource( 39 )]
+visible = false
+margin_left = 560.0
+margin_top = 196.0
+margin_right = 979.0
+margin_bottom = 444.0
+
+[node name="fade_animation_effect_dialog" parent="." instance=ExtResource( 41 )]
+visible = false
+margin_left = 560.0
+margin_top = 228.0
+margin_right = 940.0
+margin_bottom = 425.0
+
+[node name="zoom_effect_dialog" parent="." instance=ExtResource( 26 )]
+visible = false
+margin_top = 419.0
+margin_bottom = 667.0
+
+[node name="angle_effect_dialog" parent="." instance=ExtResource( 27 )]
+visible = false
+margin_left = 84.0
+margin_top = 432.0
+margin_right = 524.0
+margin_bottom = 680.0
+
+[node name="font_dialog" parent="." instance=ExtResource( 35 )]
+visible = false
+margin_left = 560.0
+margin_top = 258.0
+margin_right = 979.0
+margin_bottom = 562.0
+
+[node name="color_dialog" parent="." instance=ExtResource( 36 )]
+visible = false
+margin_left = 560.0
+margin_top = 281.0
+margin_right = 909.0
+margin_bottom = 834.0
+
+[node name="pause_dialog" parent="." instance=ExtResource( 43 )]
+visible = false
+margin_left = 560.0
+margin_top = 309.0
+margin_right = 980.0
+margin_bottom = 545.0
+
+[node name="select_image_dialog" parent="." instance=ExtResource( 48 )]
+visible = false
+margin_left = 560.0
+margin_top = 340.0
+margin_right = 922.0
+margin_bottom = 608.0
+
+[node name="image_effects_dialog" parent="." instance=ExtResource( 66 )]
+visible = false
+margin_left = 560.0
+margin_top = 364.0
+margin_right = 1048.0
+margin_bottom = 577.0
+
+[node name="remove_image_dialog" parent="." instance=ExtResource( 67 )]
+visible = false
+margin_left = 560.0
+margin_top = 398.0
+margin_right = 979.0
+margin_bottom = 501.0
+
+[node name="show_char_name_dialog" parent="." instance=ExtResource( 68 )]
+visible = false
+margin_left = 560.0
+margin_top = 430.0
+margin_right = 859.0
+margin_bottom = 582.0
+
+[node name="remove_char_name_dialog" parent="." instance=ExtResource( 69 )]
+visible = false
+margin_left = 560.0
+margin_top = 462.0
+margin_right = 859.0
+margin_bottom = 566.0
+
+[node name="change_letter_by_letter_dialog" parent="." instance=ExtResource( 70 )]
+visible = false
+margin_left = 560.0
+margin_top = 492.0
+margin_right = 859.0
+margin_bottom = 617.0
+
+[node name="emit_signal_dialog" parent="." instance=ExtResource( 71 )]
+visible = false
+margin_left = 560.0
+margin_top = 524.0
+margin_right = 859.0
+margin_bottom = 631.0
+
+[node name="play_sound_dialog" parent="." instance=ExtResource( 72 )]
+visible = false
+margin_left = 560.0
+margin_top = 550.0
+margin_right = 859.0
+margin_bottom = 695.0
+
+[node name="show_variable_dialog" parent="." instance=ExtResource( 73 )]
+visible = false
+margin_left = 28.0
+margin_top = 475.0
+margin_right = 327.0
+margin_bottom = 582.0
+
+[node name="show_term_dialog" parent="." instance=ExtResource( 78 )]
+visible = false
+margin_left = 352.0
+margin_top = 475.0
+margin_right = 651.0
+margin_bottom = 582.0
+
+[node name="show_character_name_dialog" parent="." instance=ExtResource( 79 )]
+visible = false
+margin_left = 84.0
+margin_top = 460.0
+margin_right = 383.0
+margin_bottom = 567.0
+
+[node name="select_config_dialog" parent="." instance=ExtResource( 89 )]
+visible = false
+margin_left = 410.627
+margin_top = 446.403
+margin_right = 634.627
+margin_bottom = 544.403
+
+[node name="CustomFileDialog" parent="." instance=ExtResource( 34 )]
+visible = false
+margin_left = 1109.23
+margin_top = -2.0
+margin_right = 1516.43
+margin_bottom = 297.1
+
+[node name="Tween" type="Tween" parent="."]
+[connection signal="gui_input" from="." to="." method="_on_gui_input" binds= [ "self_window" ]]
+[connection signal="item_rect_changed" from="." to="." method="_on_TextEditDialog_item_rect_changed"]
+[connection signal="visibility_changed" from="." to="." method="_on_TextEditDialog_visibility_changed"]
+[connection signal="gui_input" from="VBoxContainer/TopPanel/PanelContainer" to="." method="_on_gui_input" binds= [ "TopPanel" ]]
+[connection signal="pressed" from="VBoxContainer/TopPanel/PanelContainer/Container/CloseButton" to="." method="_on_CloseButton_pressed"]
+[connection signal="gui_input" from="VBoxContainer/BottomPanel" to="." method="_on_gui_input" binds= [ "BottomPanel" ]]
+[connection signal="item_rect_changed" from="VBoxContainer/BottomPanel/VBoxContainer/Container" to="VBoxContainer/BottomPanel/VBoxContainer/Container" method="_on_Container_item_rect_changed"]
+[connection signal="visibility_changed" from="VBoxContainer/BottomPanel/VBoxContainer/Container" to="VBoxContainer/BottomPanel/VBoxContainer/Container" method="_on_Container_visibility_changed"]
+[connection signal="button_down" from="VBoxContainer/BottomPanel/VBoxContainer/Container/PanelContainer/HBoxContainer/BoldButton" to="." method="_on_BoldButton_button_down"]
+[connection signal="button_down" from="VBoxContainer/BottomPanel/VBoxContainer/Container/PanelContainer/HBoxContainer/ItalicButton" to="." method="_on_ItalicButton_button_down"]
+[connection signal="button_down" from="VBoxContainer/BottomPanel/VBoxContainer/Container/PanelContainer/HBoxContainer/UnderlineButton" to="." method="_on_UnderlineButton_button_down"]
+[connection signal="button_down" from="VBoxContainer/BottomPanel/VBoxContainer/Container/PanelContainer/HBoxContainer/strikethroughButton" to="." method="_on_strikethroughButton_button_down"]
+[connection signal="button_down" from="VBoxContainer/BottomPanel/VBoxContainer/Container/PanelContainer2/HBoxContainer/LeftTextButton" to="." method="_on_LeftTextButton_button_down"]
+[connection signal="button_down" from="VBoxContainer/BottomPanel/VBoxContainer/Container/PanelContainer2/HBoxContainer/CenterTextButton" to="." method="_on_CenterTextButton_button_down"]
+[connection signal="button_down" from="VBoxContainer/BottomPanel/VBoxContainer/Container/PanelContainer2/HBoxContainer/RightTextButton" to="." method="_on_RightTextButton_button_down"]
+[connection signal="button_down" from="VBoxContainer/BottomPanel/VBoxContainer/Container/PanelContainer3/HBoxContainer/FontButton" to="." method="_on_FontButton_button_down"]
+[connection signal="button_down" from="VBoxContainer/BottomPanel/VBoxContainer/Container/PanelContainer3/HBoxContainer/FontColorButton" to="." method="_on_FontColorButton_button_down"]
+[connection signal="hide" from="VBoxContainer/BottomPanel/VBoxContainer/Container/PanelContainer3/HBoxContainer/FontColorButton" to="." method="_on_FontColorButton_hide"]
+[connection signal="button_down" from="VBoxContainer/BottomPanel/VBoxContainer/Container/PanelContainer4/HBoxContainer/ImageButton" to="." method="_on_ImageButton_button_down"]
+[connection signal="button_down" from="VBoxContainer/BottomPanel/VBoxContainer/Container/PanelContainer4/HBoxContainer/ImageButton2" to="." method="_on_image_effects_button_down"]
+[connection signal="button_down" from="VBoxContainer/BottomPanel/VBoxContainer/Container/PanelContainer4/HBoxContainer/ImageButton3" to="." method="_on_remove_images_button_down"]
+[connection signal="button_down" from="VBoxContainer/BottomPanel/VBoxContainer/Container/PanelContainer8/HBoxContainer/ShowNameButton" to="." method="_on_ShowNameButton_button_down"]
+[connection signal="button_down" from="VBoxContainer/BottomPanel/VBoxContainer/Container/PanelContainer8/HBoxContainer/RemoveNameButton" to="." method="_on_RemoveNameButton_button_down"]
+[connection signal="button_down" from="VBoxContainer/BottomPanel/VBoxContainer/Container/PanelContainer5/HBoxContainer/IndentButton" to="." method="_on_IndentButton_button_down"]
+[connection signal="item_selected" from="VBoxContainer/BottomPanel/VBoxContainer/Container/PanelContainer6/HBoxContainer/effects_OptionButton" to="." method="_on_effects_OptionButton_item_selected"]
+[connection signal="button_down" from="VBoxContainer/BottomPanel/VBoxContainer/Container/PanelContainer7/HBoxContainer/PauseButton" to="." method="_on_PauseButton_button_down"]
+[connection signal="button_down" from="VBoxContainer/BottomPanel/VBoxContainer/Container/PanelContainer7/HBoxContainer/PageBreakButton" to="." method="_on_PageBreakButton_button_down"]
+[connection signal="button_down" from="VBoxContainer/BottomPanel/VBoxContainer/Container/PanelContainer7/HBoxContainer/PlaySoundButton" to="." method="_on_PlaySoundButton_button_down"]
+[connection signal="button_down" from="VBoxContainer/BottomPanel/VBoxContainer/Container/PanelContainer7/HBoxContainer/LetterByLetterButton" to="." method="_on_LetterByLetterButton_button_down"]
+[connection signal="button_down" from="VBoxContainer/BottomPanel/VBoxContainer/Container/PanelContainer7/HBoxContainer/EmitSignalButton" to="." method="_on_EmitSignalButton_button_down"]
+[connection signal="button_down" from="VBoxContainer/BottomPanel/VBoxContainer/Container/PanelContainer7/HBoxContainer/ShowVariableButton" to="." method="_on_ShowVariableButton_button_down"]
+[connection signal="button_down" from="VBoxContainer/BottomPanel/VBoxContainer/Container/PanelContainer7/HBoxContainer/TermButton" to="." method="_on_ShowTermButton_button_down"]
+[connection signal="button_down" from="VBoxContainer/BottomPanel/VBoxContainer/Container/PanelContainer7/HBoxContainer/CharacterNameButton" to="." method="_on_CharacterNameButton_button_down"]
+[connection signal="button_down" from="VBoxContainer/BottomPanel/VBoxContainer/Container/PanelContainer7/HBoxContainer/ChangeConfigButton" to="." method="_on_ChangeConfigButton_button_down"]
+[connection signal="button_down" from="VBoxContainer/BottomPanel/VBoxContainer/Container/PanelContainer7/HBoxContainer/SeparatorButton" to="." method="_on_SeparatorButton_button_down"]
+[connection signal="button_down" from="VBoxContainer/BottomPanel/VBoxContainer/Container/PanelContainer9/HBoxContainer/Button" to="." method="_on_Button_button_down"]
+[connection signal="gui_input" from="VBoxContainer/BottomPanel/VBoxContainer/TextEdit" to="." method="_on_TextEdit_gui_input"]
+[connection signal="text_changed" from="VBoxContainer/BottomPanel/VBoxContainer/TextEdit" to="." method="_on_TextEdit_text_changed"]
+[connection signal="gui_input" from="hide_all_dialogs" to="." method="_on_hide_all_dialogs_gui_input"]
+[connection signal="Cancel" from="table_dialog" to="." method="hide_all"]
+[connection signal="OK" from="table_dialog" to="." method="_on_table_dialog_OK"]
+[connection signal="Cancel" from="wave_effect_dialog" to="." method="hide_all"]
+[connection signal="OK" from="wave_effect_dialog" to="." method="_on_wave_effect_dialog_OK"]
+[connection signal="Cancel" from="tornado_effect_dialog" to="." method="hide_all"]
+[connection signal="OK" from="tornado_effect_dialog" to="." method="_on_tornado_effect_dialog_OK"]
+[connection signal="Cancel" from="shake_effect_dialog" to="." method="hide_all"]
+[connection signal="OK" from="shake_effect_dialog" to="." method="_on_shake_effect_dialog_OK"]
+[connection signal="Cancel" from="fade_effect_dialog" to="." method="hide_all"]
+[connection signal="OK" from="fade_effect_dialog" to="." method="_on_fade_effect_dialog_OK"]
+[connection signal="Cancel" from="rainbow_effect_dialog" to="." method="hide_all"]
+[connection signal="OK" from="rainbow_effect_dialog" to="." method="_on_rainbow_effect_dialog_OK"]
+[connection signal="Cancel" from="ghost_effect_dialog" to="." method="hide_all"]
+[connection signal="OK" from="ghost_effect_dialog" to="." method="_on_ghost_effect_dialog_OK"]
+[connection signal="Cancel" from="pulse_effect_dialog" to="." method="hide_all"]
+[connection signal="OK" from="pulse_effect_dialog" to="." method="_on_pulse_effect_dialog_OK"]
+[connection signal="Cancel" from="matrix_effect_dialog" to="." method="hide_all"]
+[connection signal="OK" from="matrix_effect_dialog" to="." method="_on_matrix_effect_dialog_OK"]
+[connection signal="Cancel" from="fade_animation_effect_dialog" to="." method="hide_all"]
+[connection signal="OK" from="fade_animation_effect_dialog" to="." method="_on_fade_animation_effect_dialog_OK"]
+[connection signal="Cancel" from="zoom_effect_dialog" to="." method="hide_all"]
+[connection signal="OK" from="zoom_effect_dialog" to="." method="_on_zoom_effect_dialog_OK"]
+[connection signal="Cancel" from="angle_effect_dialog" to="." method="hide_all"]
+[connection signal="OK" from="angle_effect_dialog" to="." method="_on_angle_effect_dialog_OK"]
+[connection signal="Cancel" from="font_dialog" to="." method="hide_all"]
+[connection signal="OK" from="font_dialog" to="." method="_on_font_dialog_OK"]
+[connection signal="Cancel" from="color_dialog" to="." method="hide_all"]
+[connection signal="OK" from="color_dialog" to="." method="_on_color_dialog_OK"]
+[connection signal="Cancel" from="pause_dialog" to="." method="hide_all"]
+[connection signal="OK" from="pause_dialog" to="." method="_on_pause_dialog_OK"]
+[connection signal="Cancel" from="select_image_dialog" to="." method="hide_all"]
+[connection signal="OK" from="select_image_dialog" to="." method="_on_select_image_dialog_OK"]
+[connection signal="Cancel" from="image_effects_dialog" to="." method="hide_all"]
+[connection signal="OK" from="image_effects_dialog" to="." method="_on_image_effects_dialog_OK"]
+[connection signal="Cancel" from="remove_image_dialog" to="." method="hide_all"]
+[connection signal="OK" from="remove_image_dialog" to="." method="remove_image_dialog"]
+[connection signal="Cancel" from="show_char_name_dialog" to="." method="hide_all"]
+[connection signal="OK" from="show_char_name_dialog" to="." method="_on_show_char_name_dialog_OK"]
+[connection signal="Cancel" from="remove_char_name_dialog" to="." method="hide_all"]
+[connection signal="OK" from="remove_char_name_dialog" to="." method="_on_remove_char_name_dialog_OK"]
+[connection signal="Cancel" from="change_letter_by_letter_dialog" to="." method="hide_all"]
+[connection signal="OK" from="change_letter_by_letter_dialog" to="." method="_on_change_letter_by_letter_dialog_OK"]
+[connection signal="Cancel" from="emit_signal_dialog" to="." method="hide_all"]
+[connection signal="OK" from="emit_signal_dialog" to="." method="_on_emit_signal_dialog_OK"]
+[connection signal="Cancel" from="play_sound_dialog" to="." method="hide_all"]
+[connection signal="OK" from="play_sound_dialog" to="." method="_on_play_sound_dialog_OK"]
+[connection signal="Cancel" from="show_variable_dialog" to="." method="hide_all"]
+[connection signal="OK" from="show_variable_dialog" to="." method="_on_show_variable_dialog_OK"]
+[connection signal="Cancel" from="show_term_dialog" to="." method="hide_all"]
+[connection signal="OK" from="show_term_dialog" to="." method="_on_show_term_dialog_OK"]
+[connection signal="Cancel" from="show_character_name_dialog" to="." method="hide_all"]
+[connection signal="OK" from="show_character_name_dialog" to="." method="_on_show_character_name_dialog_OK"]
+[connection signal="Cancel" from="select_config_dialog" to="." method="hide_all"]
+[connection signal="OK" from="select_config_dialog" to="." method="_on_select_config_dialog_OK"]
+[connection signal="hide" from="CustomFileDialog" to="." method="_on_CustomFileDialog_hide"]
+[connection signal="select_files" from="CustomFileDialog" to="." method="_on_CustomFileDialog_select_files"]

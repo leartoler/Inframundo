@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://addons/Dialog/DialogBox/custom_dialog_node.gd" type="Script" id=1]
+[ext_resource path="res://addons/Dialog/DialogBox/DialogBox.tscn" type="PackedScene" id=2]
+
+[node name="DialogBox" type="CanvasLayer"]
+pause_mode = 2
+script = ExtResource( 1 )
+DATA = "res://Langs/lang.data"
+default_lang = "res://Langs/Eng.lang"
+preview_message_id = 0
+
+[node name="Main" parent="." instance=ExtResource( 2 )]
+visible = false
+modulate = Color( 1, 1, 1, 0 )
+margin_left = -492.0
+margin_top = -168.0
+margin_right = 492.0
+margin_bottom = -8.0

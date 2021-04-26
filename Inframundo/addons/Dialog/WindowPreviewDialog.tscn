@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://addons/Dialog/DialogBox/custom_dialog_node.gd" type="Script" id=1]
+
+[node name="WindowPreviewDialog" type="WindowDialog"]
+pause_mode = 2
+margin_right = 448.0
+margin_bottom = 368.0
+popup_exclusive = true
+window_title = "Preview Dialog"
+resizable = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DialogBox" type="CanvasLayer" parent="."]
+pause_mode = 2
+script = ExtResource( 1 )

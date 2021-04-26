@@ -1,0 +1,548 @@
+[gd_scene load_steps=18 format=2]
+
+[ext_resource path="res://addons/Dialog/CustomGraphNode_01.gd" type="Script" id=1]
+[ext_resource path="res://addons/Dialog/Graphics/arrow_down.png" type="Texture" id=2]
+[ext_resource path="res://addons/Dialog/Graphics/cancel_button_normal.png" type="Texture" id=3]
+[ext_resource path="res://addons/Dialog/Graphics/cancel_button_over.png" type="Texture" id=4]
+[ext_resource path="res://addons/Dialog/Fonts/KOMIKAX_.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://addons/Dialog/Graphics/arrow_right.png" type="Texture" id=6]
+[ext_resource path="res://addons/Dialog/Graphics/arrow_right_over.png" type="Texture" id=7]
+[ext_resource path="res://addons/Dialog/Fonts/NotoSansCJKtc-Regular.ttf" type="DynamicFontData" id=8]
+
+[sub_resource type="StyleBoxFlat" id=1]
+resource_local_to_scene = true
+content_margin_left = 16.0
+content_margin_right = 16.0
+content_margin_top = 2.0
+content_margin_bottom = 15.0
+bg_color = Color( 0, 0, 0, 0.862745 )
+border_width_left = 2
+border_width_top = 35
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0.0156863, 0.603922, 0.741176, 1 )
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+shadow_color = Color( 0, 0, 0, 0.231373 )
+shadow_size = 9
+shadow_offset = Vector2( 10, 10 )
+
+[sub_resource type="DynamicFont" id=2]
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 5 )
+
+[sub_resource type="StyleBoxFlat" id=3]
+content_margin_left = 1.0
+content_margin_right = 1.0
+content_margin_top = 1.0
+content_margin_bottom = 2.0
+bg_color = Color( 0.137255, 0.137255, 0.137255, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 0.952941, 0.588235, 0.0196078, 1 )
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+expand_margin_left = 1.0
+expand_margin_right = 1.0
+expand_margin_top = 1.0
+
+[sub_resource type="StyleBoxFlat" id=4]
+content_margin_left = 1.0
+content_margin_right = 1.0
+content_margin_top = 1.0
+content_margin_bottom = 2.0
+bg_color = Color( 0.137255, 0.137255, 0.137255, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 0.921569, 0.921569, 0.921569, 1 )
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+expand_margin_left = 1.0
+expand_margin_right = 1.0
+expand_margin_top = 1.0
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0.866667, 0.74902, 0.129412, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0.639216, 0.403922, 0.0235294, 1 )
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id=6]
+bg_color = Color( 0.760784, 0.87451, 0.870588, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0.0184326, 0.242613, 0.294922, 1 )
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id=7]
+content_margin_left = 6.0
+content_margin_right = 6.0
+bg_color = Color( 0.00392157, 0.00784314, 0.00784314, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id=8]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[sub_resource type="DynamicFont" id=9]
+font_data = ExtResource( 8 )
+
+[node name="CustomGraphNode" type="PanelContainer"]
+margin_right = 376.0
+margin_bottom = 256.0
+rect_min_size = Vector2( 400, 40 )
+focus_mode = 1
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_styles/panel = SubResource( 1 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+resizable = false
+frame_color = Color( 0.0156863, 0.603922, 0.741176, 1 )
+slots = [ {
+"dot_left_name": "",
+"dot_right_name": "",
+"left_color": Color( 1, 1, 1, 1 ),
+"left_max_connections": 1,
+"left_offset": Vector2( 0, 0 ),
+"left_show": false,
+"left_type": 0,
+"right_color": Color( 1, 1, 1, 1 ),
+"right_max_connections": 1,
+"right_offset": Vector2( 0, 0 ),
+"right_show": false,
+"right_type": 0
+}, {
+"dot_left_name": "CustomNodeDot3",
+"dot_right_name": "",
+"left_color": Color( 1, 0.988235, 0.141176, 1 ),
+"left_max_connections": 1,
+"left_offset": Vector2( 0, 0 ),
+"left_show": true,
+"left_type": 0,
+"right_color": Color( 1, 1, 1, 1 ),
+"right_max_connections": 1,
+"right_offset": Vector2( 0, 0 ),
+"right_show": false,
+"right_type": 0
+}, {
+"dot_left_name": "",
+"dot_right_name": "CustomNodeDot3",
+"left_color": Color( 1, 1, 1, 1 ),
+"left_max_connections": 1,
+"left_offset": Vector2( 0, 0 ),
+"left_show": false,
+"left_type": 0,
+"right_color": Color( 0.25098, 0.705882, 0.0705882, 1 ),
+"right_max_connections": 0,
+"right_offset": Vector2( 0, -5 ),
+"right_show": true,
+"right_type": 8
+}, {
+"dot_left_name": "CustomNodeDot4",
+"dot_right_name": "CustomNodeDot4",
+"left_color": Color( 1, 1, 1, 1 ),
+"left_max_connections": 0,
+"left_offset": Vector2( 0, 0 ),
+"left_show": true,
+"left_type": 1,
+"right_color": Color( 1, 1, 1, 1 ),
+"right_max_connections": 0,
+"right_offset": Vector2( 0, 0 ),
+"right_show": true,
+"right_type": 1
+}, {
+"dot_left_name": "",
+"dot_right_name": "",
+"left_color": Color( 1, 1, 1, 1 ),
+"left_max_connections": 1,
+"left_offset": Vector2( 0, 0 ),
+"left_show": false,
+"left_type": 0,
+"right_color": Color( 1, 1, 1, 1 ),
+"right_max_connections": 1,
+"right_offset": Vector2( 0, 0 ),
+"right_show": false,
+"right_type": 0
+}, {
+"dot_left_name": "",
+"dot_right_name": "",
+"left_color": Color( 1, 1, 1, 1 ),
+"left_max_connections": 1,
+"left_offset": Vector2( 0, 0 ),
+"left_show": false,
+"left_type": 0,
+"right_color": Color( 1, 1, 1, 1 ),
+"right_max_connections": 1,
+"right_offset": Vector2( 0, 0 ),
+"right_show": false,
+"right_type": 0
+}, {
+"dot_left_name": "",
+"dot_right_name": "",
+"left_color": Color( 1, 1, 1, 1 ),
+"left_max_connections": 1,
+"left_offset": Vector2( 0, 0 ),
+"left_show": false,
+"left_type": 0,
+"right_color": Color( 1, 1, 1, 1 ),
+"right_max_connections": 1,
+"right_offset": Vector2( 0, 0 ),
+"right_show": false,
+"right_type": 0
+}, {
+"dot_left_name": "",
+"dot_right_name": "",
+"left_color": Color( 1, 1, 1, 1 ),
+"left_max_connections": 1,
+"left_offset": Vector2( 0, 0 ),
+"left_show": false,
+"left_type": 0,
+"right_color": Color( 1, 1, 1, 1 ),
+"right_max_connections": 1,
+"right_offset": Vector2( 0, 0 ),
+"right_show": false,
+"right_type": 0
+} ]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+margin_left = 16.0
+margin_top = 2.0
+margin_right = 384.0
+margin_bottom = 259.0
+mouse_filter = 2
+
+[node name="TopContainer" type="HBoxContainer" parent="VBoxContainer"]
+margin_right = 368.0
+margin_bottom = 35.0
+rect_min_size = Vector2( 180, 35 )
+size_flags_horizontal = 3
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Title" type="Label" parent="VBoxContainer/TopContainer"]
+margin_right = 332.0
+margin_bottom = 28.0
+size_flags_horizontal = 3
+size_flags_vertical = 0
+custom_fonts/font = SubResource( 2 )
+text = "SET MESSAGE"
+
+[node name="CloseButton" type="TextureButton" parent="VBoxContainer/TopContainer"]
+margin_left = 336.0
+margin_right = 368.0
+margin_bottom = 35.0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource( 3 )
+texture_hover = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="simple_text_label" type="RichTextLabel" parent="VBoxContainer"]
+visible = false
+margin_top = 39.0
+margin_right = 304.0
+margin_bottom = 39.0
+size_flags_vertical = 0
+custom_colors/default_color = Color( 0.705882, 0.917647, 0.952941, 0.843137 )
+scroll_active = false
+
+[node name="DotContainerLeft" type="Control" parent="VBoxContainer"]
+margin_top = 39.0
+margin_right = 368.0
+margin_bottom = 39.0
+mouse_filter = 2
+
+[node name="DotContainerRight" type="Control" parent="VBoxContainer"]
+margin_top = 43.0
+margin_right = 368.0
+margin_bottom = 43.0
+mouse_filter = 2
+
+[node name="ContentContainer" type="VBoxContainer" parent="VBoxContainer"]
+margin_top = 47.0
+margin_right = 368.0
+margin_bottom = 257.0
+
+[node name="separator" type="Control" parent="VBoxContainer/ContentContainer"]
+margin_right = 368.0
+margin_bottom = 5.0
+rect_min_size = Vector2( 0, 5 )
+mouse_filter = 1
+
+[node name="HBoxContainer1" type="HBoxContainer" parent="VBoxContainer/ContentContainer"]
+margin_top = 9.0
+margin_right = 368.0
+margin_bottom = 31.0
+mouse_filter = 2
+
+[node name="config_label" type="Label" parent="VBoxContainer/ContentContainer/HBoxContainer1"]
+margin_top = 4.0
+margin_right = 342.0
+margin_bottom = 18.0
+size_flags_horizontal = 3
+text = "Config"
+
+[node name="ColorPickerButton" type="ColorPickerButton" parent="VBoxContainer/ContentContainer/HBoxContainer1"]
+margin_left = 346.0
+margin_right = 368.0
+margin_bottom = 22.0
+rect_min_size = Vector2( 22, 22 )
+hint_tooltip = "Set Color for this node"
+focus_mode = 0
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_styles/hover = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
+color = Color( 0.0156863, 0.603922, 0.741176, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="variable_label" type="HBoxContainer" parent="VBoxContainer/ContentContainer"]
+margin_top = 35.0
+margin_right = 368.0
+margin_bottom = 65.0
+rect_min_size = Vector2( 0, 30 )
+hint_tooltip = "If this message box is linked to one or more variable boxes,
+they are evaluated first and then the message of this box is displayed"
+alignment = 2
+
+[node name="variables_behavior_OptionButton" type="OptionButton" parent="VBoxContainer/ContentContainer/variable_label"]
+margin_left = 85.0
+margin_top = 5.0
+margin_right = 289.0
+margin_bottom = 25.0
+rect_min_size = Vector2( 204, 0 )
+mouse_default_cursor_shape = 2
+size_flags_vertical = 4
+text = "when starting this message"
+items = [ "when starting this message", null, false, 0, null, "At the end of this message", null, false, 1, null ]
+selected = 0
+
+[node name="Label" type="Label" parent="VBoxContainer/ContentContainer/variable_label"]
+margin_left = 293.0
+margin_top = 8.0
+margin_right = 368.0
+margin_bottom = 22.0
+text = "Set Variable"
+align = 2
+
+[node name="current_text_label" type="Label" parent="VBoxContainer/ContentContainer"]
+margin_top = 68.0
+margin_right = 368.0
+margin_bottom = 118.0
+rect_min_size = Vector2( 0, 50 )
+text = "                   Message:"
+valign = 1
+
+[node name="PercentToAppear_SpinBox" type="SpinBox" parent="VBoxContainer/ContentContainer/current_text_label"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_top = -12.0
+margin_right = 58.0
+margin_bottom = 12.0
+hint_tooltip = "When any  message is linked to more than
+one message, this percentage box indicates how
+likely it is that this message will be shown below
+
+If the previous message box is also linked to one or more condition boxes,
+these are evaluated first and if none are satisfied this message box is evaluated"
+value = 100.0
+suffix = "%"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="VBoxContainer/ContentContainer/current_text_label"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -191.0
+margin_top = -10.0
+margin_right = -16.0
+margin_bottom = 10.0
+rect_min_size = Vector2( 175, 20 )
+hint_tooltip = "Click here to replace the text in this dialog with the
+text set in the language of your choice."
+mouse_default_cursor_shape = 2
+custom_styles/hover = SubResource( 5 )
+custom_styles/normal = SubResource( 6 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0.054902, 0.215686, 0.635294, 1 )
+text = "Import Dialog from..."
+clip_text = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer3" type="PanelContainer" parent="VBoxContainer/ContentContainer"]
+margin_top = 123.0
+margin_right = 368.0
+margin_bottom = 163.0
+rect_min_size = Vector2( 0, 40 )
+custom_styles/panel = SubResource( 7 )
+
+[node name="Panel" type="HBoxContainer" parent="VBoxContainer/ContentContainer/HBoxContainer3"]
+margin_left = 6.0
+margin_top = 1.0
+margin_right = 362.0
+margin_bottom = 39.0
+rect_min_size = Vector2( 0, 20 )
+mouse_filter = 0
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 3
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="current_text_LineEdit" type="LineEdit" parent="VBoxContainer/ContentContainer/HBoxContainer3/Panel"]
+margin_right = 270.0
+margin_bottom = 38.0
+focus_mode = 0
+mouse_filter = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/normal = SubResource( 8 )
+custom_fonts/font = SubResource( 9 )
+placeholder_text = "select text..."
+caret_blink = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureButton" type="TextureButton" parent="VBoxContainer/ContentContainer/HBoxContainer3/Panel"]
+margin_left = 274.0
+margin_right = 290.0
+margin_bottom = 38.0
+rect_min_size = Vector2( 16, 0 )
+hint_tooltip = "Display Advance text editor"
+focus_mode = 0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource( 6 )
+texture_hover = ExtResource( 7 )
+expand = true
+stretch_mode = 3
+
+[node name="Button" type="Button" parent="VBoxContainer/ContentContainer/HBoxContainer3/Panel"]
+margin_left = 294.0
+margin_top = 9.0
+margin_right = 356.0
+margin_bottom = 29.0
+mouse_default_cursor_shape = 2
+size_flags_vertical = 4
+text = "Preview"
+
+[node name="separator2" type="Control" parent="VBoxContainer/ContentContainer"]
+margin_top = 167.0
+margin_right = 368.0
+margin_bottom = 172.0
+rect_min_size = Vector2( 0, 5 )
+mouse_filter = 1
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="add_choice_button" type="Button" parent="VBoxContainer/ContentContainer"]
+margin_top = 176.0
+margin_right = 125.0
+margin_bottom = 196.0
+rect_min_size = Vector2( 125, 0 )
+rect_pivot_offset = Vector2( 26.6158, -0.808182 )
+hint_tooltip = "When this message is displayed, if you have added 1 or more choices, it displays them and
+allows you to select one"
+focus_mode = 0
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = "Add Choice"
+align = 0
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/ContentContainer/add_choice_button"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -18.0
+margin_top = -8.0
+margin_right = -3.0
+margin_bottom = 8.0
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="separator3" type="Control" parent="VBoxContainer/ContentContainer"]
+margin_top = 200.0
+margin_right = 368.0
+margin_bottom = 210.0
+rect_min_size = Vector2( 0, 10 )
+mouse_filter = 1
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.02
+one_shot = true
+[connection signal="collapsed" from="." to="." method="_on_CustomGraphNode_collapsed"]
+[connection signal="draw" from="." to="." method="_on_CustomGraphNode_draw"]
+[connection signal="focus_entered" from="." to="." method="_on_CustomGraphNode_focus_entered"]
+[connection signal="gui_input" from="." to="." method="_on_CustomGraphNode_gui_input"]
+[connection signal="item_rect_changed" from="." to="." method="_on_CustomGraphNode_item_rect_changed"]
+[connection signal="tree_entered" from="." to="." method="_on_CustomGraphNode_tree_entered"]
+[connection signal="tree_exiting" from="." to="." method="_on_CustomGraphNode_tree_exiting"]
+[connection signal="button_down" from="VBoxContainer/TopContainer/CloseButton" to="." method="_on_CloseButton_button_down"]
+[connection signal="gui_input" from="VBoxContainer/DotContainerLeft/CustomNodeDot3" to="VBoxContainer/DotContainerLeft/CustomNodeDot3" method="_on_CustomNodeDot_gui_input"]
+[connection signal="mouse_entered" from="VBoxContainer/DotContainerLeft/CustomNodeDot3" to="VBoxContainer/DotContainerLeft/CustomNodeDot3" method="_on_CustomNodeDot_mouse_entered"]
+[connection signal="mouse_exited" from="VBoxContainer/DotContainerLeft/CustomNodeDot3" to="VBoxContainer/DotContainerLeft/CustomNodeDot3" method="_on_CustomNodeDot_mouse_exited"]
+[connection signal="gui_input" from="VBoxContainer/DotContainerLeft/CustomNodeDot4" to="VBoxContainer/DotContainerLeft/CustomNodeDot4" method="_on_CustomNodeDot_gui_input"]
+[connection signal="mouse_entered" from="VBoxContainer/DotContainerLeft/CustomNodeDot4" to="VBoxContainer/DotContainerLeft/CustomNodeDot4" method="_on_CustomNodeDot_mouse_entered"]
+[connection signal="mouse_exited" from="VBoxContainer/DotContainerLeft/CustomNodeDot4" to="VBoxContainer/DotContainerLeft/CustomNodeDot4" method="_on_CustomNodeDot_mouse_exited"]
+[connection signal="gui_input" from="VBoxContainer/DotContainerRight/CustomNodeDot3" to="VBoxContainer/DotContainerRight/CustomNodeDot3" method="_on_CustomNodeDot_gui_input"]
+[connection signal="mouse_entered" from="VBoxContainer/DotContainerRight/CustomNodeDot3" to="VBoxContainer/DotContainerRight/CustomNodeDot3" method="_on_CustomNodeDot_mouse_entered"]
+[connection signal="mouse_exited" from="VBoxContainer/DotContainerRight/CustomNodeDot3" to="VBoxContainer/DotContainerRight/CustomNodeDot3" method="_on_CustomNodeDot_mouse_exited"]
+[connection signal="gui_input" from="VBoxContainer/DotContainerRight/CustomNodeDot4" to="VBoxContainer/DotContainerRight/CustomNodeDot4" method="_on_CustomNodeDot_gui_input"]
+[connection signal="mouse_entered" from="VBoxContainer/DotContainerRight/CustomNodeDot4" to="VBoxContainer/DotContainerRight/CustomNodeDot4" method="_on_CustomNodeDot_mouse_entered"]
+[connection signal="mouse_exited" from="VBoxContainer/DotContainerRight/CustomNodeDot4" to="VBoxContainer/DotContainerRight/CustomNodeDot4" method="_on_CustomNodeDot_mouse_exited"]
+[connection signal="color_changed" from="VBoxContainer/ContentContainer/HBoxContainer1/ColorPickerButton" to="." method="set_frame_color"]
+[connection signal="toggled" from="VBoxContainer/ContentContainer/HBoxContainer1/ColorPickerButton" to="." method="_on_ColorPickerButton_toggled"]
+[connection signal="button_down" from="VBoxContainer/ContentContainer/current_text_label/Button" to="." method="_on_get_default_text_button_down"]
+[connection signal="gui_input" from="VBoxContainer/ContentContainer/HBoxContainer3/Panel" to="." method="_on_Panel_gui_input"]
+[connection signal="focus_entered" from="VBoxContainer/ContentContainer/HBoxContainer3/Panel/current_text_LineEdit" to="." method="select"]
+[connection signal="text_changed" from="VBoxContainer/ContentContainer/HBoxContainer3/Panel/current_text_LineEdit" to="." method="_on_current_text_LineEdit_text_changed"]
+[connection signal="button_down" from="VBoxContainer/ContentContainer/HBoxContainer3/Panel/TextureButton" to="." method="_on_advance_edit_text_button_down"]
+[connection signal="button_down" from="VBoxContainer/ContentContainer/HBoxContainer3/Panel/Button" to="." method="_on_preview_Button_button_down"]
+[connection signal="button_down" from="VBoxContainer/ContentContainer/add_choice_button" to="." method="_on_add_choice_button_button_down"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

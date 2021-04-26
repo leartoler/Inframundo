@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/default_resume_fx.wav-94b0fd83522d3826764c13645d247f02.sample"
+
+[deps]
+
+source_file="res://addons/Dialog/DialogBox/Audio/default_resume_fx.wav"
+dest_files=[ "res://.import/default_resume_fx.wav-94b0fd83522d3826764c13645d247f02.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

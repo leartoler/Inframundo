@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/default_letter_by_letter_fx.wav-5a428c96ac0f86dd9c278e88269d97fa.sample"
+
+[deps]
+
+source_file="res://Audio/default_letter_by_letter_fx.wav"
+dest_files=[ "res://.import/default_letter_by_letter_fx.wav-5a428c96ac0f86dd9c278e88269d97fa.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

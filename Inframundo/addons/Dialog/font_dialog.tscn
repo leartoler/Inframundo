@@ -1,0 +1,301 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://addons/Dialog/font_dialog.gd" type="Script" id=1]
+[ext_resource path="res://addons/Dialog/Graphics/folder_button_over.png" type="Texture" id=2]
+[ext_resource path="res://addons/Dialog/Graphics/folder_button_normal.png" type="Texture" id=3]
+
+[sub_resource type="StyleBoxFlat" id=1]
+content_margin_left = 6.0
+content_margin_right = 6.0
+content_margin_top = 6.0
+content_margin_bottom = 6.0
+bg_color = Color( 0.196078, 0.133333, 0.133333, 1 )
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color( 0, 0, 0, 1 )
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[node name="font_dialog" type="Panel"]
+margin_right = 442.0
+margin_bottom = 342.0
+rect_min_size = Vector2( 442, 342 )
+custom_styles/panel = SubResource( 1 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 8.0
+margin_top = 8.0
+margin_right = -8.0
+margin_bottom = -8.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer"]
+margin_right = 426.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 0, 20 )
+mouse_filter = 2
+bbcode_enabled = true
+bbcode_text = "[center][color=red]FONT[/color][/center]"
+text = "FONT"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 24.0
+margin_right = 426.0
+margin_bottom = 48.0
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer"]
+margin_top = 5.0
+margin_right = 95.0
+margin_bottom = 19.0
+rect_min_size = Vector2( 95, 0 )
+custom_colors/font_color = Color( 0.176471, 0.956863, 0.113725, 1 )
+text = "font path:"
+
+[node name="path_LineEdit" type="LineEdit" parent="VBoxContainer/HBoxContainer"]
+margin_left = 99.0
+margin_right = 395.0
+margin_bottom = 24.0
+hint_tooltip = "Click to select a valid font (*.ttf)
+and create a preset"
+focus_mode = 0
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 3
+text = "default"
+editable = false
+
+[node name="load_font_Button" type="TextureButton" parent="VBoxContainer/HBoxContainer"]
+margin_left = 399.0
+margin_right = 426.0
+margin_bottom = 24.0
+hint_tooltip = "Load Dynamic Font (preset)"
+focus_mode = 0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource( 3 )
+texture_hover = ExtResource( 2 )
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 52.0
+margin_right = 426.0
+margin_bottom = 76.0
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer2"]
+margin_top = 5.0
+margin_right = 95.0
+margin_bottom = 19.0
+rect_min_size = Vector2( 95, 0 )
+custom_colors/font_color = Color( 0.176471, 0.956863, 0.113725, 1 )
+text = "size:"
+
+[node name="size_SpinBox" type="SpinBox" parent="VBoxContainer/HBoxContainer2"]
+margin_left = 99.0
+margin_right = 173.0
+margin_bottom = 24.0
+min_value = 1.0
+max_value = 256.0
+value = 16.0
+
+[node name="label2" type="Label" parent="VBoxContainer/HBoxContainer2"]
+margin_left = 177.0
+margin_top = 5.0
+margin_right = 211.0
+margin_bottom = 19.0
+custom_colors/font_color = Color( 0.176471, 0.956863, 0.113725, 1 )
+text = "Type:"
+
+[node name="OptionButton" type="OptionButton" parent="VBoxContainer/HBoxContainer2"]
+margin_left = 215.0
+margin_top = 2.0
+margin_right = 426.0
+margin_bottom = 22.0
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+text = "Normal Font"
+items = [ "Normal Font", null, false, 0, null, "Bold Font", null, false, 1, null, "Italic Font", null, false, 2, null, "Bold Italic Font", null, false, 3, null ]
+selected = 0
+
+[node name="HBoxContainer30" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 80.0
+margin_right = 426.0
+margin_bottom = 104.0
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer30"]
+margin_top = 5.0
+margin_right = 95.0
+margin_bottom = 19.0
+rect_min_size = Vector2( 95, 0 )
+custom_colors/font_color = Color( 0.176471, 0.956863, 0.113725, 1 )
+text = "outline size:"
+
+[node name="osize_SpinBox" type="SpinBox" parent="VBoxContainer/HBoxContainer30"]
+margin_left = 99.0
+margin_right = 173.0
+margin_bottom = 24.0
+max_value = 32.0
+allow_greater = true
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 108.0
+margin_right = 426.0
+margin_bottom = 134.0
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer4"]
+margin_top = 6.0
+margin_right = 95.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 95, 0 )
+custom_colors/font_color = Color( 0.176471, 0.956863, 0.113725, 1 )
+text = "outline color:"
+
+[node name="ocolor_Button" type="ColorPickerButton" parent="VBoxContainer/HBoxContainer4"]
+margin_left = 99.0
+margin_right = 131.0
+margin_bottom = 26.0
+rect_min_size = Vector2( 32, 26 )
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 138.0
+margin_right = 426.0
+margin_bottom = 162.0
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer5"]
+margin_top = 5.0
+margin_right = 95.0
+margin_bottom = 19.0
+rect_min_size = Vector2( 95, 0 )
+custom_colors/font_color = Color( 0.176471, 0.956863, 0.113725, 1 )
+text = "use mipmaps:"
+
+[node name="mipmaps_CheckBox" type="CheckBox" parent="VBoxContainer/HBoxContainer5"]
+margin_left = 99.0
+margin_right = 123.0
+margin_bottom = 24.0
+
+[node name="HBoxContainer6" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 166.0
+margin_right = 426.0
+margin_bottom = 190.0
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer6"]
+margin_top = 5.0
+margin_right = 95.0
+margin_bottom = 19.0
+rect_min_size = Vector2( 95, 0 )
+custom_colors/font_color = Color( 0.176471, 0.956863, 0.113725, 1 )
+text = "use filter:"
+
+[node name="filter_CheckBox" type="CheckBox" parent="VBoxContainer/HBoxContainer6"]
+margin_left = 99.0
+margin_right = 123.0
+margin_bottom = 24.0
+
+[node name="HBoxContainer7" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 194.0
+margin_right = 426.0
+margin_bottom = 218.0
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer7"]
+margin_top = 5.0
+margin_right = 95.0
+margin_bottom = 19.0
+rect_min_size = Vector2( 95, 0 )
+custom_colors/font_color = Color( 0.176471, 0.956863, 0.113725, 1 )
+text = "top spacing:"
+
+[node name="top_spacing_SpinBox" type="SpinBox" parent="VBoxContainer/HBoxContainer7"]
+margin_left = 99.0
+margin_right = 173.0
+margin_bottom = 24.0
+allow_greater = true
+allow_lesser = true
+
+[node name="Label2" type="Label" parent="VBoxContainer/HBoxContainer7"]
+margin_left = 177.0
+margin_top = 5.0
+margin_right = 308.0
+margin_bottom = 19.0
+rect_min_size = Vector2( 95, 0 )
+custom_colors/font_color = Color( 0.176471, 0.956863, 0.113725, 1 )
+text = "       bottom spacing:"
+
+[node name="bottom_spacing_SpinBox" type="SpinBox" parent="VBoxContainer/HBoxContainer7"]
+margin_left = 312.0
+margin_right = 386.0
+margin_bottom = 24.0
+allow_greater = true
+allow_lesser = true
+
+[node name="HBoxContainer8" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 222.0
+margin_right = 426.0
+margin_bottom = 262.0
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer8"]
+margin_right = 95.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 95, 40 )
+custom_colors/font_color = Color( 0.176471, 0.956863, 0.113725, 1 )
+text = "char spacing:"
+
+[node name="char_spacing_SpinBox" type="SpinBox" parent="VBoxContainer/HBoxContainer8"]
+margin_left = 99.0
+margin_right = 173.0
+margin_bottom = 24.0
+size_flags_vertical = 0
+allow_greater = true
+allow_lesser = true
+
+[node name="Label2" type="Label" parent="VBoxContainer/HBoxContainer8"]
+margin_left = 177.0
+margin_right = 308.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 131, 40 )
+custom_colors/font_color = Color( 0.176471, 0.956863, 0.113725, 1 )
+text = "       space:               "
+
+[node name="space_SpinBox" type="SpinBox" parent="VBoxContainer/HBoxContainer8"]
+margin_left = 312.0
+margin_right = 386.0
+margin_bottom = 24.0
+size_flags_vertical = 0
+allow_greater = true
+allow_lesser = true
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 306.0
+margin_right = 426.0
+margin_bottom = 326.0
+size_flags_vertical = 10
+alignment = 2
+
+[node name="OK_Button" type="Button" parent="VBoxContainer/HBoxContainer3"]
+margin_left = 337.0
+margin_right = 368.0
+margin_bottom = 20.0
+mouse_default_cursor_shape = 2
+text = "OK"
+
+[node name="Cancel_Button" type="Button" parent="VBoxContainer/HBoxContainer3"]
+margin_left = 372.0
+margin_right = 426.0
+margin_bottom = 20.0
+mouse_default_cursor_shape = 2
+text = "Cancel"
+[connection signal="visibility_changed" from="." to="." method="_on_font_dialog_visibility_changed"]
+[connection signal="gui_input" from="VBoxContainer/HBoxContainer/path_LineEdit" to="." method="_on_path_LineEdit_gui_input"]
+[connection signal="button_down" from="VBoxContainer/HBoxContainer/load_font_Button" to="." method="_on_load_font_Button_button_down"]
+[connection signal="button_down" from="VBoxContainer/HBoxContainer3/OK_Button" to="." method="_on_OK_Button_button_down"]
+[connection signal="button_down" from="VBoxContainer/HBoxContainer3/Cancel_Button" to="." method="_on_Cancel_Button_button_down"]
+[connection signal="focus_exited" from="VBoxContainer/HBoxContainer3/Cancel_Button" to="." method="_on_Cancel_Button_focus_exited"]

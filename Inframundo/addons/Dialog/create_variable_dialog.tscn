@@ -1,0 +1,156 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://addons/Dialog/create_variable_dialog.gd" type="Script" id=1]
+[ext_resource path="res://addons/Dialog/Fonts/NotoSansCJKtc-Regular.ttf" type="DynamicFontData" id=2]
+
+[sub_resource type="StyleBoxFlat" id=1]
+content_margin_left = 6.0
+content_margin_right = 6.0
+content_margin_top = 6.0
+content_margin_bottom = 6.0
+bg_color = Color( 0.196078, 0.133333, 0.133333, 1 )
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color( 0, 0, 0, 1 )
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="DynamicFont" id=2]
+font_data = ExtResource( 2 )
+
+[sub_resource type="InputEventKey" id=3]
+scancode = 16777221
+
+[sub_resource type="ShortCut" id=4]
+shortcut = SubResource( 3 )
+
+[node name="create_variable_dialog" type="Panel"]
+margin_right = 388.0
+margin_bottom = 261.0
+rect_min_size = Vector2( 388, 300 )
+custom_styles/panel = SubResource( 1 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+resizable = true
+vertical_resizable = false
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 8.0
+margin_top = 8.0
+margin_right = -8.0
+margin_bottom = -8.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer"]
+margin_right = 372.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 0, 100 )
+mouse_filter = 2
+bbcode_enabled = true
+bbcode_text = "[center][color=red]VARIABLE[/color][/center]
+
+Create a new local variable.
+[indent][color=#2df41d]· Variable type[/color]: Set the type of variable.
+[color=#2df41d]· Variable Name[/color]: Set the name of variable.
+[color=#2df41d]· Default[/color]: Set the default value for this variable.[/indent]"
+text = "VARIABLE
+
+Create a new local variable.
+	· Variable type: Set the type of variable.
+· Variable Name: Set the name of variable.
+· Default: Set the default value for this variable."
+
+[node name="Label3" type="Label" parent="VBoxContainer"]
+margin_top = 104.0
+margin_right = 372.0
+margin_bottom = 118.0
+custom_colors/font_color = Color( 0.176471, 0.956863, 0.113725, 1 )
+text = "Variable Type:"
+
+[node name="OptionButton" type="OptionButton" parent="VBoxContainer"]
+margin_top = 122.0
+margin_right = 372.0
+margin_bottom = 142.0
+mouse_default_cursor_shape = 2
+text = "String"
+items = [ "String", null, false, 0, null, "Int", null, false, 1, null, "Float", null, false, 2, null, "Boolean", null, false, 3, null ]
+selected = 0
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+margin_top = 146.0
+margin_right = 372.0
+margin_bottom = 160.0
+custom_colors/font_color = Color( 0.176471, 0.956863, 0.113725, 1 )
+text = "Variable Name:"
+
+[node name="LineEdit" type="LineEdit" parent="VBoxContainer"]
+margin_top = 164.0
+margin_right = 372.0
+margin_bottom = 199.0
+custom_fonts/font = SubResource( 2 )
+text = "my var"
+caret_blink = true
+
+[node name="Label2" type="Label" parent="VBoxContainer"]
+margin_top = 203.0
+margin_right = 372.0
+margin_bottom = 217.0
+custom_colors/font_color = Color( 0.176471, 0.956863, 0.113725, 1 )
+text = "Default Value:"
+
+[node name="Container" type="Container" parent="VBoxContainer"]
+margin_top = 221.0
+margin_right = 372.0
+margin_bottom = 250.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 264.0
+margin_right = 372.0
+margin_bottom = 284.0
+size_flags_vertical = 10
+alignment = 2
+
+[node name="OK_Button" type="Button" parent="VBoxContainer/HBoxContainer3"]
+margin_left = 279.0
+margin_right = 310.0
+margin_bottom = 20.0
+mouse_default_cursor_shape = 2
+shortcut = SubResource( 4 )
+text = "OK"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Cancel_Button" type="Button" parent="VBoxContainer/HBoxContainer3"]
+margin_left = 314.0
+margin_right = 368.0
+margin_bottom = 20.0
+mouse_default_cursor_shape = 2
+text = "Cancel"
+
+[node name="Control" type="Control" parent="VBoxContainer/HBoxContainer3"]
+margin_left = 372.0
+margin_right = 372.0
+margin_bottom = 20.0
+[connection signal="visibility_changed" from="." to="." method="_on_create_variable_dialog_visibility_changed"]
+[connection signal="item_selected" from="VBoxContainer/OptionButton" to="." method="_on_OptionButton_item_selected"]
+[connection signal="focus_entered" from="VBoxContainer/LineEdit" to="." method="_on_LineEdit_focus_entered"]
+[connection signal="focus_exited" from="VBoxContainer/LineEdit" to="." method="_on_LineEdit_focus_exited"]
+[connection signal="gui_input" from="VBoxContainer/LineEdit" to="." method="_on_control1_gui_input"]
+[connection signal="button_down" from="VBoxContainer/HBoxContainer3/OK_Button" to="." method="_on_OK_Button_button_down"]
+[connection signal="button_down" from="VBoxContainer/HBoxContainer3/Cancel_Button" to="." method="_on_Cancel_Button_button_down"]
+[connection signal="focus_exited" from="VBoxContainer/HBoxContainer3/Cancel_Button" to="." method="_on_Cancel_Button_focus_exited"]

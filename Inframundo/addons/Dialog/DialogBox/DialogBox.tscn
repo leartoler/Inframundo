@@ -1,0 +1,121 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://addons/Dialog/DialogBox/Graphics/default_dialog_background.png" type="Texture" id=1]
+[ext_resource path="res://addons/Dialog/DialogBox/Audio/default_letter_by_letter_fx.wav" type="AudioStream" id=3]
+[ext_resource path="res://addons/Dialog/DialogBox/SimpleTextPanel.tscn" type="PackedScene" id=4]
+[ext_resource path="res://addons/Dialog/DialogBox/CustomRichTextLabel.tscn" type="PackedScene" id=5]
+[ext_resource path="res://addons/Dialog/DialogBox/MainDialog.gd" type="Script" id=6]
+[ext_resource path="res://addons/Dialog/DialogBox/SelectOptionsPanel.tscn" type="PackedScene" id=25]
+[ext_resource path="res://addons/Dialog/DialogBox/SimpleTexture.tscn" type="PackedScene" id=27]
+
+[node name="Main" type="Control" groups=[
+"main_message_node",
+]]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -300.0
+margin_top = -226.0
+margin_right = 300.0
+margin_bottom = -66.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Dialog" type="NinePatchRect" parent="." groups=[
+"main_dialog_node",
+]]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 1 )
+patch_margin_left = 18
+patch_margin_top = 16
+patch_margin_right = 18
+patch_margin_bottom = 16
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 2
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MessageMarginContainer" type="MarginContainer" parent="Dialog"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_constants/margin_right = 16
+custom_constants/margin_top = 16
+custom_constants/margin_left = 16
+custom_constants/margin_bottom = 16
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Dialog/MessageMarginContainer"]
+margin_left = 16.0
+margin_top = 16.0
+margin_right = 584.0
+margin_bottom = 144.0
+custom_constants/separation = 20
+
+[node name="Face" type="TextureRect" parent="Dialog/MessageMarginContainer/HBoxContainer"]
+margin_top = 32.0
+margin_right = 64.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_vertical = 4
+expand = true
+
+[node name="MessageBox" parent="Dialog/MessageMarginContainer/HBoxContainer" groups=[
+"message_box_main_node",
+] instance=ExtResource( 5 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 84.0
+margin_right = 568.0
+margin_bottom = 128.0
+rect_clip_content = false
+size_flags_horizontal = 3
+
+[node name="NameBoxLeft" parent="." instance=ExtResource( 4 )]
+margin_top = -32.0
+margin_bottom = 0.0
+
+[node name="NameBoxRight" parent="." instance=ExtResource( 4 )]
+
+[node name="full_character_images" type="Control" parent="."]
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ResumeButton" parent="." instance=ExtResource( 27 )]
+visible = true
+
+[node name="SelectOptions" parent="." instance=ExtResource( 25 )]
+visible = false
+
+[node name="AudioStreamPlayer1" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+
+[node name="AudioStreamPlayer3" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+
+[node name="AudioStreamPlayer4" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+
+[node name="AudioStreamPlayer5" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+
+[node name="AudioStreamPlayer6" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+
+[node name="TweenNode" type="Tween" parent="."]
+
+[editable path="Dialog/MessageMarginContainer/HBoxContainer/MessageBox"]

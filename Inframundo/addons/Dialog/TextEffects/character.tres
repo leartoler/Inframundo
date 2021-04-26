@@ -1,0 +1,33 @@
+[gd_resource type="RichTextEffect" load_steps=2 format=2]
+
+[sub_resource type="GDScript" id=1]
+script/source = "tool
+extends RichTextEffect
+
+# Syntax: [character width=16 height=16 img=path flip=enabled? id=0 pos=0] [/character]
+
+signal show_character(data)
+
+# Define the tag name.
+var bbcode = \"character\"
+
+func _process_custom_fx(char_fx):
+	# Get parameters, or use the provided default value if missing.
+	var p = char_fx.env.get(\"process\", false)
+	if p: return false
+	char_fx.env.process = true
+	var data = {
+		\"char_index\"	: char_fx.absolute_index,
+		\"width\"		: char_fx.env.get(\"width\", 16),
+		\"height\"		: char_fx.env.get(\"height\", 16),
+		\"img\"			: char_fx.env.get(\"img\", null),
+		\"flip\"		: char_fx.env.get(\"flip\", false),
+		\"id\"			: char_fx.env.get(\"id\", 0),
+		\"pos\"			: char_fx.env.get(\"pos\", 0),
+	}
+	emit_signal(\"show_character\", data)
+	return true
+"
+
+[resource]
+script = SubResource( 1 )

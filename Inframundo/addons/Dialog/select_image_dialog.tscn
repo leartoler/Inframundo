@@ -1,0 +1,866 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://addons/Dialog/select_image_dialog.gd" type="Script" id=1]
+[ext_resource path="res://addons/Dialog/Graphics/search_image.png" type="Texture" id=2]
+[ext_resource path="res://addons/Dialog/Graphics/help_button_over.png" type="Texture" id=3]
+[ext_resource path="res://addons/Dialog/Graphics/canvas_background2.png" type="Texture" id=4]
+[ext_resource path="res://addons/Dialog/Graphics/help_button_normal.png" type="Texture" id=5]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.196078, 0.133333, 0.133333, 1 )
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color( 0, 0, 0, 1 )
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id=2]
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0, 0, 0, 1 )
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.913725, 0.141176, 0.141176, 0.168627 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 0.2, 0.00784314, 0.00784314, 1 )
+corner_radius_top_left = 1
+corner_radius_top_right = 1
+corner_radius_bottom_right = 1
+corner_radius_bottom_left = 1
+
+[sub_resource type="StyleBoxFlat" id=4]
+content_margin_left = 2.0
+content_margin_right = 2.0
+content_margin_top = 2.0
+content_margin_bottom = 2.0
+bg_color = Color( 0.223529, 0.219608, 0.219608, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 0.784314, 0.670588, 0.0588235, 1 )
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[sub_resource type="StyleBoxFlat" id=5]
+content_margin_left = 2.0
+content_margin_right = 2.0
+content_margin_top = 2.0
+content_margin_bottom = 2.0
+bg_color = Color( 0.223529, 0.219608, 0.219608, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 0, 0, 0, 1 )
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[sub_resource type="StyleBoxFlat" id=6]
+content_margin_left = 2.0
+content_margin_right = 2.0
+content_margin_top = 2.0
+content_margin_bottom = 2.0
+bg_color = Color( 0.223529, 0.219608, 0.219608, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 0.784314, 0.670588, 0.0588235, 1 )
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[sub_resource type="StyleBoxFlat" id=7]
+content_margin_left = 2.0
+content_margin_right = 2.0
+content_margin_top = 2.0
+content_margin_bottom = 2.0
+bg_color = Color( 0.223529, 0.219608, 0.219608, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 0, 0, 0, 1 )
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[sub_resource type="InputEventKey" id=8]
+scancode = 16777221
+
+[sub_resource type="ShortCut" id=9]
+shortcut = SubResource( 8 )
+
+[node name="select_image_dialog" type="Panel"]
+margin_right = 342.0
+margin_bottom = 268.0
+rect_min_size = Vector2( 281, 180 )
+size_flags_horizontal = 3
+custom_styles/panel = SubResource( 1 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 8.0
+margin_top = 8.0
+margin_right = -8.0
+margin_bottom = -8.0
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer"]
+margin_right = 326.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 0, 30 )
+mouse_filter = 2
+bbcode_enabled = true
+bbcode_text = "[center][color=red]SHOW A PICTURE[/color][/center]"
+text = "SHOW A PICTURE"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 34.0
+margin_right = 326.0
+margin_bottom = 59.0
+rect_min_size = Vector2( 0, 25 )
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer"]
+margin_top = 5.0
+margin_right = 50.0
+margin_bottom = 19.0
+rect_min_size = Vector2( 50, 0 )
+custom_colors/font_color = Color( 0.176471, 0.956863, 0.113725, 1 )
+text = "Type:"
+
+[node name="OptionButton" type="OptionButton" parent="VBoxContainer/HBoxContainer"]
+margin_left = 54.0
+margin_right = 326.0
+margin_bottom = 20.0
+hint_tooltip = "[color=green]Face[/color] : Show a face
+[color=green]Full Character[/color] : Display an image behind or in font of the message box
+[color=green]Embed image in text[/color] : Show an image inline with the text"
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+text = "Face"
+items = [ "Face", null, false, 0, null, "Full Character", null, false, 1, null, "Embed image in text", null, false, 2, null ]
+selected = 0
+
+[node name="ID" type="HBoxContainer" parent="VBoxContainer/HBoxContainer"]
+visible = false
+margin_left = 219.0
+margin_right = 327.0
+margin_bottom = 25.0
+
+[node name="Label2" type="Label" parent="VBoxContainer/HBoxContainer/ID"]
+margin_top = 5.0
+margin_right = 30.0
+margin_bottom = 19.0
+rect_min_size = Vector2( 30, 0 )
+custom_colors/font_color = Color( 0.176471, 0.956863, 0.113725, 1 )
+text = "ID:"
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="SpinBox" type="SpinBox" parent="VBoxContainer/HBoxContainer/ID"]
+margin_left = 34.0
+margin_right = 108.0
+margin_bottom = 25.0
+hint_tooltip = "Full characters use IDs to can controlate them
+with the command [color=red]image_effect[/color]"
+
+[node name="Parameters_label" type="Label" parent="VBoxContainer"]
+margin_top = 63.0
+margin_right = 326.0
+margin_bottom = 77.0
+rect_min_size = Vector2( 50, 0 )
+custom_colors/font_color = Color( 0.176471, 0.956863, 0.113725, 1 )
+text = "Parameters:"
+
+[node name="ColorRect" type="ColorRect" parent="VBoxContainer/Parameters_label"]
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 0.454902 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Image" type="VBoxContainer" parent="VBoxContainer"]
+margin_top = 81.0
+margin_right = 326.0
+margin_bottom = 145.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/Image"]
+margin_right = 326.0
+margin_bottom = 64.0
+
+[node name="Label" type="Label" parent="VBoxContainer/Image/HBoxContainer"]
+margin_top = 25.0
+margin_right = 50.0
+margin_bottom = 39.0
+rect_min_size = Vector2( 50, 0 )
+custom_colors/font_color = Color( 0.176471, 0.956863, 0.113725, 1 )
+text = "image:"
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="Panel" type="Panel" parent="VBoxContainer/Image/HBoxContainer"]
+margin_left = 54.0
+margin_right = 118.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 64, 64 )
+hint_tooltip = "Click to select an image"
+mouse_default_cursor_shape = 2
+size_flags_vertical = 4
+custom_styles/panel = SubResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/Image/HBoxContainer/Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 8.0
+margin_top = 8.0
+margin_right = -8.0
+margin_bottom = -8.0
+mouse_filter = 2
+texture = ExtResource( 2 )
+expand = true
+stretch_mode = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Size" type="VBoxContainer" parent="VBoxContainer/Image/HBoxContainer"]
+visible = false
+margin_left = 122.0
+margin_top = 11.0
+margin_right = 305.0
+margin_bottom = 53.0
+rect_min_size = Vector2( 0, 20 )
+size_flags_vertical = 4
+
+[node name="Label2" type="Label" parent="VBoxContainer/Image/HBoxContainer/Size"]
+margin_right = 183.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 50, 0 )
+size_flags_vertical = 0
+custom_colors/font_color = Color( 0.176471, 0.956863, 0.113725, 1 )
+text = "Scale:"
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/Image/HBoxContainer/Size"]
+margin_top = 18.0
+margin_right = 183.0
+margin_bottom = 42.0
+
+[node name="Label" type="Label" parent="VBoxContainer/Image/HBoxContainer/Size/HBoxContainer"]
+margin_top = 5.0
+margin_right = 12.0
+margin_bottom = 19.0
+custom_colors/font_color = Color( 0.176471, 0.956863, 0.113725, 1 )
+text = "X:"
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="SpinBox" type="SpinBox" parent="VBoxContainer/Image/HBoxContainer/Size/HBoxContainer"]
+margin_left = 16.0
+margin_right = 90.0
+margin_bottom = 24.0
+hint_tooltip = "Width to draw this image."
+step = 0.01
+value = 1.0
+allow_greater = true
+allow_lesser = true
+
+[node name="Label2" type="Label" parent="VBoxContainer/Image/HBoxContainer/Size/HBoxContainer"]
+margin_left = 94.0
+margin_top = 5.0
+margin_right = 105.0
+margin_bottom = 19.0
+custom_colors/font_color = Color( 0.176471, 0.956863, 0.113725, 1 )
+text = "Y:"
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="SpinBox2" type="SpinBox" parent="VBoxContainer/Image/HBoxContainer/Size/HBoxContainer"]
+margin_left = 109.0
+margin_right = 183.0
+margin_bottom = 24.0
+hint_tooltip = "Height to draw this image."
+step = 0.01
+value = 1.0
+allow_greater = true
+allow_lesser = true
+
+[node name="Flip" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 149.0
+margin_right = 326.0
+margin_bottom = 173.0
+
+[node name="Label" type="Label" parent="VBoxContainer/Flip"]
+margin_top = 5.0
+margin_right = 50.0
+margin_bottom = 19.0
+rect_min_size = Vector2( 50, 0 )
+custom_colors/font_color = Color( 0.176471, 0.956863, 0.113725, 1 )
+text = "Flip:"
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="CheckBox" type="CheckBox" parent="VBoxContainer/Flip"]
+margin_left = 54.0
+margin_right = 78.0
+margin_bottom = 24.0
+hint_tooltip = "Enable this to flip the images
+(flip option is only available for faces and full characters)"
+mouse_default_cursor_shape = 2
+custom_styles/disabled = SubResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Offset" type="HBoxContainer" parent="VBoxContainer"]
+visible = false
+margin_top = 177.0
+margin_right = 326.0
+margin_bottom = 201.0
+
+[node name="Label" type="Label" parent="VBoxContainer/Offset"]
+margin_top = 5.0
+margin_right = 58.0
+margin_bottom = 19.0
+rect_min_size = Vector2( 58, 0 )
+custom_colors/font_color = Color( 0.176471, 0.956863, 0.113725, 1 )
+text = "Offset:"
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="SpinBox" type="SpinBox" parent="VBoxContainer/Offset"]
+margin_left = 62.0
+margin_right = 136.0
+margin_bottom = 24.0
+hint_tooltip = "The embedded image is aligned
+with the bottom of the text.
+
+Use the offset to alter its vertical position."
+allow_greater = true
+allow_lesser = true
+
+[node name="Position" type="VBoxContainer" parent="VBoxContainer"]
+visible = false
+margin_top = 205.0
+margin_right = 326.0
+margin_bottom = 277.0
+
+[node name="Mode" type="HBoxContainer" parent="VBoxContainer/Position"]
+margin_right = 326.0
+margin_bottom = 20.0
+
+[node name="Label" type="Label" parent="VBoxContainer/Position/Mode"]
+margin_right = 60.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 60, 0 )
+size_flags_vertical = 0
+custom_colors/font_color = Color( 0.176471, 0.956863, 0.113725, 1 )
+text = "Mode:"
+
+[node name="OptionButton" type="OptionButton" parent="VBoxContainer/Position/Mode"]
+margin_left = 64.0
+margin_right = 326.0
+margin_bottom = 20.0
+hint_tooltip = "Full character images can be shown behind
+or in font of the message box"
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+text = "Behind the message"
+items = [ "Behind the message", null, false, 0, null, "In front of the message", null, false, 1, null ]
+selected = 0
+
+[node name="Pos" type="HBoxContainer" parent="VBoxContainer/Position"]
+margin_top = 24.0
+margin_right = 326.0
+margin_bottom = 44.0
+
+[node name="Label" type="Label" parent="VBoxContainer/Position/Pos"]
+margin_right = 60.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 60, 0 )
+size_flags_vertical = 0
+custom_colors/font_color = Color( 0.176471, 0.956863, 0.113725, 1 )
+text = "Position:"
+
+[node name="OptionButton" type="OptionButton" parent="VBoxContainer/Position/Pos"]
+margin_left = 64.0
+margin_right = 326.0
+margin_bottom = 20.0
+hint_tooltip = "Set position of the image in X axis.
+
+Images will be positioned on the Y axis aligned to the bottom of the message box.
+
+use offsets to modify the default position"
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+text = "0% from the left"
+items = [ "0% from the left", null, false, 0, null, "10% from the left", null, false, 1, null, "20% from the left", null, false, 2, null, "30% from the left", null, false, 3, null, "40% from the left", null, false, 4, null, "50% from the left", null, false, 5, null, "60% from the left", null, false, 6, null, "70% from the left", null, false, 7, null, "80% from the left", null, false, 8, null, "90% from the left", null, false, 9, null, "100% from the left", null, false, 10, null ]
+selected = 0
+
+[node name="CustomPos" type="HBoxContainer" parent="VBoxContainer/Position"]
+margin_top = 48.0
+margin_right = 326.0
+margin_bottom = 72.0
+
+[node name="Label2" type="Label" parent="VBoxContainer/Position/CustomPos"]
+margin_top = 5.0
+margin_right = 54.0
+margin_bottom = 19.0
+rect_min_size = Vector2( 54, 0 )
+custom_colors/font_color = Color( 0.176471, 0.956863, 0.113725, 1 )
+text = "Offset:"
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Label4" type="Label" parent="VBoxContainer/Position/CustomPos"]
+margin_left = 58.0
+margin_top = 5.0
+margin_right = 78.0
+margin_bottom = 19.0
+rect_min_size = Vector2( 20, 0 )
+custom_colors/font_color = Color( 0.176471, 0.956863, 0.113725, 1 )
+text = "X:"
+align = 2
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="SpinBox2" type="SpinBox" parent="VBoxContainer/Position/CustomPos"]
+margin_left = 82.0
+margin_right = 156.0
+margin_bottom = 24.0
+hint_tooltip = "Displacement in the X axis from default position."
+allow_greater = true
+allow_lesser = true
+
+[node name="Label3" type="Label" parent="VBoxContainer/Position/CustomPos"]
+margin_left = 160.0
+margin_top = 5.0
+margin_right = 180.0
+margin_bottom = 19.0
+rect_min_size = Vector2( 20, 0 )
+custom_colors/font_color = Color( 0.176471, 0.956863, 0.113725, 1 )
+text = "Y:"
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="SpinBox3" type="SpinBox" parent="VBoxContainer/Position/CustomPos"]
+margin_left = 184.0
+margin_right = 258.0
+margin_bottom = 24.0
+hint_tooltip = "Displacement in the Y axis from default position."
+allow_greater = true
+allow_lesser = true
+
+[node name="ModulateColor" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 177.0
+margin_right = 326.0
+margin_bottom = 201.0
+
+[node name="Label" type="Label" parent="VBoxContainer/ModulateColor"]
+margin_top = 5.0
+margin_right = 64.0
+margin_bottom = 19.0
+rect_min_size = Vector2( 50, 0 )
+custom_colors/font_color = Color( 0.176471, 0.956863, 0.113725, 1 )
+text = "Modulate:"
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="ColorPickerButton" type="ColorPickerButton" parent="VBoxContainer/ModulateColor"]
+margin_left = 68.0
+margin_right = 100.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 32, 24 )
+mouse_default_cursor_shape = 2
+custom_styles/hover = SubResource( 4 )
+custom_styles/normal = SubResource( 5 )
+color = Color( 1, 1, 1, 1 )
+
+[node name="AppearAnimation" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 205.0
+margin_right = 326.0
+margin_bottom = 225.0
+
+[node name="Label" type="Label" parent="VBoxContainer/AppearAnimation"]
+margin_top = 3.0
+margin_right = 149.0
+margin_bottom = 17.0
+rect_min_size = Vector2( 50, 0 )
+custom_colors/font_color = Color( 0.176471, 0.956863, 0.113725, 1 )
+text = "animation when added:"
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="OptionButton" type="OptionButton" parent="VBoxContainer/AppearAnimation"]
+margin_left = 153.0
+margin_right = 326.0
+margin_bottom = 20.0
+hint_tooltip = "Animation played the first time the image is added"
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 3
+text = "Instant"
+items = [ "Instant", null, false, 0, null, "Fade-in", null, false, 1, null, "Zoom-in", null, false, 2, null, "Zoom-Out", null, false, 3, null, "Fade-in + Left to Right", null, false, 4, null, "Fade-in + Right to Left", null, false, 5, null, "Custom", null, false, 6, null ]
+selected = 0
+
+[node name="AnimationCustom" type="VBoxContainer" parent="VBoxContainer"]
+visible = false
+margin_top = 229.0
+margin_right = 326.0
+margin_bottom = 416.0
+rect_clip_content = true
+
+[node name="Control" type="Control" parent="VBoxContainer/AnimationCustom"]
+margin_right = 326.0
+margin_bottom = 5.0
+rect_min_size = Vector2( 0, 5 )
+
+[node name="Sprite" type="Sprite" parent="VBoxContainer/AnimationCustom"]
+modulate = Color( 0, 0, 0, 0.92549 )
+position = Vector2( -3, 5.88631 )
+scale = Vector2( 17, 14.8148 )
+texture = ExtResource( 4 )
+centered = false
+
+[node name="Label" type="Label" parent="VBoxContainer/AnimationCustom"]
+margin_top = 9.0
+margin_right = 326.0
+margin_bottom = 23.0
+text = "Custom Animation Configuration:"
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="VBoxContainer/AnimationCustom"]
+margin_top = 27.0
+margin_right = 326.0
+margin_bottom = 54.0
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="VBoxContainer/AnimationCustom/HBoxContainer3"]
+margin_top = 6.0
+margin_right = 100.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 100, 0 )
+custom_colors/font_color = Color( 0.176471, 0.956863, 0.113725, 1 )
+text = "Initial Offset:"
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="Label2" type="Label" parent="VBoxContainer/AnimationCustom/HBoxContainer3"]
+margin_left = 104.0
+margin_top = 6.0
+margin_right = 116.0
+margin_bottom = 20.0
+custom_colors/font_color = Color( 0.176471, 0.956863, 0.113725, 1 )
+text = "X:"
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="SpinBox2" type="SpinBox" parent="VBoxContainer/AnimationCustom/HBoxContainer3"]
+margin_left = 120.0
+margin_right = 194.0
+margin_bottom = 27.0
+allow_greater = true
+allow_lesser = true
+
+[node name="Label3" type="Label" parent="VBoxContainer/AnimationCustom/HBoxContainer3"]
+margin_left = 198.0
+margin_top = 6.0
+margin_right = 209.0
+margin_bottom = 20.0
+custom_colors/font_color = Color( 0.176471, 0.956863, 0.113725, 1 )
+text = "Y:"
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="SpinBox" type="SpinBox" parent="VBoxContainer/AnimationCustom/HBoxContainer3"]
+margin_left = 213.0
+margin_right = 287.0
+margin_bottom = 27.0
+allow_greater = true
+allow_lesser = true
+
+[node name="TextureButton" type="TextureButton" parent="VBoxContainer/AnimationCustom/HBoxContainer3"]
+margin_left = 291.0
+margin_right = 318.0
+margin_bottom = 27.0
+hint_tooltip = "animated initial offset in time up to x = 0,  y = 0"
+mouse_default_cursor_shape = 16
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture_normal = ExtResource( 5 )
+texture_hover = ExtResource( 3 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/AnimationCustom"]
+margin_top = 58.0
+margin_right = 326.0
+margin_bottom = 85.0
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="VBoxContainer/AnimationCustom/HBoxContainer"]
+margin_top = 6.0
+margin_right = 100.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 100, 0 )
+custom_colors/font_color = Color( 0.176471, 0.956863, 0.113725, 1 )
+text = "Initial Scale:"
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="Label2" type="Label" parent="VBoxContainer/AnimationCustom/HBoxContainer"]
+margin_left = 104.0
+margin_top = 6.0
+margin_right = 116.0
+margin_bottom = 20.0
+custom_colors/font_color = Color( 0.176471, 0.956863, 0.113725, 1 )
+text = "X:"
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="SpinBox2" type="SpinBox" parent="VBoxContainer/AnimationCustom/HBoxContainer"]
+margin_left = 120.0
+margin_right = 194.0
+margin_bottom = 27.0
+step = 0.01
+value = 1.0
+allow_greater = true
+allow_lesser = true
+
+[node name="Label3" type="Label" parent="VBoxContainer/AnimationCustom/HBoxContainer"]
+margin_left = 198.0
+margin_top = 6.0
+margin_right = 209.0
+margin_bottom = 20.0
+custom_colors/font_color = Color( 0.176471, 0.956863, 0.113725, 1 )
+text = "Y:"
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="SpinBox" type="SpinBox" parent="VBoxContainer/AnimationCustom/HBoxContainer"]
+margin_left = 213.0
+margin_right = 287.0
+margin_bottom = 27.0
+step = 0.01
+value = 1.0
+allow_greater = true
+allow_lesser = true
+
+[node name="TextureButton" type="TextureButton" parent="VBoxContainer/AnimationCustom/HBoxContainer"]
+margin_left = 291.0
+margin_right = 318.0
+margin_bottom = 27.0
+hint_tooltip = "animated initial scale in time up to x = 1.0, y = 1.0"
+mouse_default_cursor_shape = 16
+texture_normal = ExtResource( 5 )
+texture_hover = ExtResource( 3 )
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer/AnimationCustom"]
+margin_top = 89.0
+margin_right = 326.0
+margin_bottom = 116.0
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="VBoxContainer/AnimationCustom/HBoxContainer2"]
+margin_top = 6.0
+margin_right = 106.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 100, 0 )
+custom_colors/font_color = Color( 0.176471, 0.956863, 0.113725, 1 )
+text = "Initial modulate:"
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="ColorPickerButton" type="ColorPickerButton" parent="VBoxContainer/AnimationCustom/HBoxContainer2"]
+margin_left = 110.0
+margin_right = 142.0
+margin_bottom = 27.0
+rect_min_size = Vector2( 32, 24 )
+mouse_default_cursor_shape = 2
+custom_styles/hover = SubResource( 6 )
+custom_styles/normal = SubResource( 7 )
+color = Color( 1, 1, 1, 0 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="TextureButton" type="TextureButton" parent="VBoxContainer/AnimationCustom/HBoxContainer2"]
+margin_left = 146.0
+margin_right = 173.0
+margin_bottom = 27.0
+hint_tooltip = "animated modulate in time up to White (1.0, 1.0, 1.0, 1.0)"
+mouse_default_cursor_shape = 16
+texture_normal = ExtResource( 5 )
+texture_hover = ExtResource( 3 )
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="VBoxContainer/AnimationCustom"]
+margin_top = 120.0
+margin_right = 326.0
+margin_bottom = 147.0
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="VBoxContainer/AnimationCustom/HBoxContainer4"]
+margin_top = 6.0
+margin_right = 100.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 100, 0 )
+custom_colors/font_color = Color( 0.176471, 0.956863, 0.113725, 1 )
+text = "Initial angle:"
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="SpinBox" type="SpinBox" parent="VBoxContainer/AnimationCustom/HBoxContainer4"]
+margin_left = 104.0
+margin_right = 178.0
+margin_bottom = 27.0
+step = 0.01
+allow_greater = true
+allow_lesser = true
+
+[node name="TextureButton" type="TextureButton" parent="VBoxContainer/AnimationCustom/HBoxContainer4"]
+margin_left = 182.0
+margin_right = 209.0
+margin_bottom = 27.0
+hint_tooltip = "animated rotation in time up to 0.0 (in degrees)"
+mouse_default_cursor_shape = 16
+texture_normal = ExtResource( 5 )
+texture_hover = ExtResource( 3 )
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="VBoxContainer/AnimationCustom"]
+margin_top = 151.0
+margin_right = 326.0
+margin_bottom = 178.0
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="VBoxContainer/AnimationCustom/HBoxContainer5"]
+margin_top = 6.0
+margin_right = 100.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 100, 0 )
+custom_colors/font_color = Color( 0.176471, 0.956863, 0.113725, 1 )
+text = "Duration:"
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="SpinBox" type="SpinBox" parent="VBoxContainer/AnimationCustom/HBoxContainer5"]
+margin_left = 104.0
+margin_right = 178.0
+margin_bottom = 27.0
+step = 0.01
+allow_greater = true
+
+[node name="TextureButton" type="TextureButton" parent="VBoxContainer/AnimationCustom/HBoxContainer5"]
+margin_left = 182.0
+margin_right = 209.0
+margin_bottom = 27.0
+hint_tooltip = "Duration of the custom animation (in seconds)"
+mouse_default_cursor_shape = 16
+texture_normal = ExtResource( 5 )
+texture_hover = ExtResource( 3 )
+
+[node name="Control2" type="Control" parent="VBoxContainer/AnimationCustom"]
+margin_top = 182.0
+margin_right = 326.0
+margin_bottom = 187.0
+rect_min_size = Vector2( 0, 5 )
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 229.0
+margin_right = 326.0
+margin_bottom = 249.0
+alignment = 2
+
+[node name="OK_Button" type="Button" parent="VBoxContainer/HBoxContainer3"]
+margin_left = 237.0
+margin_right = 268.0
+margin_bottom = 20.0
+mouse_default_cursor_shape = 2
+shortcut = SubResource( 9 )
+text = "OK"
+
+[node name="Cancel_Button" type="Button" parent="VBoxContainer/HBoxContainer3"]
+margin_left = 272.0
+margin_right = 326.0
+margin_bottom = 20.0
+mouse_default_cursor_shape = 2
+text = "Cancel"
+[connection signal="visibility_changed" from="." to="." method="_on_select_image_dialog_visibility_changed"]
+[connection signal="item_selected" from="VBoxContainer/HBoxContainer/OptionButton" to="." method="_on_OptionButton_item_selected"]
+[connection signal="gui_input" from="VBoxContainer/Image/HBoxContainer/Panel" to="." method="_on_Panel_gui_input"]
+[connection signal="mouse_entered" from="VBoxContainer/Image/HBoxContainer/Panel" to="." method="_on_Panel_mouse_entered"]
+[connection signal="mouse_exited" from="VBoxContainer/Image/HBoxContainer/Panel" to="." method="_on_Panel_mouse_exited"]
+[connection signal="item_selected" from="VBoxContainer/AppearAnimation/OptionButton" to="." method="_on_AppearAnimation_OptionButton_item_selected"]
+[connection signal="button_down" from="VBoxContainer/HBoxContainer3/OK_Button" to="." method="_on_OK_Button_button_down"]
+[connection signal="button_down" from="VBoxContainer/HBoxContainer3/Cancel_Button" to="." method="_on_Cancel_Button_button_down"]
+[connection signal="focus_exited" from="VBoxContainer/HBoxContainer3/Cancel_Button" to="." method="_on_Cancel_Button_focus_exited"]

@@ -1,0 +1,169 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://addons/Dialog/rainbow_effect_dialog.gd" type="Script" id=1]
+
+[sub_resource type="StyleBoxFlat" id=1]
+content_margin_left = 6.0
+content_margin_right = 6.0
+content_margin_top = 6.0
+content_margin_bottom = 6.0
+bg_color = Color( 0.196078, 0.133333, 0.133333, 1 )
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color( 0, 0, 0, 1 )
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="InputEventKey" id=2]
+scancode = 16777221
+
+[sub_resource type="ShortCut" id=3]
+shortcut = SubResource( 2 )
+
+[node name="rainbow_effect_dialog" type="Panel"]
+margin_left = 36.0
+margin_top = 94.0
+margin_right = 465.0
+margin_bottom = 359.0
+rect_min_size = Vector2( 429, 265 )
+custom_styles/panel = SubResource( 1 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 8.0
+margin_top = 8.0
+margin_right = -8.0
+margin_bottom = -8.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer"]
+margin_right = 413.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 0, 100 )
+mouse_filter = 2
+bbcode_enabled = true
+bbcode_text = "[center][color=red]RAINBOW[/color][/center]
+
+Rainbow gives the text a rainbow color that changes over time.
+[indent][color=#2df41d]· freq[/color]: Is the number of full rainbow cycles per second.
+[color=#2df41d]· sat[/color]: Is the saturation of the rainbow.
+[color=#2df41d]· val[/color]: Is the value of the rainbow.[/indent]"
+text = "RAINBOW
+
+Rainbow gives the text a rainbow color that changes over time.
+	· freq: Is the number of full rainbow cycles per second.
+· sat: Is the saturation of the rainbow.
+· val: Is the value of the rainbow."
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 104.0
+margin_right = 413.0
+margin_bottom = 128.0
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer"]
+margin_top = 5.0
+margin_right = 50.0
+margin_bottom = 19.0
+rect_min_size = Vector2( 50, 0 )
+custom_colors/font_color = Color( 0.176471, 0.956863, 0.113725, 1 )
+text = "freq:"
+
+[node name="freq_SpinBox" type="SpinBox" parent="VBoxContainer/HBoxContainer"]
+margin_left = 54.0
+margin_right = 128.0
+margin_bottom = 24.0
+min_value = -1000.0
+max_value = 1000.0
+step = 0.1
+value = -5.5
+allow_greater = true
+allow_lesser = true
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 132.0
+margin_right = 413.0
+margin_bottom = 156.0
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer2"]
+margin_top = 5.0
+margin_right = 50.0
+margin_bottom = 19.0
+rect_min_size = Vector2( 50, 0 )
+custom_colors/font_color = Color( 0.176471, 0.956863, 0.113725, 1 )
+text = "sat:"
+
+[node name="sat_SpinBox" type="SpinBox" parent="VBoxContainer/HBoxContainer2"]
+margin_left = 54.0
+margin_right = 128.0
+margin_bottom = 24.0
+min_value = -1000.0
+max_value = 1000.0
+step = 0.1
+value = 8.0
+allow_greater = true
+allow_lesser = true
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 160.0
+margin_right = 413.0
+margin_bottom = 200.0
+rect_min_size = Vector2( 0, 40 )
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer3"]
+margin_top = 13.0
+margin_right = 50.0
+margin_bottom = 27.0
+rect_min_size = Vector2( 50, 0 )
+custom_colors/font_color = Color( 0.176471, 0.956863, 0.113725, 1 )
+text = "val:"
+
+[node name="val_SpinBox" type="SpinBox" parent="VBoxContainer/HBoxContainer3"]
+margin_left = 54.0
+margin_top = 8.0
+margin_right = 128.0
+margin_bottom = 32.0
+size_flags_vertical = 4
+min_value = -1000.0
+max_value = 1000.0
+step = 0.1
+value = 5.5
+allow_greater = true
+allow_lesser = true
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 229.0
+margin_right = 413.0
+margin_bottom = 249.0
+rect_min_size = Vector2( 413, 20 )
+size_flags_vertical = 10
+alignment = 2
+
+[node name="OK_Button" type="Button" parent="VBoxContainer/HBoxContainer4"]
+margin_left = 324.0
+margin_right = 355.0
+margin_bottom = 20.0
+mouse_default_cursor_shape = 2
+shortcut = SubResource( 3 )
+text = "OK"
+
+[node name="Cancel_Button" type="Button" parent="VBoxContainer/HBoxContainer4"]
+margin_left = 359.0
+margin_right = 413.0
+margin_bottom = 20.0
+mouse_default_cursor_shape = 2
+text = "Cancel"
+[connection signal="visibility_changed" from="." to="." method="_on_rainbow_effect_dialog_visibility_changed"]
+[connection signal="button_down" from="VBoxContainer/HBoxContainer4/OK_Button" to="." method="_on_OK_Button_button_down"]
+[connection signal="button_down" from="VBoxContainer/HBoxContainer4/Cancel_Button" to="." method="_on_Cancel_Button_button_down"]
+[connection signal="focus_exited" from="VBoxContainer/HBoxContainer4/Cancel_Button" to="." method="_on_Cancel_Button_focus_exited"]

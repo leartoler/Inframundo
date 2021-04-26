@@ -1,0 +1,104 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://addons/Dialog/ResizerControl.gd" type="Script" id=1]
+[ext_resource path="res://addons/Dialog/Graphics/control_point_normal.png" type="Texture" id=2]
+[ext_resource path="res://addons/Dialog/Graphics/control_point_over.png" type="Texture" id=3]
+
+[node name="ResizerControl" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -907.0
+margin_bottom = -651.0
+rect_min_size = Vector2( 20, 20 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TopLeft" type="TextureButton" parent="."]
+margin_right = 16.0
+margin_bottom = 16.0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource( 2 )
+texture_hover = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Top" type="TextureButton" parent="."]
+margin_left = 50.0
+margin_right = 66.0
+margin_bottom = 16.0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource( 2 )
+texture_hover = ExtResource( 3 )
+
+[node name="TopRight" type="TextureButton" parent="."]
+margin_left = 100.0
+margin_right = 116.0
+margin_bottom = 16.0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource( 2 )
+texture_hover = ExtResource( 3 )
+
+[node name="Right" type="TextureButton" parent="."]
+margin_left = 100.0
+margin_top = 50.0
+margin_right = 116.0
+margin_bottom = 66.0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource( 2 )
+texture_hover = ExtResource( 3 )
+
+[node name="BottomRight" type="TextureButton" parent="."]
+margin_left = 100.0
+margin_top = 100.0
+margin_right = 116.0
+margin_bottom = 116.0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource( 2 )
+texture_hover = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Bottom" type="TextureButton" parent="."]
+margin_left = 50.0
+margin_top = 100.0
+margin_right = 66.0
+margin_bottom = 116.0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource( 2 )
+texture_hover = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BottomLeft" type="TextureButton" parent="."]
+margin_top = 100.0
+margin_right = 16.0
+margin_bottom = 116.0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource( 2 )
+texture_hover = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Left" type="TextureButton" parent="."]
+margin_top = 50.0
+margin_right = 16.0
+margin_bottom = 66.0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource( 2 )
+texture_hover = ExtResource( 3 )
+[connection signal="draw" from="." to="." method="_on_ResizerControl_draw"]
+[connection signal="item_rect_changed" from="." to="." method="_on_ResizerControl_item_rect_changed"]
+[connection signal="gui_input" from="TopLeft" to="." method="_on_TopLeft_gui_input"]
+[connection signal="gui_input" from="Top" to="." method="_on_Top_gui_input"]
+[connection signal="gui_input" from="TopRight" to="." method="_on_TopRight_gui_input"]
+[connection signal="gui_input" from="Right" to="." method="_on_Right_gui_input"]
+[connection signal="gui_input" from="BottomRight" to="." method="_on_BottomRight_gui_input"]
+[connection signal="gui_input" from="Bottom" to="." method="_on_Bottom_gui_input"]
+[connection signal="gui_input" from="BottomLeft" to="." method="_on_BottomLeft_gui_input"]
+[connection signal="gui_input" from="Left" to="." method="_on_Left_gui_input"]

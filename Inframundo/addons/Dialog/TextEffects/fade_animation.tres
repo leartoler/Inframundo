@@ -1,0 +1,26 @@
+[gd_resource type="RichTextEffect" load_steps=2 format=2]
+
+[sub_resource type="GDScript" id=1]
+script/source = "tool
+extends RichTextEffect
+
+# Syntax: [fade_animation time=5 mode=0][/fade_animation]
+
+# Define the tag name.
+var bbcode = \"fade_animation\"
+
+func _process_custom_fx(char_fx):
+	# Get parameters, or use the provided default value if missing.
+	var total_time = char_fx.env.get(\"time\", 5)
+
+	var a
+	if char_fx.env.get(\"mode\", 0) == 0: # fade in
+		a = min(1.0, char_fx.elapsed_time / total_time)
+	else:
+		a = max(0, (1 - char_fx.elapsed_time / total_time))
+
+	char_fx.color.a = a
+	return true"
+
+[resource]
+script = SubResource( 1 )

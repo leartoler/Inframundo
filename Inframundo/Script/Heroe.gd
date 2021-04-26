@@ -1,6 +1,6 @@
 extends Sprite 
 var can_move = true
-var dialog = null
+var dialog = null 
 
 #Vectores para el personaje
 var dir = {

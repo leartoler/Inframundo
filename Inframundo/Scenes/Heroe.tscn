@@ -32,7 +32,9 @@ tracks/1/keys = {
 "values": [ Vector2( 0, -25 ), Vector2( 0, -35 ), Vector2( 0, -25 ) ]
 }
 
-[node name="KinematicBody2D" type="Sprite"]
+[node name="Hero" type="Sprite" groups=[
+"player",
+]]
 position = Vector2( 0, -4 )
 texture = ExtResource( 1 )
 offset = Vector2( 0, -25 )

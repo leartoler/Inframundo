@@ -1,0 +1,163 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Assets/Hero.png" type="Texture" id=3]
+
+[sub_resource type="GDScript" id=3]
+script/source = "extends KinematicBody2D
+
+
+# Declare member variables here. Examples:
+# var a = 2
+# var b = \"text\"
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+#func _process(delta):
+#	pass
+"
+
+[sub_resource type="GDScript" id=4]
+script/source = "extends Sprite
+
+var can_move = true
+var dialog = null
+
+#Vectores para el personaje
+var dir = {
+	\"Down\": Vector2(40,20),
+	\"Left\": Vector2(-40,20),
+	\"Right\": Vector2(40,-20),
+	\"Up\": Vector2(-40,-20)
+}
+# Para el movimiento del personaje
+# Raycast que permite mover si, y siempre si, no choque con algo.
+func _physics_process(delta): 
+	if can_move:
+		if Input.is_action_pressed(\"ui_up\") and !$Up.is_colliding():
+			move_to(dir.Up)
+		elif Input.is_action_pressed(\"ui_down\") and !$Down.is_colliding():
+			move_to(dir.Down)
+		elif Input.is_action_pressed(\"ui_right\") and !$Right.is_colliding():
+			move_to(dir.Right)
+		elif Input.is_action_pressed(\"ui_left\") and !$Left.is_colliding():
+			move_to(dir.Left)
+		
+#Movimiento según donde se mueva el prota
+func move_to(direction):
+	$anim.play(\"Walk\")
+	match direction:
+		dir.Up:
+			set_frame(2)
+		dir.Down:
+			set_frame(0)
+		dir.Right:
+			set_frame(1)
+		dir.Left:
+			set_frame(3)
+			
+	can_move =  false
+	$Tween.interpolate_property(self, \"global_position\",
+					global_position, global_position + direction, 0.5,
+					Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
+	$Tween.start()
+	yield($Tween, \"tween_completed\")
+	can_move = true
+	
+	#Diálogo
+	if dialog != null and Input.is_action_just_pressed(\"ui_accept\"):
+		pass
+
+
+# Declare member variables here. Examples:
+# var a = 2
+# var b = \"text\"
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+#func _process(delta):
+#	pass
+"
+
+[sub_resource type="Animation" id=1]
+resource_name = "Walk"
+length = 0.5
+step = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = false
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, -4 ), Vector2( 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:offset")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.25, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, -25 ), Vector2( 0, -35 ), Vector2( 0, -25 ) ]
+}
+
+[sub_resource type="RectangleShape2D" id=2]
+
+[node name="Hero" type="KinematicBody2D"]
+script = SubResource( 3 )
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 3 )
+hframes = 4
+frame = 2
+script = SubResource( 4 )
+
+[node name="Down" type="RayCast2D" parent="."]
+position = Vector2( 3.18199, 3.02237 )
+enabled = true
+cast_to = Vector2( 40, 20 )
+
+[node name="Left" type="RayCast2D" parent="."]
+position = Vector2( 3.18199, 3.02237 )
+enabled = true
+cast_to = Vector2( -40, 20 )
+
+[node name="Right" type="RayCast2D" parent="."]
+position = Vector2( 3.18199, 3.02237 )
+enabled = true
+cast_to = Vector2( 40, -20 )
+
+[node name="Up" type="RayCast2D" parent="."]
+position = Vector2( 3.18199, 3.02237 )
+enabled = true
+cast_to = Vector2( -40, -20 )
+
+[node name="Tween" type="Tween" parent="."]
+
+[node name="anim" type="AnimationPlayer" parent="."]
+anims/Walk = SubResource( 1 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 3.18199, 3.02237 )
+offset = Vector2( 0.7, -23 )
+current = true
+zoom = Vector2( 0.4, 0.4 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 2 )

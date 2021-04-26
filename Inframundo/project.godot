@@ -83,6 +83,10 @@ _global_script_class_icons={
 config/name="Inframundo"
 config/icon="res://icon.png"
 
+[autoload]
+
+Dialog="*res://Scenes/DialogBox.tscn"
+
 [display]
 
 window/stretch/mode="2d"

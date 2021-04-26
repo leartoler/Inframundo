@@ -89,6 +89,8 @@ Dialog="*res://Scenes/Actions/DialogBox.tscn"
 
 [display]
 
+window/size/width=1280
+window/size/height=720
 window/stretch/mode="2d"
 window/stretch/aspect="keep"
 
@@ -105,4 +107,5 @@ common/enable_pause_aware_picking=true
 quality/driver/driver_name="GLES2"
 vram_compression/import_etc=true
 vram_compression/import_etc2=false
+environment/default_clear_color=Color( 0.054902, 0.0588235, 0.113725, 1 )
 environment/default_environment="res://default_env.tres"

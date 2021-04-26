@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Iglesia.png-94fb0f0934052eda08778f1486065efb.stex"
+path="res://.import/Title.png-a42e279fdba1deb45fe1821e15d246fd.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Iglesia.png"
-dest_files=[ "res://.import/Iglesia.png-94fb0f0934052eda08778f1486065efb.stex" ]
+source_file="res://Assets/UI/Title.png"
+dest_files=[ "res://.import/Title.png-a42e279fdba1deb45fe1821e15d246fd.stex" ]
 
 [params]
 

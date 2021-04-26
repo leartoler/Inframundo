@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Hero.png-31c3d4f666f4c3ac23347b0002e53b0e.stex"
+path="res://.import/Suelo_infierno_02_04.png-7bae96f33298af8bad47de4f4ec1063c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Lvl_01/Hero.png"
-dest_files=[ "res://.import/Hero.png-31c3d4f666f4c3ac23347b0002e53b0e.stex" ]
+source_file="res://Assets/Lvl_03/Suelo_infierno_02_04.png"
+dest_files=[ "res://.import/Suelo_infierno_02_04.png-7bae96f33298af8bad47de4f4ec1063c.stex" ]
 
 [params]
 

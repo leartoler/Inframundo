@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" load_steps=39 format=2]
+[gd_resource type="TileSet" load_steps=57 format=2]
 
 [ext_resource path="res://Assets/Lvl_01/Cerca_1_2.png" type="Texture" id=1]
 [ext_resource path="res://Assets/Lvl_01/arbol_1.png" type="Texture" id=2]
@@ -17,78 +17,109 @@
 [ext_resource path="res://Assets/Lvl_02/suelo_3_1.png" type="Texture" id=15]
 [ext_resource path="res://Assets/Lvl_02/arbol_03_03.png" type="Texture" id=16]
 [ext_resource path="res://Assets/Lvl_02/suelo_3_4.png" type="Texture" id=17]
+[ext_resource path="res://Assets/Lvl_03/Suelo_infierno_02_02.png" type="Texture" id=18]
+[ext_resource path="res://Assets/Lvl_03/Planta_infierno_01_01.png" type="Texture" id=19]
+[ext_resource path="res://Assets/Lvl_03/Suelo_infierno_02_01.png" type="Texture" id=20]
+[ext_resource path="res://Assets/Lvl_03/Casa_01.png" type="Texture" id=21]
+[ext_resource path="res://Assets/Lvl_03/Planta_infierno_01_03.png" type="Texture" id=22]
+[ext_resource path="res://Assets/Lvl_03/Suelo_infierno_01.png" type="Texture" id=23]
+[ext_resource path="res://Assets/Lvl_03/Planta_infierno_01_02.png" type="Texture" id=24]
+[ext_resource path="res://Assets/Lvl_03/Suelo_infierno_02_03.png" type="Texture" id=25]
+[ext_resource path="res://Assets/Lvl_03/Suelo_infierno_02_04.png" type="Texture" id=26]
+[ext_resource path="res://Assets/Lvl_03/Planta_infierno_01_04.png" type="Texture" id=27]
+[ext_resource path="res://Assets/Lvl_04/Roca_infierno_01_01.png" type="Texture" id=28]
 
-[sub_resource type="StreamTexture" id=12]
+[sub_resource type="StreamTexture" id=1]
 flags = 4
 load_path = "res://.import/Piso_1.png-052ace0e42cbaec7476b77923c341b91.stex"
 
-[sub_resource type="ConvexPolygonShape2D" id=1]
+[sub_resource type="ConvexPolygonShape2D" id=2]
 points = PoolVector2Array( 0.523705, 39.5951, 40.9905, 20.5245, 80.2945, 40.5254, 40.2928, 60.2937 )
 
-[sub_resource type="StreamTexture" id=13]
+[sub_resource type="StreamTexture" id=3]
 flags = 4
 load_path = "res://.import/Tumba_1.png-b645ce03bddeba889c747343e9965e92.stex"
 
-[sub_resource type="ConvexPolygonShape2D" id=2]
+[sub_resource type="ConvexPolygonShape2D" id=4]
 points = PoolVector2Array( 39.5951, 60.2937, 0.523705, 41.2231, 41.6882, 19.5943, 80.5271, 40.2928 )
 
-[sub_resource type="ConvexPolygonShape2D" id=3]
+[sub_resource type="ConvexPolygonShape2D" id=5]
 points = PoolVector2Array( 0.756271, 47.9676, 40.5254, 27.5016, 80, 48.8978, 40.2928, 67.9684 )
 
-[sub_resource type="ConvexPolygonShape2D" id=4]
+[sub_resource type="ConvexPolygonShape2D" id=6]
 points = PoolVector2Array( 40.8258, 28.0346, 80.1685, 48.5781, 40.2444, 68.5401, 0.126404, 48.1904 )
 
-[sub_resource type="StreamTexture" id=14]
+[sub_resource type="StreamTexture" id=7]
 flags = 4
-load_path = "res://.import/Tumba_Esposa_01.png-18dc8ce4b467e1d036aa113f8b5fc5ea.stex"
 
-[sub_resource type="ConvexPolygonShape2D" id=15]
+[sub_resource type="ConvexPolygonShape2D" id=8]
 points = PoolVector2Array( 61.6347, 74.2891, 135.58, 112.869, 72.4854, 144.216, 0.549286, 105.636 )
 
-[sub_resource type="ConvexPolygonShape2D" id=16]
+[sub_resource type="ConvexPolygonShape2D" id=9]
 points = PoolVector2Array( 63.2422, 83.3361, 115.486, 110.262, 54.8027, 142.01, 0.147415, 112.673 )
 
-[sub_resource type="ConvexPolygonShape2D" id=17]
+[sub_resource type="ConvexPolygonShape2D" id=10]
 points = PoolVector2Array( 71.8779, 129.346, 7.97932, 97.1961, 75.0929, 63.4384, 136.178, 96.3924 )
 
-[sub_resource type="StreamTexture" id=18]
+[sub_resource type="StreamTexture" id=11]
 flags = 4
 load_path = "res://.import/Piso_2.png-5523e57a55829cd642f31d9107bcfd4a.stex"
 
-[sub_resource type="ConvexPolygonShape2D" id=19]
+[sub_resource type="ConvexPolygonShape2D" id=12]
 points = PoolVector2Array( 158.874, 299.256, 19.0202, 228.847, 138.137, 169.53, 277.99, 238.01 )
 
-[sub_resource type="ConvexPolygonShape2D" id=20]
+[sub_resource type="ConvexPolygonShape2D" id=13]
 points = PoolVector2Array( 80.5229, 137.59, 4.56807, 99.813, 66.4572, 67.6628, 142, 105.037 )
 
-[sub_resource type="ConvexPolygonShape2D" id=5]
+[sub_resource type="ConvexPolygonShape2D" id=27]
+points = PoolVector2Array( 172.292, 239.36, 187.242, 230.197, 289.479, 179.561, 310.698, 189.848, 313.11, 213.961, 425.474, 154.484, 436.566, 159.789, 160.235, 298, 159.271, 244.665 )
+
+[sub_resource type="ConvexPolygonShape2D" id=28]
+points = PoolVector2Array( 1.57407, 219.106, 1.0918, 142.427, 155.895, 64.3024, 280.658, 3.05632, 428.228, 81.1813, 424.37, 153.519, 275.012, 80.2168, 148.179, 143.874, 166.987, 153.519, 163.611, 161.718, 39.6721, 236.467, 37.2608, 235.02 )
+
+[sub_resource type="ConvexPolygonShape2D" id=23]
+points = PoolVector2Array( 38.8554, 21.8973, 80.5777, 42.4893, 40.2013, 63.0812, 0.497864, 42.7585 )
+
+[sub_resource type="ConvexPolygonShape2D" id=24]
+points = PoolVector2Array( 38.99, 20.2823, 80.0393, 40.7396, 40.0667, 61.0624, 0.901627, 40.8742 )
+
+[sub_resource type="ConvexPolygonShape2D" id=25]
+points = PoolVector2Array( 39.9321, 16.2446, 80, 36.8366, 40.2013, 56.8902, 0.632446, 36.8366 )
+
+[sub_resource type="ConvexPolygonShape2D" id=26]
+points = PoolVector2Array( 80, 46.3923, 40.4705, 67.1189, 0.497864, 46.3923, 38.8554, 26.3387 )
+
+[sub_resource type="ConvexPolygonShape2D" id=14]
 points = PoolVector2Array( 0, 38.1416, 39.537, 17.443, 80.0038, 38.6067, 40.6998, 59.0727 )
 
-[sub_resource type="StreamTexture" id=21]
+[sub_resource type="StreamTexture" id=15]
 flags = 4
 load_path = "res://.import/Tumba_2.png-781c8345af125cd519f17b114dc0fcf8.stex"
 
-[sub_resource type="ConvexPolygonShape2D" id=6]
+[sub_resource type="ConvexPolygonShape2D" id=29]
+points = PoolVector2Array( 40.0088, 5.88137, 80, 26.4733, 40.1434, 46.7961, 0.574562, 26.7425 )
+
+[sub_resource type="ConvexPolygonShape2D" id=16]
 points = PoolVector2Array( 0.215225, 28.6397, 40.4301, 7.48248, 79.999, 27.5092, 40.2686, 48.8279 )
 
-[sub_resource type="ConvexPolygonShape2D" id=7]
+[sub_resource type="ConvexPolygonShape2D" id=17]
 points = PoolVector2Array( 38.8877, 30.434, 79.5871, 51.5589, 40.2444, 70.7457, 0.126404, 50.396 )
 
-[sub_resource type="ConvexPolygonShape2D" id=8]
+[sub_resource type="ConvexPolygonShape2D" id=18]
 points = PoolVector2Array( 80.1685, 34.2673, 40.632, 53.8418, 0.126404, 33.2983, 40.2444, 12.7548 )
 
-[sub_resource type="ConvexPolygonShape2D" id=9]
+[sub_resource type="ConvexPolygonShape2D" id=19]
 points = PoolVector2Array( 42.2444, 27.4841, 82.3624, 47.4462, 42.0506, 67.6021, 2.1264, 47.8338 )
 
-[sub_resource type="ConvexPolygonShape2D" id=10]
+[sub_resource type="ConvexPolygonShape2D" id=20]
 points = PoolVector2Array( 0.291138, 33.7809, 44.0139, 12.1521, 80.5271, 31.9204, 40.2928, 53.5492 )
 
-[sub_resource type="ConvexPolygonShape2D" id=11]
+[sub_resource type="ConvexPolygonShape2D" id=21]
 points = PoolVector2Array( 40.0603, 18.8966, 80.2945, 40.5254, 40.0603, 60.2937, 0.0585709, 40.5254 )
 
 [resource]
 0/name = "Piso_1"
-0/texture = SubResource( 12 )
+0/texture = SubResource( 1 )
 0/tex_offset = Vector2( 0, 0 )
 0/modulate = Color( 1, 1, 1, 1 )
 0/region = Rect2( 0, 0, 81, 45 )
@@ -102,7 +133,7 @@ points = PoolVector2Array( 40.0603, 18.8966, 80.2945, 40.5254, 40.0603, 60.2937,
 0/shapes = [  ]
 0/z_index = 0
 1/name = "Tumba_1"
-1/texture = SubResource( 13 )
+1/texture = SubResource( 3 )
 1/tex_offset = Vector2( 0, -20 )
 1/modulate = Color( 1, 1, 1, 1 )
 1/region = Rect2( 0, 0, 81, 65 )
@@ -111,19 +142,19 @@ points = PoolVector2Array( 40.0603, 18.8966, 80.2945, 40.5254, 40.0603, 60.2937,
 1/navigation_offset = Vector2( 40.5, 32.5 )
 1/shape_offset = Vector2( 0, 0 )
 1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-1/shape = SubResource( 1 )
+1/shape = SubResource( 2 )
 1/shape_one_way = false
 1/shape_one_way_margin = 1.0
 1/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 1 ),
+"shape": SubResource( 2 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 1/z_index = 0
 2/name = "Piso_2.png 2"
-2/texture = SubResource( 18 )
+2/texture = SubResource( 11 )
 2/tex_offset = Vector2( 0.275, -1.116 )
 2/modulate = Color( 1, 1, 1, 1 )
 2/region = Rect2( 0, 0, 81, 47 )
@@ -137,7 +168,7 @@ points = PoolVector2Array( 40.0603, 18.8966, 80.2945, 40.5254, 40.0603, 60.2937,
 2/shapes = [  ]
 2/z_index = 0
 3/name = "Tumba_2.png 3"
-3/texture = SubResource( 21 )
+3/texture = SubResource( 15 )
 3/tex_offset = Vector2( 0, -18 )
 3/modulate = Color( 1, 1, 1, 1 )
 3/region = Rect2( 0, 0, 81, 63 )
@@ -146,14 +177,14 @@ points = PoolVector2Array( 40.0603, 18.8966, 80.2945, 40.5254, 40.0603, 60.2937,
 3/navigation_offset = Vector2( 40.5, 22.5 )
 3/shape_offset = Vector2( 0, -18 )
 3/shape_transform = Transform2D( 1, 0, 0, 1, 0, -18 )
-3/shape = SubResource( 5 )
+3/shape = SubResource( 14 )
 3/shape_one_way = false
 3/shape_one_way_margin = 1.0
 3/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 5 ),
+"shape": SubResource( 14 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, -18 )
 } ]
 3/z_index = 0
@@ -167,14 +198,14 @@ points = PoolVector2Array( 40.0603, 18.8966, 80.2945, 40.5254, 40.0603, 60.2937,
 4/navigation_offset = Vector2( 0, 0 )
 4/shape_offset = Vector2( 0, -8 )
 4/shape_transform = Transform2D( 1, 0, 0, 1, 0, -8 )
-4/shape = SubResource( 6 )
+4/shape = SubResource( 16 )
 4/shape_one_way = false
 4/shape_one_way_margin = 1.0
 4/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 6 ),
+"shape": SubResource( 16 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, -8 )
 } ]
 4/z_index = 0
@@ -188,14 +219,14 @@ points = PoolVector2Array( 40.0603, 18.8966, 80.2945, 40.5254, 40.0603, 60.2937,
 5/navigation_offset = Vector2( 0, 0 )
 5/shape_offset = Vector2( 0, -30 )
 5/shape_transform = Transform2D( 1, 0, 0, 1, 0, -30 )
-5/shape = SubResource( 7 )
+5/shape = SubResource( 17 )
 5/shape_one_way = false
 5/shape_one_way_margin = 1.0
 5/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 7 ),
+"shape": SubResource( 17 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, -30 )
 } ]
 5/z_index = 0
@@ -209,14 +240,14 @@ points = PoolVector2Array( 40.0603, 18.8966, 80.2945, 40.5254, 40.0603, 60.2937,
 6/navigation_offset = Vector2( 0, 0 )
 6/shape_offset = Vector2( 0, -13 )
 6/shape_transform = Transform2D( 1, 0, 0, 1, 0, -13 )
-6/shape = SubResource( 8 )
+6/shape = SubResource( 18 )
 6/shape_one_way = false
 6/shape_one_way_margin = 1.0
 6/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 8 ),
+"shape": SubResource( 18 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, -13 )
 } ]
 6/z_index = 0
@@ -230,14 +261,14 @@ points = PoolVector2Array( 40.0603, 18.8966, 80.2945, 40.5254, 40.0603, 60.2937,
 7/navigation_offset = Vector2( 0, 0 )
 7/shape_offset = Vector2( 0, -26 )
 7/shape_transform = Transform2D( 1, 0, 0, 1, 0, -26 )
-7/shape = SubResource( 9 )
+7/shape = SubResource( 19 )
 7/shape_one_way = false
 7/shape_one_way_margin = 1.0
 7/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 9 ),
+"shape": SubResource( 19 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, -26 )
 } ]
 7/z_index = 0
@@ -251,14 +282,14 @@ points = PoolVector2Array( 40.0603, 18.8966, 80.2945, 40.5254, 40.0603, 60.2937,
 8/navigation_offset = Vector2( 0, 0 )
 8/shape_offset = Vector2( 0, -15 )
 8/shape_transform = Transform2D( 1, 0, 0, 1, 0, -15 )
-8/shape = SubResource( 10 )
+8/shape = SubResource( 20 )
 8/shape_one_way = false
 8/shape_one_way_margin = 1.0
 8/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 10 ),
+"shape": SubResource( 20 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, -15 )
 } ]
 8/z_index = 0
@@ -272,14 +303,14 @@ points = PoolVector2Array( 40.0603, 18.8966, 80.2945, 40.5254, 40.0603, 60.2937,
 9/navigation_offset = Vector2( 0, 0 )
 9/shape_offset = Vector2( 0, -19 )
 9/shape_transform = Transform2D( 1, 0, 0, 1, 0, -19 )
-9/shape = SubResource( 11 )
+9/shape = SubResource( 21 )
 9/shape_one_way = false
 9/shape_one_way_margin = 1.0
 9/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 11 ),
+"shape": SubResource( 21 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, -19 )
 } ]
 9/z_index = 0
@@ -293,14 +324,14 @@ points = PoolVector2Array( 40.0603, 18.8966, 80.2945, 40.5254, 40.0603, 60.2937,
 10/navigation_offset = Vector2( 0, 0 )
 10/shape_offset = Vector2( 0, -19 )
 10/shape_transform = Transform2D( 1, 0, 0, 1, 0, -19 )
-10/shape = SubResource( 2 )
+10/shape = SubResource( 4 )
 10/shape_one_way = false
 10/shape_one_way_margin = 1.0
 10/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 2 ),
+"shape": SubResource( 4 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, -19 )
 } ]
 10/z_index = 0
@@ -314,19 +345,19 @@ points = PoolVector2Array( 40.0603, 18.8966, 80.2945, 40.5254, 40.0603, 60.2937,
 11/navigation_offset = Vector2( 0, 0 )
 11/shape_offset = Vector2( 0, -28 )
 11/shape_transform = Transform2D( 1, 0, 0, 1, 0, -28 )
-11/shape = SubResource( 3 )
+11/shape = SubResource( 5 )
 11/shape_one_way = false
 11/shape_one_way_margin = 1.0
 11/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 3 ),
+"shape": SubResource( 5 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, -28 )
 } ]
 11/z_index = 0
 12/name = "Tumba_Esposa_01.png 12"
-12/texture = SubResource( 14 )
+12/texture = SubResource( 7 )
 12/tex_offset = Vector2( 0, -28 )
 12/modulate = Color( 1, 1, 1, 1 )
 12/region = Rect2( 0, 0, 81, 73 )
@@ -335,14 +366,14 @@ points = PoolVector2Array( 40.0603, 18.8966, 80.2945, 40.5254, 40.0603, 60.2937,
 12/navigation_offset = Vector2( 0, 0 )
 12/shape_offset = Vector2( 0, -28 )
 12/shape_transform = Transform2D( 1, 0, 0, 1, 0, -28 )
-12/shape = SubResource( 4 )
+12/shape = SubResource( 6 )
 12/shape_one_way = false
 12/shape_one_way_margin = 1.0
 12/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 4 ),
+"shape": SubResource( 6 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, -28 )
 } ]
 12/z_index = 0
@@ -356,14 +387,14 @@ points = PoolVector2Array( 40.0603, 18.8966, 80.2945, 40.5254, 40.0603, 60.2937,
 14/navigation_offset = Vector2( 0, 0 )
 14/shape_offset = Vector2( 0, -85 )
 14/shape_transform = Transform2D( 1, 0, 0, 1, 0, -85 )
-14/shape = SubResource( 15 )
+14/shape = SubResource( 8 )
 14/shape_one_way = false
 14/shape_one_way_margin = 1.0
 14/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 15 ),
+"shape": SubResource( 8 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, -85 )
 } ]
 14/z_index = 0
@@ -377,14 +408,14 @@ points = PoolVector2Array( 40.0603, 18.8966, 80.2945, 40.5254, 40.0603, 60.2937,
 15/navigation_offset = Vector2( 0, 0 )
 15/shape_offset = Vector2( 0, -92 )
 15/shape_transform = Transform2D( 1, 0, 0, 1, 0, -92 )
-15/shape = SubResource( 16 )
+15/shape = SubResource( 9 )
 15/shape_one_way = false
 15/shape_one_way_margin = 1.0
 15/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 16 ),
+"shape": SubResource( 9 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, -92 )
 } ]
 15/z_index = 0
@@ -398,14 +429,14 @@ points = PoolVector2Array( 40.0603, 18.8966, 80.2945, 40.5254, 40.0603, 60.2937,
 16/navigation_offset = Vector2( 0, 0 )
 16/shape_offset = Vector2( 0, -76 )
 16/shape_transform = Transform2D( 1, 0, 0, 1, 0, -76 )
-16/shape = SubResource( 17 )
+16/shape = SubResource( 10 )
 16/shape_one_way = false
 16/shape_one_way_margin = 1.0
 16/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 17 ),
+"shape": SubResource( 10 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, -76 )
 } ]
 16/z_index = 0
@@ -475,14 +506,14 @@ points = PoolVector2Array( 40.0603, 18.8966, 80.2945, 40.5254, 40.0603, 60.2937,
 21/navigation_offset = Vector2( 0, 0 )
 21/shape_offset = Vector2( 0, -217 )
 21/shape_transform = Transform2D( 1, 0, 0, 1, 0, -217 )
-21/shape = SubResource( 19 )
+21/shape = SubResource( 12 )
 21/shape_one_way = false
 21/shape_one_way_margin = 1.0
 21/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 19 ),
+"shape": SubResource( 12 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, -217 )
 } ]
 21/z_index = 0
@@ -496,14 +527,216 @@ points = PoolVector2Array( 40.0603, 18.8966, 80.2945, 40.5254, 40.0603, 60.2937,
 22/navigation_offset = Vector2( 0, 0 )
 22/shape_offset = Vector2( 0, -76 )
 22/shape_transform = Transform2D( 1, 0, 0, 1, 0, -76 )
-22/shape = SubResource( 20 )
+22/shape = SubResource( 13 )
 22/shape_one_way = false
 22/shape_one_way_margin = 1.0
 22/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 20 ),
+"shape": SubResource( 13 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, -76 )
 } ]
 22/z_index = 0
+23/name = "Casa_01.png 23"
+23/texture = ExtResource( 21 )
+23/tex_offset = Vector2( 0, -197 )
+23/modulate = Color( 1, 1, 1, 1 )
+23/region = Rect2( 0, -1, 438, 298 )
+23/tile_mode = 0
+23/occluder_offset = Vector2( 0, 0 )
+23/navigation_offset = Vector2( 0, 0 )
+23/shape_offset = Vector2( 0, -197 )
+23/shape_transform = Transform2D( 1, 0, 0, 1, 0, -197 )
+23/shape = SubResource( 27 )
+23/shape_one_way = false
+23/shape_one_way_margin = 1.0
+23/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 27 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, -197 )
+}, {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 28 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, -197 )
+} ]
+23/z_index = -1
+24/name = "Planta_infierno_01_01.png 24"
+24/texture = ExtResource( 19 )
+24/tex_offset = Vector2( 0, -22 )
+24/modulate = Color( 1, 1, 1, 1 )
+24/region = Rect2( 0, 0, 81, 67 )
+24/tile_mode = 0
+24/occluder_offset = Vector2( 0, 0 )
+24/navigation_offset = Vector2( 0, 0 )
+24/shape_offset = Vector2( 0, -22 )
+24/shape_transform = Transform2D( 1, 0, 0, 1, 0, -22 )
+24/shape = SubResource( 23 )
+24/shape_one_way = false
+24/shape_one_way_margin = 1.0
+24/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 23 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, -22 )
+} ]
+24/z_index = 0
+25/name = "Planta_infierno_01_02.png 25"
+25/texture = ExtResource( 24 )
+25/tex_offset = Vector2( 0, -20 )
+25/modulate = Color( 1, 1, 1, 1 )
+25/region = Rect2( 0, 0, 81, 65 )
+25/tile_mode = 0
+25/occluder_offset = Vector2( 0, 0 )
+25/navigation_offset = Vector2( 0, 0 )
+25/shape_offset = Vector2( 0, -20 )
+25/shape_transform = Transform2D( 1, 0, 0, 1, 0, -20 )
+25/shape = SubResource( 24 )
+25/shape_one_way = false
+25/shape_one_way_margin = 1.0
+25/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 24 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, -20 )
+} ]
+25/z_index = 0
+26/name = "Planta_infierno_01_03.png 26"
+26/texture = ExtResource( 22 )
+26/tex_offset = Vector2( 0, -16 )
+26/modulate = Color( 1, 1, 1, 1 )
+26/region = Rect2( 0, 0, 80, 60 )
+26/tile_mode = 0
+26/occluder_offset = Vector2( 0, 0 )
+26/navigation_offset = Vector2( 0, 0 )
+26/shape_offset = Vector2( 0, -16 )
+26/shape_transform = Transform2D( 1, 0, 0, 1, 0, -16 )
+26/shape = SubResource( 25 )
+26/shape_one_way = false
+26/shape_one_way_margin = 1.0
+26/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 25 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, -16 )
+} ]
+26/z_index = 0
+27/name = "Planta_infierno_01_04.png 27"
+27/texture = ExtResource( 27 )
+27/tex_offset = Vector2( 0, -25 )
+27/modulate = Color( 1, 1, 1, 1 )
+27/region = Rect2( 0, 0, 80, 70 )
+27/tile_mode = 0
+27/occluder_offset = Vector2( 0, 0 )
+27/navigation_offset = Vector2( 0, 0 )
+27/shape_offset = Vector2( 0, -25 )
+27/shape_transform = Transform2D( 1, 0, 0, 1, 0, -25 )
+27/shape = SubResource( 26 )
+27/shape_one_way = false
+27/shape_one_way_margin = 1.0
+27/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 26 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, -25 )
+} ]
+27/z_index = 0
+28/name = "Suelo_infierno_01.png 28"
+28/texture = ExtResource( 23 )
+28/tex_offset = Vector2( 0, 0 )
+28/modulate = Color( 1, 1, 1, 1 )
+28/region = Rect2( 0, 0, 80, 45 )
+28/tile_mode = 0
+28/occluder_offset = Vector2( 0, 0 )
+28/navigation_offset = Vector2( 0, 0 )
+28/shape_offset = Vector2( 0, 0 )
+28/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+28/shape_one_way = false
+28/shape_one_way_margin = 0.0
+28/shapes = [  ]
+28/z_index = 0
+29/name = "Suelo_infierno_02_01.png 29"
+29/texture = ExtResource( 20 )
+29/tex_offset = Vector2( 0, -1 )
+29/modulate = Color( 1, 1, 1, 1 )
+29/region = Rect2( 0, 0, 81, 48 )
+29/tile_mode = 0
+29/occluder_offset = Vector2( 0, 0 )
+29/navigation_offset = Vector2( 0, 0 )
+29/shape_offset = Vector2( 0, 0 )
+29/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+29/shape_one_way = false
+29/shape_one_way_margin = 0.0
+29/shapes = [  ]
+29/z_index = -2
+30/name = "Suelo_infierno_02_02.png 30"
+30/texture = ExtResource( 18 )
+30/tex_offset = Vector2( 0, 0 )
+30/modulate = Color( 1, 1, 1, 1 )
+30/region = Rect2( 0, 0, 80, 44 )
+30/tile_mode = 0
+30/occluder_offset = Vector2( 0, 0 )
+30/navigation_offset = Vector2( 0, 0 )
+30/shape_offset = Vector2( 0, 0 )
+30/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+30/shape_one_way = false
+30/shape_one_way_margin = 0.0
+30/shapes = [  ]
+30/z_index = -2
+31/name = "Suelo_infierno_02_03.png 31"
+31/texture = ExtResource( 25 )
+31/tex_offset = Vector2( 0, 0 )
+31/modulate = Color( 1, 1, 1, 1 )
+31/region = Rect2( 0, 0, 80, 44 )
+31/tile_mode = 0
+31/occluder_offset = Vector2( 0, 0 )
+31/navigation_offset = Vector2( 0, 0 )
+31/shape_offset = Vector2( 0, 0 )
+31/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+31/shape_one_way = false
+31/shape_one_way_margin = 0.0
+31/shapes = [  ]
+31/z_index = -2
+32/name = "Suelo_infierno_02_04.png 32"
+32/texture = ExtResource( 26 )
+32/tex_offset = Vector2( 0, 0 )
+32/modulate = Color( 1, 1, 1, 1 )
+32/region = Rect2( 0, 0, 82, 46 )
+32/tile_mode = 0
+32/occluder_offset = Vector2( 0, 0 )
+32/navigation_offset = Vector2( 0, 0 )
+32/shape_offset = Vector2( 0, 0 )
+32/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+32/shape_one_way = false
+32/shape_one_way_margin = 0.0
+32/shapes = [  ]
+32/z_index = -1
+33/name = "Roca_infierno_01_01.png 33"
+33/texture = ExtResource( 28 )
+33/tex_offset = Vector2( 1, -7 )
+33/modulate = Color( 1, 1, 1, 1 )
+33/region = Rect2( 1, 0, 80, 50 )
+33/tile_mode = 0
+33/occluder_offset = Vector2( 0, 0 )
+33/navigation_offset = Vector2( 0, 0 )
+33/shape_offset = Vector2( 0, -7 )
+33/shape_transform = Transform2D( 1, 0, 0, 1, 0, -7 )
+33/shape = SubResource( 29 )
+33/shape_one_way = false
+33/shape_one_way_margin = 1.0
+33/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 29 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, -7 )
+} ]
+33/z_index = 0

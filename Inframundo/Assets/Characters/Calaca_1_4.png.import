@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Tumba_Esposa_01.png-23e1e307f915531424bc021c8458b795.stex"
+path="res://.import/Calaca_1_4.png-bd73a5cf6bfe9ffbbf04a6a27e619bf3.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Lvl_01/Tumba_Esposa_01.png"
-dest_files=[ "res://.import/Tumba_Esposa_01.png-23e1e307f915531424bc021c8458b795.stex" ]
+source_file="res://Assets/Characters/Calaca_1_4.png"
+dest_files=[ "res://.import/Calaca_1_4.png-bd73a5cf6bfe9ffbbf04a6a27e619bf3.stex" ]
 
 [params]
 

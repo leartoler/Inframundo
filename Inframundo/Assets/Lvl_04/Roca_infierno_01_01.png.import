@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Tecolote_1_3.png-fab1bfd434314b20694519cf409a5714.stex"
+path="res://.import/Roca_infierno_01_01.png-8e576f06f5fb107527b886016cf3db1f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Lvl_01/Tecolote_1_3.png"
-dest_files=[ "res://.import/Tecolote_1_3.png-fab1bfd434314b20694519cf409a5714.stex" ]
+source_file="res://Assets/Lvl_04/Roca_infierno_01_01.png"
+dest_files=[ "res://.import/Roca_infierno_01_01.png-8e576f06f5fb107527b886016cf3db1f.stex" ]
 
 [params]
 

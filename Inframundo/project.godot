@@ -85,7 +85,7 @@ config/icon="res://icon.png"
 
 [autoload]
 
-Dialog="*res://Scenes/DialogBox.tscn"
+Dialog="*res://Scenes/Actions/DialogBox.tscn"
 
 [display]
 

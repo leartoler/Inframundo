@@ -8,6 +8,7 @@ pause_mode = 2
 script = ExtResource( 1 )
 DATA = "res://Langs/lang.data"
 default_lang = "res://Langs/Eng.lang"
+preview_message_id = 0
 
 [node name="Main" parent="." instance=ExtResource( 2 )]
 visible = false

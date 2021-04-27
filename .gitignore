@@ -9,3 +9,10 @@ Builds/
 .mono/
 data_*/
 
+Inframundo/Scenes/Lvl/Lvl_03.tscn
+Inframundo/Scenes/Lvl/Salida.gd
+Inframundo/Scenes/Lvl/Salida2.gd
+Inframundo/Scenes/Lvl/Salida3.gd
+Inframundo/Scenes/Title_Screen/Dialogos.tscn
+Inframundo/Scenes/Title_Screen/Final.tscn
+Inframundo/Script/NPC.gd

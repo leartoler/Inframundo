@@ -1427,7 +1427,7 @@ func get_next_character(delta):
 			var l = line_data
 			x = 0
 			l.current_char += 1
-			if l.current_char > c[l.current_page][l.current_line-1].size():
+ 			if l.current_char > c[l.current_page][l.current_line-1].size():
 				l.current_char = 0
 				l.current_line += 1
 				if l.current_line > c[l.current_page].size():

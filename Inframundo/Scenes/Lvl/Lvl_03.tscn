@@ -1,12 +1,36 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Assets/Tileset_1.tres" type="TileSet" id=1]
 [ext_resource path="res://Scenes/Characters/Wife.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/Characters/Heroe.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Script/KinematicBody2D.gd" type="Script" id=4]
+[ext_resource path="res://Assets/Lvl_03/Suelo_infierno_02_04.png" type="Texture" id=5]
+[ext_resource path="res://Scenes/Lvl/Salida3.gd" type="Script" id=6]
+[ext_resource path="res://Scenes/Characters/166176__felix-blume__cricket-in-the-desert-close-recording.wav" type="AudioStream" id=7]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 10.313, 10 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 36.8816, 25.4703 )
+
+[sub_resource type="Animation" id=3]
+resource_name = "Dialogo"
+length = 0.5
+loop = true
+step = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.487084 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0.00784314, 0.00784314, 0.00784314, 1 ) ]
+}
 
 [node name="Lvl_01" type="Node2D"]
 
@@ -22,6 +46,7 @@ tile_data = PoolIntArray( -1114100, 28, 0, -1114099, 28, 0, -1114098, 28, 0, -10
 
 [node name="NPC2" parent="YSort/TileMap" instance=ExtResource( 2 )]
 position = Vector2( 880.013, 123.678 )
+dialog = 12
 
 [node name="Hero" parent="YSort/TileMap" instance=ExtResource( 3 )]
 position = Vector2( 961.319, 496.305 )
@@ -37,6 +62,35 @@ script = ExtResource( 4 )
 position = Vector2( 82.5563, 23.5102 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/TileMap/Hero/arbol_1"]
+visible = false
 position = Vector2( 49.3623, 177.065 )
 scale = Vector2( 8.876, 6.559 )
 shape = SubResource( 1 )
+
+[node name="NPC2" parent="." instance=ExtResource( 2 )]
+position = Vector2( 880.013, 123.678 )
+dialog = 12
+
+[node name="Salida3" type="Area2D" parent="."]
+position = Vector2( 285.427, 0 )
+script = ExtResource( 6 )
+
+[node name="Sprite" type="Sprite" parent="Salida3"]
+position = Vector2( 396.062, 39.5221 )
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Salida3"]
+visible = false
+shape = SubResource( 2 )
+
+[node name="anim" type="AnimationPlayer" parent="Salida3"]
+autoplay = "Dialogo"
+playback_process_mode = 0
+anims/Dialogo = SubResource( 3 )
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 7 )
+autoplay = true
+
+[connection signal="body_entered" from="Salida3" to="Salida3" method="_on_Salida_body_entered"]
+[connection signal="body_exited" from="Salida3" to="Salida3" method="_on_Salida_body_exited"]

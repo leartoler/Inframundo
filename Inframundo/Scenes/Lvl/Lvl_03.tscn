@@ -8,7 +8,7 @@
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 10.313, 10 )
 
-[node name="Lvl_01" type="Node2D"]
+[node name="Lvl_02" type="Node2D"]
 
 [node name="YSort" type="YSort" parent="."]
 

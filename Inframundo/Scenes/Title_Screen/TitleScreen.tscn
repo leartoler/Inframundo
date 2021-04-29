@@ -62,7 +62,9 @@ margin_right = 1040.0
 margin_bottom = 560.0
 size_flags_vertical = 3
 custom_fonts/font = SubResource( 1 )
-text = "Version 0.6
+text = "Press enter to interact with blinking objects
+
+Version 0.4
 @learto_ler
 "
 

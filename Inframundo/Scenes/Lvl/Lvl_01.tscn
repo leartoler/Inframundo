@@ -50,7 +50,7 @@ position = Vector2( 198.737, 104.241 )
 dialog = 3
 
 [node name="Hero" parent="YSort/TileMap" instance=ExtResource( 3 )]
-position = Vector2( 961.319, 496.305 )
+position = Vector2( 882.819, 459.305 )
 z_index = 1
 
 [node name="arbol_1" type="KinematicBody2D" parent="YSort/TileMap/Hero" groups=[

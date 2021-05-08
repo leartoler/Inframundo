@@ -1,7 +1,7 @@
 extends Sprite 
 var can_move = true
 var dialog = null 
-
+var sound_has_played = false
 
 #Vectores para el personaje
 var dir = {
@@ -25,24 +25,26 @@ func _physics_process(delta):
 			move_to(dir.Right)
 		elif Input.is_action_pressed("ui_left") and !$Left.is_colliding():
 			move_to(dir.Left)
-		
-		
+			
 
 #func toggle():
 #	$anim.play("Toggle")	
 		
 #Movimiento según donde se mueva el prota
 func move_to(direction):
-	$anim.play("Walk")
+	$anim.play("Walk")	
+	$Step.play()
+		
 	match direction:
 		dir.Up:
-			set_frame(2)
+			set_frame(2)				
 		dir.Down:
-			set_frame(0)
+			set_frame(0)			
 		dir.Right:
-			set_frame(1)
+			set_frame(1)			
 		dir.Left:
 			set_frame(3)
+			
 
 
 	
@@ -54,6 +56,10 @@ func move_to(direction):
 	$Tween.start()
 	yield($Tween, "tween_completed")
 	can_move = true
+	
+
+	
+		
 
 	
 	#Diálogo

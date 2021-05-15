@@ -1,9 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Assets/Tileset_1.tres" type="TileSet" id=1]
 [ext_resource path="res://Scenes/Characters/Grave.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/Characters/Heroe.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Script/KinematicBody2D.gd" type="Script" id=4]
+[ext_resource path="res://Scenes/Lvl/Lvl_01.tres" type="Material" id=5]
+[ext_resource path="res://icon.png" type="Texture" id=6]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 10.313, 10 )
@@ -40,3 +42,9 @@ position = Vector2( 82.5563, 23.5102 )
 position = Vector2( 49.3623, 177.065 )
 scale = Vector2( 8.876, 6.559 )
 shape = SubResource( 1 )
+
+[node name="icon" type="Sprite" parent="."]
+material = ExtResource( 5 )
+position = Vector2( 689.221, 348.237 )
+scale = Vector2( 21.3836, 21.8148 )
+texture = ExtResource( 6 )

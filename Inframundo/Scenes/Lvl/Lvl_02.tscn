@@ -44,3 +44,19 @@ position = Vector2( 82.5563, 23.5102 )
 position = Vector2( 49.3623, 177.065 )
 scale = Vector2( 8.876, 6.559 )
 shape = SubResource( 1 )
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+position = Vector2( 853.935, 251.213 )
+amount = 3500
+lifetime = 4.0
+emission_shape = 2
+emission_rect_extents = Vector2( 500, 1 )
+gravity = Vector2( 20, 98 )
+initial_velocity = 36.51
+initial_velocity_random = 0.11
+angular_velocity = 98.18
+linear_accel = 28.79
+radial_accel = 10.61
+angle = 87.3
+scale_amount = 2.0
+color = Color( 0.541176, 0.701961, 0.8, 1 )

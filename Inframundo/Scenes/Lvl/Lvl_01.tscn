@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Assets/Tileset_1.tres" type="TileSet" id=1]
 [ext_resource path="res://Scenes/Characters/Grave.tscn" type="PackedScene" id=2]
@@ -35,6 +35,13 @@ tracks/0/keys = {
 "update": 0,
 "values": [ Color( 1, 1, 1, 1 ), Color( 0.00784314, 0.00784314, 0.00784314, 1 ) ]
 }
+
+[sub_resource type="Environment" id=4]
+background_mode = 4
+glow_enabled = true
+glow_levels/1 = true
+glow_levels/7 = true
+glow_intensity = 1.15
 
 [node name="Lvl_01" type="Node2D"]
 
@@ -85,10 +92,10 @@ dialog = 1
 position = Vector2( -297.573, -114.967 )
 
 [node name="Dialogo_3" parent="." instance=ExtResource( 5 )]
-position = Vector2( -617.563, -72.3851 )
+position = Vector2( -615.779, -150.979 )
 
 [node name="Dialogo_4" parent="." instance=ExtResource( 5 )]
-position = Vector2( -455.14, -313.971 )
+position = Vector2( -456.888, -311.734 )
 
 [node name="Dialogo_5" parent="." instance=ExtResource( 5 )]
 position = Vector2( -4917.06, -1525.79 )
@@ -126,6 +133,9 @@ position = Vector2( 637.875, 455.693 )
 scale = Vector2( 25, 25 )
 z_index = 1
 texture = ExtResource( 10 )
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource( 4 )
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_Area2D_body_entered"]
 [connection signal="body_exited" from="Area2D" to="Area2D" method="_on_Area2D_body_exited"]

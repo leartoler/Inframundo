@@ -29,6 +29,7 @@ position = Vector2( 197.896, 104.241 )
 
 [node name="Hero" parent="YSort/TileMap" instance=ExtResource( 3 )]
 position = Vector2( 961.319, 496.305 )
+z_index = 1
 
 [node name="arbol_1" type="KinematicBody2D" parent="YSort/TileMap/Hero" groups=[
 "arbol",
@@ -45,8 +46,9 @@ position = Vector2( 49.3623, 177.065 )
 scale = Vector2( 8.876, 6.559 )
 shape = SubResource( 1 )
 
-[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
-position = Vector2( 853.935, 251.213 )
+[node name="CPUParticles2D" type="CPUParticles2D" parent="YSort/TileMap/Hero"]
+position = Vector2( -107.384, -245.092 )
+z_index = 1
 amount = 3500
 lifetime = 4.0
 emission_shape = 2

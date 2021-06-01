@@ -401,7 +401,7 @@ points = PoolVector2Array( 40.0603, 18.8966, 80.2945, 40.5254, 40.0603, 60.2937,
 "shape": SubResource( 8 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, -85 )
 } ]
-14/z_index = 0
+14/z_index = 1
 15/name = "arbol_03_03.png 15"
 15/texture = ExtResource( 16 )
 15/tex_offset = Vector2( -0.5, -92 )
@@ -422,7 +422,7 @@ points = PoolVector2Array( 40.0603, 18.8966, 80.2945, 40.5254, 40.0603, 60.2937,
 "shape": SubResource( 9 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, -92 )
 } ]
-15/z_index = 0
+15/z_index = 1
 16/name = "arbol_03_04.png 16"
 16/texture = ExtResource( 11 )
 16/tex_offset = Vector2( 0, -76 )
@@ -443,7 +443,7 @@ points = PoolVector2Array( 40.0603, 18.8966, 80.2945, 40.5254, 40.0603, 60.2937,
 "shape": SubResource( 10 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, -76 )
 } ]
-16/z_index = 0
+16/z_index = 1
 17/name = "suelo_3_1.png 17"
 17/texture = ExtResource( 15 )
 17/tex_offset = Vector2( 0, 0 )
@@ -520,7 +520,7 @@ points = PoolVector2Array( 40.0603, 18.8966, 80.2945, 40.5254, 40.0603, 60.2937,
 "shape": SubResource( 12 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, -217 )
 } ]
-21/z_index = 0
+21/z_index = 1
 22/name = "arbol_03_01.png 22"
 22/texture = ExtResource( 14 )
 22/tex_offset = Vector2( -1, -76 )
@@ -541,7 +541,7 @@ points = PoolVector2Array( 40.0603, 18.8966, 80.2945, 40.5254, 40.0603, 60.2937,
 "shape": SubResource( 13 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, -76 )
 } ]
-22/z_index = 0
+22/z_index = 1
 23/name = "Casa_01.png 23"
 23/texture = ExtResource( 21 )
 23/tex_offset = Vector2( 0, -197 )

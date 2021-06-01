@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Assets/Characters/Hero.png" type="Texture" id=1]
 [ext_resource path="res://Script/Heroe.gd" type="Script" id=2]
 [ext_resource path="res://Audio/Paso1.wav" type="AudioStream" id=3]
+[ext_resource path="res://Animations/CharactersIdle.tres" type="Animation" id=4]
 
 [sub_resource type="Animation" id=1]
 resource_name = "Toggle"
@@ -49,7 +50,7 @@ tracks/1/keys = {
 }
 
 [sub_resource type="Animation" id=3]
-resource_name = "Idle"
+resource_name = "IdleHeroe"
 loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:offset")
@@ -58,10 +59,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.52, 1 ),
-"transitions": PoolRealArray( 1, 0.757859, 1 ),
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 0, -25 ), Vector2( 0, -27 ), Vector2( 0, -25 ) ]
+"values": [ Vector2( 0, -26.995 ), Vector2( 0, -28 ), Vector2( 0, -26.995 ) ]
 }
 
 [node name="Hero" type="Sprite" groups=[
@@ -69,7 +70,7 @@ tracks/0/keys = {
 ]]
 position = Vector2( -8.4855, 31.4289 )
 texture = ExtResource( 1 )
-offset = Vector2( 0, -31.796 )
+offset = Vector2( 0, -27.5309 )
 hframes = 4
 frame = 2
 script = ExtResource( 2 )
@@ -113,8 +114,9 @@ current = true
 zoom = Vector2( 0.553, 0.611 )
 
 [node name="anim2" type="AnimationPlayer" parent="."]
-autoplay = "Idle"
-anims/Idle = SubResource( 3 )
+autoplay = "IdleHeroe"
+anims/Idle = ExtResource( 4 )
+anims/IdleHeroe = SubResource( 3 )
 
 [node name="Step" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 3 )

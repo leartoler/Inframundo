@@ -82,7 +82,7 @@ scale = Vector2( 8.876, 6.559 )
 shape = SubResource( 1 )
 
 [node name="Dialogo_0" parent="." instance=ExtResource( 5 )]
-position = Vector2( -58.8002, 6.88651 )
+position = Vector2( 761.72, 397.504 )
 
 [node name="Dialogo_1" parent="." instance=ExtResource( 5 )]
 position = Vector2( -177.472, -54.5176 )
@@ -128,6 +128,7 @@ volume_db = -8.056
 autoplay = true
 
 [node name="icon" type="Sprite" parent="."]
+visible = false
 material = ExtResource( 11 )
 position = Vector2( 637.875, 455.693 )
 scale = Vector2( 25, 25 )

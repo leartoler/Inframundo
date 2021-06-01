@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Assets/Tileset_1.tres" type="TileSet" id=1]
 [ext_resource path="res://Scenes/Characters/Grave.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/Characters/Heroe.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Script/KinematicBody2D.gd" type="Script" id=4]
+[ext_resource path="res://Scenes/Title_Screen/Dialogos.tscn" type="PackedScene" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 10.313, 10 )
@@ -28,7 +29,7 @@ position = Vector2( 197.896, 104.241 )
 position = Vector2( 197.896, 104.241 )
 
 [node name="Hero" parent="YSort/TileMap" instance=ExtResource( 3 )]
-position = Vector2( 961.319, 496.305 )
+position = Vector2( 275.417, 159.768 )
 z_index = 1
 
 [node name="arbol_1" type="KinematicBody2D" parent="YSort/TileMap/Hero" groups=[
@@ -42,7 +43,7 @@ script = ExtResource( 4 )
 position = Vector2( 82.5563, 23.5102 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/TileMap/Hero/arbol_1"]
-position = Vector2( 49.3623, 177.065 )
+position = Vector2( 158.894, 332.179 )
 scale = Vector2( 8.876, 6.559 )
 shape = SubResource( 1 )
 
@@ -62,3 +63,19 @@ radial_accel = 10.61
 angle = 87.3
 scale_amount = 2.0
 color = Color( 0.541176, 0.701961, 0.8, 1 )
+
+[node name="Dialogo_1" parent="." instance=ExtResource( 5 )]
+position = Vector2( 478.176, 258.81 )
+dialog = 7
+
+[node name="Dialogo_2" parent="." instance=ExtResource( 5 )]
+position = Vector2( 799.262, 217.188 )
+dialog = 7
+
+[node name="Dialogo_3" parent="." instance=ExtResource( 5 )]
+position = Vector2( 960.995, -24.2214 )
+dialog = 7
+
+[node name="Dialogo_4" parent="." instance=ExtResource( 5 )]
+position = Vector2( 960.995, -24.2214 )
+dialog = 7

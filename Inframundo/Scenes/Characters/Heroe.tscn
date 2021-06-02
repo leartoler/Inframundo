@@ -70,7 +70,7 @@ tracks/0/keys = {
 ]]
 position = Vector2( -8.4855, 31.4289 )
 texture = ExtResource( 1 )
-offset = Vector2( 0, -27.5309 )
+offset = Vector2( 0, -25 )
 hframes = 4
 frame = 2
 script = ExtResource( 2 )

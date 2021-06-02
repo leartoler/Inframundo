@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Assets/Tileset_1.tres" type="TileSet" id=1]
 [ext_resource path="res://Scenes/Characters/Grave.tscn" type="PackedScene" id=2]
@@ -6,9 +6,32 @@
 [ext_resource path="res://Script/KinematicBody2D.gd" type="Script" id=4]
 [ext_resource path="res://Scenes/Title_Screen/Dialogos.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scenes/Characters/Tecolote.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/Lvl/AreaLvl02.gd" type="Script" id=7]
+[ext_resource path="res://Assets/Lvl_01/Piso_1.png" type="Texture" id=8]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 10.313, 10 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 24.5919, 23.3349 )
+
+[sub_resource type="Animation" id=3]
+resource_name = "Dialogo"
+length = 0.5
+loop = true
+step = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.487084 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0.00784314, 0.00784314, 0.00784314, 1 ) ]
+}
 
 [node name="Lvl_01" type="Node2D"]
 modulate = Color( 0.686275, 0.713726, 0.760784, 1 )
@@ -90,3 +113,24 @@ dialog = 11
 [node name="NPC" parent="." instance=ExtResource( 6 )]
 position = Vector2( 1879.84, -1025.78 )
 z_as_relative = false
+
+[node name="AreaLvl02" type="Area2D" parent="."]
+z_index = 1
+script = ExtResource( 7 )
+
+[node name="Sprite" type="Sprite" parent="AreaLvl02"]
+position = Vector2( 2117.55, -1241.53 )
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaLvl02"]
+visible = false
+position = Vector2( 2118.8, -1240.66 )
+shape = SubResource( 2 )
+
+[node name="anim2" type="AnimationPlayer" parent="AreaLvl02"]
+autoplay = "Dialogo"
+playback_process_mode = 0
+anims/Dialogo = SubResource( 3 )
+
+[connection signal="body_entered" from="AreaLvl02" to="AreaLvl02" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="AreaLvl02" to="AreaLvl02" method="_on_Area2D_body_exited"]

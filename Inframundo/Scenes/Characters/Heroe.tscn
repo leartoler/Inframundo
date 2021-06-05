@@ -70,7 +70,7 @@ tracks/0/keys = {
 ]]
 position = Vector2( -8.4855, 31.4289 )
 texture = ExtResource( 1 )
-offset = Vector2( 0, -25 )
+offset = Vector2( 0, -31.796 )
 hframes = 4
 frame = 2
 script = ExtResource( 2 )
@@ -121,5 +121,3 @@ anims/IdleHeroe = SubResource( 3 )
 
 [node name="Step" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 3 )
-
-[connection signal="animation_finished" from="anim" to="." method="_on_anim_animation_finished"]

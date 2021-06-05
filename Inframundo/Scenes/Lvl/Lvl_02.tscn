@@ -54,6 +54,7 @@ visible = false
 position = Vector2( 197.896, 104.241 )
 
 [node name="Hero" parent="YSort/TileMap" instance=ExtResource( 3 )]
+visible = false
 position = Vector2( 1846.21, -710.56 )
 z_index = 1
 

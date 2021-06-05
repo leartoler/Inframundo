@@ -128,7 +128,6 @@ volume_db = -8.056
 autoplay = true
 
 [node name="icon" type="Sprite" parent="."]
-visible = false
 material = ExtResource( 11 )
 position = Vector2( 637.875, 455.693 )
 scale = Vector2( 25, 25 )

@@ -85,20 +85,24 @@ shape = SubResource( 1 )
 position = Vector2( 761.72, 397.504 )
 
 [node name="Dialogo_1" parent="." instance=ExtResource( 5 )]
-position = Vector2( -177.472, -54.5176 )
+position = Vector2( 600.55, 315.827 )
 dialog = 1
 
 [node name="Dialogo_2" parent="." instance=ExtResource( 5 )]
-position = Vector2( -297.573, -114.967 )
+position = Vector2( 480.078, 258.246 )
+dialog = 2
 
 [node name="Dialogo_3" parent="." instance=ExtResource( 5 )]
-position = Vector2( -615.779, -150.979 )
+position = Vector2( 242.002, 258.761 )
+dialog = 3
 
 [node name="Dialogo_4" parent="." instance=ExtResource( 5 )]
-position = Vector2( -456.888, -311.734 )
+position = Vector2( 323.364, 218.809 )
+dialog = 4
 
 [node name="Dialogo_5" parent="." instance=ExtResource( 5 )]
-position = Vector2( -4917.06, -1525.79 )
+position = Vector2( 403.821, 99.0976 )
+dialog = 5
 
 [node name="Area2D" type="Area2D" parent="."]
 script = ExtResource( 7 )
@@ -129,13 +133,17 @@ autoplay = true
 
 [node name="icon" type="Sprite" parent="."]
 material = ExtResource( 11 )
-position = Vector2( 637.875, 455.693 )
-scale = Vector2( 25, 25 )
+position = Vector2( 575.65, 397.71 )
+scale = Vector2( 48.8649, 32.2478 )
 z_index = 1
 texture = ExtResource( 10 )
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource( 4 )
+
+[node name="Dialogo_6" parent="." instance=ExtResource( 5 )]
+position = Vector2( 244.096, 136.9 )
+dialog = 6
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_Area2D_body_entered"]
 [connection signal="body_exited" from="Area2D" to="Area2D" method="_on_Area2D_body_exited"]

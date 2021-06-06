@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Assets/Tileset_1.tres" type="TileSet" id=1]
 [ext_resource path="res://Scenes/Characters/Grave.tscn" type="PackedScene" id=2]
@@ -6,9 +6,32 @@
 [ext_resource path="res://Script/KinematicBody2D.gd" type="Script" id=4]
 [ext_resource path="res://Scenes/Lvl/Lvl_01.tres" type="Material" id=5]
 [ext_resource path="res://icon.png" type="Texture" id=6]
+[ext_resource path="res://Scenes/Characters/Tecolote.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scenes/Title_Screen/Dialogos.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Assets/Lvl_01/Piso_1.png" type="Texture" id=9]
+[ext_resource path="res://Scenes/Lvl/Lvl5.gd" type="Script" id=10]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 10.313, 10 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 15.1769, 13.6878 )
+
+[sub_resource type="Animation" id=3]
+resource_name = "AnimLvl5"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0, 0, 0, 1 ) ]
+}
 
 [node name="Lvl_01" type="Node2D"]
 
@@ -26,12 +49,13 @@ tile_data = PoolIntArray( -1048568, 11, 0, -1048567, 11, 0, -1048566, 11, 0, -10
 position = Vector2( 197.896, 104.241 )
 
 [node name="Hero" parent="YSort/TileMap" instance=ExtResource( 3 )]
-position = Vector2( 961.319, 496.305 )
+position = Vector2( 646.658, 340.564 )
+z_index = 1
 
 [node name="arbol_1" type="KinematicBody2D" parent="YSort/TileMap/Hero" groups=[
 "arbol",
 ]]
-position = Vector2( -4.77344, -49.1575 )
+position = Vector2( -4.77344, -39.6223 )
 scale = Vector2( 0.076, 0.115 )
 script = ExtResource( 4 )
 
@@ -43,8 +67,43 @@ position = Vector2( 49.3623, 177.065 )
 scale = Vector2( 8.876, 6.559 )
 shape = SubResource( 1 )
 
+[node name="icon" type="Sprite" parent="YSort/TileMap/Hero"]
+position = Vector2( -772.254, 368.26 )
+texture = ExtResource( 6 )
+
+[node name="NPC" parent="." instance=ExtResource( 7 )]
+position = Vector2( 477.132, 236.458 )
+z_index = 1
+
+[node name="Dialogo_1" parent="." instance=ExtResource( 8 )]
+position = Vector2( 519.449, 276.86 )
+dialog = 96
+
 [node name="icon" type="Sprite" parent="."]
 material = ExtResource( 5 )
-position = Vector2( 689.221, 348.237 )
+position = Vector2( 645.502, 345.988 )
 scale = Vector2( 21.3836, 21.8148 )
+z_index = 4
 texture = ExtResource( 6 )
+
+[node name="Lvl5" type="Area2D" parent="."]
+position = Vector2( 959.016, 499.305 )
+script = ExtResource( 10 )
+
+[node name="Sprite" type="Sprite" parent="Lvl5"]
+modulate = Color( 0.804898, 0.804898, 0.804898, 1 )
+position = Vector2( 4, 0.940552 )
+texture = ExtResource( 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lvl5"]
+visible = false
+position = Vector2( 4.36536, -1.19055 )
+shape = SubResource( 2 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Lvl5"]
+autoplay = "AnimLvl5"
+playback_speed = 0.8
+anims/AnimLvl5 = SubResource( 3 )
+
+[connection signal="body_entered" from="Lvl5" to="Lvl5" method="_on_Lvl5_body_entered"]
+[connection signal="body_exited" from="Lvl5" to="Lvl5" method="_on_Lvl5_body_exited"]

@@ -1,10 +1,6 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://Fonts/verdana-bold.ttf" type="DynamicFontData" id=1]
-
-[sub_resource type="DynamicFont" id=1]
-size = 48
-font_data = ExtResource( 1 )
+[ext_resource path="res://Fonts/VCR_OSD_MONO_1.001(18).tres" type="DynamicFont" id=1]
 
 [node name="NewGameButton" type="Button"]
 margin_right = 1040.0
@@ -20,8 +16,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 margin_top = -0.793701
 margin_bottom = -0.793701
-custom_fonts/font = SubResource( 1 )
-custom_colors/font_color = Color( 0.501961, 0.219608, 0.231373, 1 )
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 0.615686, 0.180392, 0.180392, 1 )
 custom_colors/font_color_shadow = Color( 0.929412, 0.87451, 0.913725, 1 )
 custom_constants/shadow_offset_x = 2
 custom_constants/shadow_offset_y = 2

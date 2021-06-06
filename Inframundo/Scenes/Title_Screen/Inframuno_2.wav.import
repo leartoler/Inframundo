@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Inframuno_2.wav-01d19b11090c4527c5ea3dc005d18dc0.sample"
+
+[deps]
+
+source_file="res://Scenes/Title_Screen/Inframuno_2.wav"
+dest_files=[ "res://.import/Inframuno_2.wav-01d19b11090c4527c5ea3dc005d18dc0.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

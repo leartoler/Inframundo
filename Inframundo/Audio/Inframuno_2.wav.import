@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Inframuno_2.wav-cf8cace8fa29b823c91162f4ed99df0a.sample"
+
+[deps]
+
+source_file="res://Audio/Inframuno_2.wav"
+dest_files=[ "res://.import/Inframuno_2.wav-cf8cace8fa29b823c91162f4ed99df0a.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

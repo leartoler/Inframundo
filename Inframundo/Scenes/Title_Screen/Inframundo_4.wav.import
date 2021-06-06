@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Inframundo_4.wav-9f1f1a2e19ae9d69dcaafea4f6bc5d46.sample"
+
+[deps]
+
+source_file="res://Scenes/Title_Screen/Inframundo_4.wav"
+dest_files=[ "res://.import/Inframundo_4.wav-9f1f1a2e19ae9d69dcaafea4f6bc5d46.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

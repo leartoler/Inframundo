@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Inframundo_4.wav-04776b071b6e55540c73a771f5702aaf.sample"
+
+[deps]
+
+source_file="res://Audio/Inframundo_4.wav"
+dest_files=[ "res://.import/Inframundo_4.wav-04776b071b6e55540c73a771f5702aaf.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

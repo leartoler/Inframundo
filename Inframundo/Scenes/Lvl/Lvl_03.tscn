@@ -9,7 +9,7 @@
 [ext_resource path="res://icon.png" type="Texture" id=7]
 [ext_resource path="res://Scenes/Lvl/Lvl_03.tres" type="Material" id=8]
 [ext_resource path="res://Assets/Lvl_03/Suelo_infierno_01.png" type="Texture" id=9]
-[ext_resource path="res://Scenes/Title_Screen/Dialogos_03.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Scenes/Title_Screen/Dialogos.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Scenes/Lvl/Lvl03Final.gd" type="Script" id=11]
 
 [sub_resource type="RectangleShape2D" id=1]
@@ -87,26 +87,6 @@ scale = Vector2( 77.2288, 64.0544 )
 z_index = 4
 texture = ExtResource( 7 )
 
-[node name="Dialogo_1" parent="." instance=ExtResource( 10 )]
-position = Vector2( -242.293, 497.788 )
-z_index = -1
-dialog = 14
-
-[node name="Dialogo_2" parent="." instance=ExtResource( 10 )]
-position = Vector2( 518.554, 398.086 )
-z_index = -1
-dialog = 18
-
-[node name="Dialogo_3" parent="." instance=ExtResource( 10 )]
-position = Vector2( 855.844, 174.64 )
-z_index = -1
-dialog = 44
-
-[node name="Dialogo_4" parent="." instance=ExtResource( 10 )]
-position = Vector2( 478.956, 176.761 )
-z_index = -1
-dialog = 58
-
 [node name="mesapuerta" type="Sprite" parent="."]
 position = Vector2( 772.237, 253.709 )
 z_index = 1
@@ -129,6 +109,22 @@ shape = SubResource( 2 )
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Lvl03Final"]
 autoplay = "Lvl03"
 anims/Lvl03 = SubResource( 3 )
+
+[node name="Dialogo_1" parent="." instance=ExtResource( 10 )]
+position = Vector2( -242.31, 497.837 )
+dialog = 14
+
+[node name="Dialogo_2" parent="." instance=ExtResource( 10 )]
+position = Vector2( 518.535, 397.131 )
+dialog = 18
+
+[node name="Dialogo_3" parent="." instance=ExtResource( 10 )]
+position = Vector2( 858.141, 180.976 )
+dialog = 44
+
+[node name="Dialogo_4" parent="." instance=ExtResource( 10 )]
+position = Vector2( 520.144, 157.862 )
+dialog = 58
 
 [connection signal="body_entered" from="Lvl03Final" to="Lvl03Final" method="_on_Lvl03Final_body_entered"]
 [connection signal="body_exited" from="Lvl03Final" to="Lvl03Final" method="_on_Lvl03Final_body_exited"]

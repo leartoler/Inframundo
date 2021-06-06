@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/104319__proxima4__desert-monolith.wav-130416fde4830cc8a3ffa68fa0b615d1.sample"
+
+[deps]
+
+source_file="res://Audio/104319__proxima4__desert-monolith.wav"
+dest_files=[ "res://.import/104319__proxima4__desert-monolith.wav-130416fde4830cc8a3ffa68fa0b615d1.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=true
+compress/mode=0

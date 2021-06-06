@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Assets/Tileset_1.tres" type="TileSet" id=1]
 [ext_resource path="res://Scenes/Characters/Wife.tscn" type="PackedScene" id=2]
@@ -11,6 +11,8 @@
 [ext_resource path="res://Assets/Lvl_03/Suelo_infierno_01.png" type="Texture" id=9]
 [ext_resource path="res://Scenes/Title_Screen/Dialogos.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Scenes/Lvl/Lvl03Final.gd" type="Script" id=11]
+[ext_resource path="res://Audio/104319__proxima4__desert-monolith.wav" type="AudioStream" id=12]
+[ext_resource path="res://Audio/Inframundo_3.wav" type="AudioStream" id=13]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 10.313, 10 )
@@ -51,13 +53,12 @@ visible = false
 position = Vector2( 880.013, 123.678 )
 
 [node name="Hero" parent="YSort/TileMap" instance=ExtResource( 3 )]
-position = Vector2( -485.359, 741.568 )
+position = Vector2( -479.532, 745.541 )
 frame = 1
 
 [node name="arbol_1" type="KinematicBody2D" parent="YSort/TileMap/Hero" groups=[
 "arbol",
 ]]
-visible = false
 position = Vector2( -4.77344, -49.1575 )
 scale = Vector2( 0.076, 0.115 )
 script = ExtResource( 4 )
@@ -66,7 +67,7 @@ script = ExtResource( 4 )
 position = Vector2( 82.5563, 23.5102 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/TileMap/Hero/arbol_1"]
-position = Vector2( 49.3623, 177.065 )
+position = Vector2( 115.579, 317.559 )
 scale = Vector2( 8.876, 6.559 )
 shape = SubResource( 1 )
 
@@ -82,7 +83,7 @@ z_index = -1
 
 [node name="icon" type="Sprite" parent="."]
 material = ExtResource( 8 )
-position = Vector2( -212.125, 205.053 )
+position = Vector2( -208.35, 213.076 )
 scale = Vector2( 77.2288, 64.0544 )
 z_index = 4
 texture = ExtResource( 7 )
@@ -112,19 +113,32 @@ anims/Lvl03 = SubResource( 3 )
 
 [node name="Dialogo_1" parent="." instance=ExtResource( 10 )]
 position = Vector2( -242.31, 497.837 )
+z_index = -1
 dialog = 14
 
 [node name="Dialogo_2" parent="." instance=ExtResource( 10 )]
 position = Vector2( 518.535, 397.131 )
+z_index = -1
 dialog = 18
 
 [node name="Dialogo_3" parent="." instance=ExtResource( 10 )]
 position = Vector2( 858.141, 180.976 )
+z_index = -1
 dialog = 44
 
 [node name="Dialogo_4" parent="." instance=ExtResource( 10 )]
 position = Vector2( 520.144, 157.862 )
+z_index = -1
 dialog = 58
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 13 )
+volume_db = 2.167
+autoplay = true
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 12 )
+autoplay = true
 
 [connection signal="body_entered" from="Lvl03Final" to="Lvl03Final" method="_on_Lvl03Final_body_entered"]
 [connection signal="body_exited" from="Lvl03Final" to="Lvl03Final" method="_on_Lvl03Final_body_exited"]

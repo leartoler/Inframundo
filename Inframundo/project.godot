@@ -82,7 +82,10 @@ _global_script_class_icons={
 
 config/name="Inframundo"
 run/main_scene="res://Scenes/Title_Screen/TitleScreen.tscn"
-config/icon="res://icon.png"
+boot_splash/image="res://Assets/UI/Title_02.png"
+boot_splash/fullsize=false
+boot_splash/use_filter=false
+config/icon="res://Assets/UI/Sprite-0001-Recovered.png"
 
 [autoload]
 

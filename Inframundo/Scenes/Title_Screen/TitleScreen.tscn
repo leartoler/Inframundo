@@ -5,7 +5,7 @@
 [ext_resource path="res://Scenes/Title_Screen/NewGameButton.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Fonts/VCR_OSD_MONO_1.001(18).tres" type="DynamicFont" id=4]
 [ext_resource path="res://Scenes/Title_Screen/Fade_In.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Scenes/Title_Screen/NewGame.gd" type="Script" id=6]
+[ext_resource path="res://Scenes/Title_Screen/TitleScreen.gd" type="Script" id=6]
 
 [node name="TitleScreen" type="Control"]
 anchor_right = 1.0
@@ -30,45 +30,20 @@ margin_bottom = 181.0
 texture = ExtResource( 2 )
 stretch_mode = 6
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Menu"]
-margin_top = 185.0
-margin_right = 1110.0
-margin_bottom = 560.0
-size_flags_vertical = 3
-
-[node name="Buttons" type="VBoxContainer" parent="Menu/HBoxContainer"]
-margin_top = 250.0
-margin_right = 1110.0
-margin_bottom = 428.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-custom_constants/separation = 20
-alignment = 1
-
-[node name="NewGameButton" parent="Menu/HBoxContainer/Buttons" instance=ExtResource( 3 )]
-margin_top = 19.0
-margin_right = 1110.0
-margin_bottom = 79.0
-
-[node name="ExitButton" parent="Menu/HBoxContainer/Buttons" instance=ExtResource( 1 )]
-margin_top = 99.0
-margin_right = 1110.0
-margin_bottom = 159.0
-
 [node name="FadeIn" parent="." instance=ExtResource( 5 )]
-visible = false
 
 [node name="Label" type="Label" parent="."]
 modulate = Color( 0.615686, 0.180392, 0.180392, 1 )
-margin_left = 120.0
+margin_left = 50.0
 margin_top = 300.0
-margin_right = 1230.0
-margin_bottom = 486.0
+margin_right = 1250.0
+margin_bottom = 700.0
 size_flags_vertical = 3
 custom_fonts/font = ExtResource( 4 )
 text = "Inframundo began as a game based on the Totonac tale of the trapiche, which is about a man who was so in love with his recently deceased wife that he managed to cross the underworld (Ichon, 1973).
 	However, for the development of the story and the handling of other topics such as the immortality of the soul, I took the liberty of modifying certain elements, but always maintaining the original essence of the tale. In the end, the player is the one who has the last word and will interpret according to his reading and experiences.
 
+Move with the arrow keys and interact with the blinking squares with the space key.
 "
 autowrap = true
 clip_text = true
@@ -76,6 +51,35 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[connection signal="pressed" from="Menu/HBoxContainer/Buttons/NewGameButton" to="." method="_on_NewGameButton_pressed"]
-[connection signal="pressed" from="Menu/HBoxContainer/Buttons/ExitButton" to="." method="_on_ExitButton_pressed"]
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+margin_left = 119.509
+margin_top = 550.0
+margin_right = 1243.0
+margin_bottom = 701.0
+rect_clip_content = true
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Buttons" type="VBoxContainer" parent="HBoxContainer"]
+margin_right = 1123.0
+margin_bottom = 151.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 20
+alignment = 1
+
+[node name="NewGameButton" parent="HBoxContainer/Buttons" instance=ExtResource( 3 )]
+margin_top = 5.0
+margin_right = 1123.0
+margin_bottom = 65.0
+
+[node name="ExitButton" parent="HBoxContainer/Buttons" instance=ExtResource( 1 )]
+margin_top = 85.0
+margin_right = 1123.0
+margin_bottom = 145.0
+
 [connection signal="fade_finished" from="FadeIn" to="." method="_on_FadeIn_fade_finished"]
+[connection signal="pressed" from="HBoxContainer/Buttons/NewGameButton" to="." method="_on_NewGameButton_pressed"]
+[connection signal="pressed" from="HBoxContainer/Buttons/ExitButton" to="." method="_on_ExitButton_pressed"]
